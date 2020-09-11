@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Image from 'gatsby-image'
 import { FaRegClock } from 'react-icons/fa'
 import { IoMdArrowRoundForward } from 'react-icons/io'
@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const Post = ({ frontmatter, excerpt }) => {
-  const { title, image, slug, date, category, readTime } = frontmatter
+  const { title, slug, date, category, readTime } = frontmatter
 
   return (
     <Wrapper>
@@ -45,13 +45,13 @@ const Wrapper = styled.article`
   .category {
     display: inline-block;
     margin-bottom: 1rem;
-    background: var(--clr-grey-10);
+    background: hsl(95, 28%, 46%);
     padding: 0.25rem 0.5rem;
     text-transform: uppercase;
     font-weight: 700;
     border-radius: var(--radius);
     letter-spacing: var(--spacing);
-    color: var(--clr-grey-5);
+    color: white;
   }
   h3 {
     font-weight: 400;
@@ -83,11 +83,11 @@ const Wrapper = styled.article`
     }
   }
   .link:hover {
-    border-color: var(--clr-primary-8);
-    color: var(--clr-primary-8);
+    border-color: #0a0c10;
+    color: #0a0c10;
   }
   footer {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid var(--clr-grey-9);
     display: flex;

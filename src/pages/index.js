@@ -1,17 +1,21 @@
 import React from 'react'
-import Hero from '../components/Hero'
 import Layout from '../components/Layout'
-import Posts from '../components/Posts'
 import { graphql } from 'gatsby'
 import SEO from '../components/SEO'
+import HomeBanner from '../components/HomeBanner'
+import HeroHeader from '../components/HeroHeader'
+import BusinessFifth from '../components/BusinessFifth'
+
 
 const IndexPage = ({ data }) => {
   const { allMdx: { nodes: posts } } = data
-
+  const { allAirtable: { nodes: strains } } = data
   return (
     <Layout>
-      <Hero showPerson />
-      <Posts posts={posts} title="recently published" />
+      <SEO title="Home" />
+      <HeroHeader />
+      <HomeBanner />
+      <BusinessFifth />
     </Layout>
   )
 }
@@ -37,6 +41,25 @@ export const query = graphql`
           }
         }
         id
+      }
+    }
+    allAirtable(filter: {table: {eq: "Strains"}}, limit: 3, sort: {fields: data___date, order: DESC}) {
+      nodes {
+        id
+        data {
+          date
+          name
+          type
+          image {
+            localFiles {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

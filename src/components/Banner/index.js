@@ -2,11 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import About from './About'
 import Instagram from './Instagram'
-import Recent from './Recent'
 import BannerCategories from './BannerCategories'
+import Recent from './Recent'
 const Banner = () => {
-  return <Wrapper>Banner Component</Wrapper>
+  return (
+    <Wrapper>
+      <About />
+      <Instagram />
+      <Recent />
+      <BannerCategories />
+    </Wrapper>
+  )
 }
+
+
 
 const Wrapper = styled.aside`
   display: grid;

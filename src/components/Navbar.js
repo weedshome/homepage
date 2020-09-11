@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { FaBars } from 'react-icons/fa'
-import logo from '../assets/logo.svg'
+import logo from '../assets/logo.png'
 import Links from '../constants/links'
 import SocialLinks from '../constants/socialLinks'
+import Hamburger from './Hamburger'
+
 const Navbar = ({ toggle }) => {
   return <nav className="navbar">
     <div className="nav-center">
@@ -11,12 +13,10 @@ const Navbar = ({ toggle }) => {
         <Link to="/" className="nav-logo">
           <img src={logo} alt="mdx logo" />
         </Link>
-        <button className="toggle-btn" onClick={toggle}>
-          <FaBars />
-        </button>
       </div>
       <Links styleClass="nav-links" />
       <SocialLinks styleClass="nav-icons"></SocialLinks>
+      <Hamburger pageWrapId={"page-wrap"} outerContainerId={"App"} />
     </div>
   </nav>
 }

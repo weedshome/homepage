@@ -1,0 +1,126 @@
+.grid-container-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px 20px;
+    grid-template-areas: "b-1 b-2 b-3";
+    place-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  .b-1 {
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    gap: 1px 1px;
+    grid-template-areas: "b-text-1";
+    grid-area: b-1;
+    background: white;
+    border-radius: 10px;
+  }
+  
+  .b-text-1 { grid-area: b-text-1; }
+  
+  .b-2 {
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    grid-template-areas: "b-text-2";
+    grid-area: b-2;
+    background: white;
+    border-radius: 10px;
+  }
+  
+  .b-text-2 { grid-area: b-text-2; }
+  
+  .b-3 {
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    grid-template-areas: "b-text-3";
+    grid-area: b-3;
+    background: white;
+    border-radius: 10px;
+  }
+  
+  .b-text-3 { grid-area: b-text-3; }
+
+  .b-text-1 {
+    grid-area: b-text-1;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.b-text-2 {
+    grid-area: b-text-1;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.b-text-3 {
+    grid-area: b-text-1;
+    margin: 0 auto;
+    text-align: center;
+}
+
+  .hero-info {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-info-2 {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-image-x {
+    width: 12.5rem;
+    float: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.above-heading {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: poppins;
+  background: #102a42 !important;
+  display: inline-block;
+  padding: 0 0.6rem;
+  margin-bottom: 5px;
+}
+
+.h2-heading {
+    width: 50%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    margin: 0 auto;
+    color: #102a42;
+
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #6f9654;
+    padding: 0 0.6rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.card-text {
+    color: hsl(220, 23%, 5%);
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+.icon-hero {
+    height: 2em;
+}

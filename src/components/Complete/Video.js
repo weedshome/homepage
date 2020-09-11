@@ -47,6 +47,8 @@ const RegVideoWrapper = styled.div`
 const IframeVideoWrapper = styled.div`
   width: 90vw;
   max-width: 700px;
+  padding-bottom: 30px;
+  margin: 0 auto;
 
   .video {
     overflow: hidden;
@@ -67,6 +69,6 @@ const IframeVideoWrapper = styled.div`
 `
 
 Video.defaultProps = {
-  src: 'https://www.youtube.com/embed/-8ORfgUa8ow',
+  src: 'https://www.youtube.com/embed/RjOpejjgug8',
   title: 'the best html css tutorial ever !',
 }

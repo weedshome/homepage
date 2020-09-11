@@ -52,8 +52,6 @@ const Wrapper = styled.blockquote`
   }
   @media (min-width: 1170px) {
     .container {
-      margin-left: -2rem;
-      margin-right: -2rem;
     }
   }
   .icon {
@@ -76,11 +74,11 @@ const Wrapper = styled.blockquote`
     }
   }
   .warning {
-    background: #fffaeb;
-    color: #513c06;
-    border-color: #f7d070;
+    background: #709654;
+    color: #ffffff;
+    border-color: #0a0c10;
     .icon {
-      color: #f7d070;
+      color: #709654;
     }
   }
   .quote {
