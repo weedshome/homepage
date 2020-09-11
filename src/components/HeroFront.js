@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
-import './Herofront.css'
 import Background from './Background'
 import styled, { keyframes } from "styled-components"
 

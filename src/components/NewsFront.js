@@ -1,5 +1,4 @@
 import React from 'react'
-import './Herofront.css'
 import NewsFirst from './NewsFirst'
 import styled from "styled-components"
 

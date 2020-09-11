@@ -1,5 +1,4 @@
 import React from 'react'
-import './Herofront.css'
 import GrowingFirst from './GrowingFirst'
 
 

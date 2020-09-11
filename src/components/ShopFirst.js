@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useStaticQuery } from 'gatsby';
-import './Herofront.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

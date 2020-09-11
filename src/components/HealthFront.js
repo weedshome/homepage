@@ -1,5 +1,4 @@
 import React from 'react'
-import './Herofront.css'
 import HealthFirst from './HealthFirst'
 import styled from "styled-components"
 

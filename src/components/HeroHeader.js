@@ -1,5 +1,4 @@
 import React from 'react'
-import './Herofront.css'
 import HeroHeaderFirst from './HeroHeaderFirst'
 
 

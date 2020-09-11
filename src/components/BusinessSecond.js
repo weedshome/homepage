@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
-import './Herofront.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

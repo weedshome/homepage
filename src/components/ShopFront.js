@@ -1,5 +1,4 @@
 import React from 'react'
-import './Herofront.css'
 import ShopFirst from './ShopFirst'
 import ShopFrontTwo from './ShopFrontTwo'
 
