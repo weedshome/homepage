@@ -21,7 +21,6 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <main>{children}</main>
       <BeforeFooter />
       <CookieConsent
         location="bottom"
