@@ -8,8 +8,6 @@ import BusinessFifth from '../components/BusinessFifth'
 
 
 const IndexPage = ({ data }) => {
-  const { allMdx: { nodes: posts } } = data
-  const { allAirtable: { nodes: strains } } = data
   return (
     <Layout>
       <SEO title="Home" />
@@ -41,25 +39,6 @@ export const query = graphql`
           }
         }
         id
-      }
-    }
-    allAirtable(filter: {table: {eq: "Strains"}}, limit: 3, sort: {fields: data___date, order: DESC}) {
-      nodes {
-        id
-        data {
-          date
-          name
-          type
-          image {
-            localFiles {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
       }
     }
   }
