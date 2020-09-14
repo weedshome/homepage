@@ -15,6 +15,7 @@ import CookieConsent from 'react-cookie-consent';
 const Layout = ({ children }) => {
   return (
     <>
+      <Navbar />
       <main>{children}</main>
       <BeforeFooter />
       <CookieConsent
