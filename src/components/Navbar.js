@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../assets/logo.png'
 import Links from '../constants/links'
-import Hamburger from './Hamburger'
+import SocialLinks from '../constants/socialLinks'
 
 const Navbar = ({ }) => {
   return <nav className="navbar">
@@ -13,7 +13,7 @@ const Navbar = ({ }) => {
         </Link>
       </div>
       <Links styleClass="nav-links" />
-      <Hamburger pageWrapId={"page-wrap"} outerContainerId={"App"} />
+      <SocialLinks styleClass="nav-icons"></SocialLinks>
     </div>
   </nav>
 }
