@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { TiArrowSortedDown } from 'react-icons/ti'
 
 
-const Links = ({ styleClass, children }) => {
+const Links = ({ styleClass }) => {
   return (
     <ul className={styleClass}>
       <li>
