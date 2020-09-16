@@ -9,6 +9,7 @@ import { GoSettings } from 'react-icons/go'
 import ReactStars from "react-stars";
 import SearchComp from '../components/search/searchComp'
 import 'instantsearch.css/themes/algolia.css';
+import StrainSlider from "../components/StrainSlider"
 
 const Strains = ({ data }) => {
   const {

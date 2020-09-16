@@ -3,7 +3,7 @@ import SocialLinks from '../constants/socialLinks'
 const Footer = () => {
   return <footer className="footer">
 
-    <div>
+    <div className="footer-align">
       <SocialLinks styleClass="footer-icons" />
       <p className="footer-copyright">
         &copy;{new Date().getFullYear()} Weed's Home. All rights reserved

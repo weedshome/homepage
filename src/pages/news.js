@@ -91,7 +91,6 @@ const Wrapper = styled.article`
     border-radius: 4px;
     font-family: optima;
 }
-  margin-bottom: 1rem;
   .info {
     text-align: left;
     padding-bottom: 0.5rem !important;

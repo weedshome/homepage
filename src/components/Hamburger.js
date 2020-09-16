@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { slide as Menu } from 'react-burger-menu'
 import styled from '@emotion/styled'
 import SocialLinks from '../constants/socialLinks'
-import logo from '../assets/logo.png'
+import menu from '../assets/menu.svg'
 
 
 
@@ -19,7 +19,7 @@ export default () => {
     <>
       <TopNav className="sticky-top">
         <SideMenu>
-          <Menu isOpen={menuState.menuOpen}>
+          <Menu customBurgerIcon={<img src={menu} />} isOpen={menuState.menuOpen}>
             <h3 className="menu-header">Featured Categories</h3>
             <Link className="menu-item8" to="/" onClick={() => closeMenu()}>
               Home

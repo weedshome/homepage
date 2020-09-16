@@ -77,7 +77,7 @@ const Wrapper = styled.div`
   .newsletter-inside { grid-area: newsletter-inside; }
   
   .newsletter-terms {
-    padding-top: 20px;
+    padding: 20px;
   }
   
   .newsletter-title {

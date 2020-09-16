@@ -14,7 +14,7 @@ class StrainSlider extends Component {
             dots: true,
             infinite: false,
             speed: 500,
-            slidesToShow: 4,
+            slidesToShow: 1,
             slidesToScroll: 4,
             initialSlide: 0,
             responsive: [
@@ -51,16 +51,16 @@ class StrainSlider extends Component {
                     <h2 class="slider-title"> Strain Image Gallery </h2>
                     <Slider {...settings}>
                         <div className="inside-image">
-                            <div><TrendingNews /></div>
+                            <div>1</div>
                         </div>
                         <div className="inside-image">
-                            <div><TrendingNews /></div>
+                            <div>2</div>
                         </div>
                         <div className="inside-image">
-                            <div><TrendingNews /></div>
+                            <div>3</div>
                         </div>
                         <div className="inside-image">
-                            <div><TrendingNews /></div>
+                            <div>4</div>
                         </div>
                         <div className="inside-image">
                             <h3>5</h3>

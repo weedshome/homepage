@@ -58,7 +58,6 @@ const Howto = ({ data }) => {
 }
 
 const Wrapper = styled.article`
-  margin-bottom: 1rem;
   .post-card-figure {
     position: relative;
     display: block;
