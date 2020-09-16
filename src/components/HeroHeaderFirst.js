@@ -27,7 +27,6 @@ const HeroHeaderFirst = ({ }) => {
 
             <div class="grid-container-business">
                 <div class="k-1">
-                    <div class="above-heading">We Guide You </div>
                     <div class="k-title">
                         <h2 className="business-title">Learn more about the plant</h2>
                     </div>

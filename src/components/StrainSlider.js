@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components'
 import { graphql } from "gatsby"
 import Image from 'gatsby-image';
+import TrendingCanada from './NewsBanner/TrendingCanada';
+import TrendingNews from './NewsBanner/TrendingNews';
 
 class StrainSlider extends Component {
     render() {
@@ -49,16 +51,16 @@ class StrainSlider extends Component {
                     <h2 class="slider-title"> Strain Image Gallery </h2>
                     <Slider {...settings}>
                         <div className="inside-image">
-                            <h3>1</h3>
+                            <div><TrendingNews /></div>
                         </div>
                         <div className="inside-image">
-                            <h3>2</h3>
+                            <div><TrendingNews /></div>
                         </div>
                         <div className="inside-image">
-                            <h3>3</h3>
+                            <div><TrendingNews /></div>
                         </div>
                         <div className="inside-image">
-                            <h3>4</h3>
+                            <div><TrendingNews /></div>
                         </div>
                         <div className="inside-image">
                             <h3>5</h3>
@@ -111,7 +113,6 @@ const Wrapper = styled.section`
         .inside-image {
             height: 150px;
             padding: 3px;
-            background: #6e9654;
         }
         .inside-image {
             width: 98% !important;

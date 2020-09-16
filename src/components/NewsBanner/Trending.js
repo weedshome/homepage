@@ -13,6 +13,7 @@ const query = graphql`
         slug
         date
         author
+        category
         image {
           fluid {
           ...GatsbyContentfulFluid
@@ -26,41 +27,75 @@ const query = graphql`
   }
 `
 const Trending = () => {
-    const data = useStaticQuery(query)
-    const { allContentfulNews: { nodes: products }, } = data
-    return (
-        <Wrapper>
-            <Title title="Latest News" />
-            {products.map(product => {
-                return (
-                    <article key={product.id}>
-                        <Link className="link" to={`/news/${product.slug}`}>
-                            <div className="d">
-                                <Image fluid={product.image.fluid} alt={product.title}></Image>
-                                <div className="info">
-                                    <h3>{product.title}</h3>
-                                    <div className="article-info">
-                                        <p className="author-text">{product.author}</p>
-                                        <p className="author-text2">{product.date}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </article>
-                )
-            })}
-        </Wrapper>
-    )
+  const data = useStaticQuery(query)
+  const { allContentfulNews: { nodes: products }, } = data
+  return (
+    <Wrapper>
+      <Title title="Latest News" />
+      {products.map(product => {
+        return (
+          <article key={product.id}>
+            <Link className="link" to={`/news/${product.slug}`}>
+              <div className="d">
+                <figure className="post-card-figure">
+                  <Image fluid={product.image.fluid} alt={product.title}></Image>
+                  <span class="post-card-badge">{product.category}</span>
+                </figure>
+                <div className="info">
+                  <h3 className="trending-sidebar-title">{product.title}</h3>
+                  <div className="article-info">
+                    <p className="author-text">{product.author}</p>
+                    <p className="author-text2">{product.date}</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </article>
+        )
+      })}
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`
+.trending-sidebar-title {
+  font-size: 0.75rem !important;
+  line-height: 16px;
+  color: #102a42;
+}
+.post-card-figure {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background-color: #f6f7f8;
+}
+
+.post-card-badge {
+  position: absolute;
+    bottom: 16px;
+    right: 12px;
+    display: block;
+    padding: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .575rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap;
+    color: #ffffff;
+    background-color: #6e9654;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
+    border-radius: 4px;
+    font-family: optima;
+}
   text-align: center;
   h3 {
     font-size: 0.9rem !important;
     font-weight: 400;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: poppins;
+    font-family: optima;
     line-height: 24px;
   }
   p {
@@ -79,10 +114,8 @@ const Wrapper = styled.div`
   display: flex;
  }
  .d {
-    padding-bottom: 1rem;
     display: block !important;
     border-right: 0px !important;
-    border-bottom: 3px solid #6f9654;
 }
 .author-text {
   margin-right: auto;

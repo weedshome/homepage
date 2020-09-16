@@ -5,7 +5,7 @@ const Footer = () => {
 
     <div>
       <SocialLinks styleClass="footer-icons" />
-      <p>
+      <p className="footer-copyright">
         &copy;{new Date().getFullYear()} Weed's Home. All rights reserved
       </p>
     </div>

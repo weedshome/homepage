@@ -17,8 +17,9 @@ const query = graphql`
         slug
         date
         author
+        category
         image {
-        fixed(width: 280, height: 130) {
+        fixed(width: 290, height: 130) {
           ...GatsbyContentfulFixed
           }
         }
@@ -48,7 +49,10 @@ const TrendingHowto = () => {
               <Link className="link" to={`/growing/${product.slug}`}>
                 <div className="d">
                   <div className="grid">
-                    <Image fixed={product.image.fixed} alt={product.title}></Image>
+                    <figure className="post-card-figure">
+                      <Image fixed={product.image.fixed} alt={product.title}></Image>
+                      <span class="post-card-badge">{product.category}</span>
+                    </figure>
                     <div className="info">
                       <h3>{product.title}</h3>
                       <p className="readmore">{product.excerpt.excerpt}</p>
@@ -78,10 +82,36 @@ column-gap: 20px;
 @media screen and (max-width: 768px) {
   grid-auto-flow: row !important;
 }
+.post-card-figure {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 130px;
+  margin: 0;
+  background-color: #f6f7f8;
+}
+
+.post-card-badge {
+  position: absolute;
+    top: 16px;
+    left: 12px;
+    display: block;
+    padding: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .675rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap;
+    color: #ffffff;
+    background-color: #6e9654;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
+    border-radius: 4px;
+    font-family: optima;
+}
   h3 {
     font-weight: 600;
     text-transform: initial;
-    font-family: poppins;
+    font-family: optima;
     line-height: 20px;
     font-size: 0.9rem;
     color: #102a42;
@@ -90,7 +120,7 @@ column-gap: 20px;
     color: var(--clr-grey-5);
     line-height: 1.8;
     font-size: 12px;
-    font-family: poppins;
+    font-family: optima;
     text-transform: none;
   }
   .img {
@@ -102,6 +132,7 @@ column-gap: 20px;
     border: none !important;
     padding: 10px;
     padding-bottom: 0px !important;
+    background: #ffffff;
  }
  .article-info {
   align-items: center;
@@ -109,8 +140,7 @@ column-gap: 20px;
  }
  .d {
     box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
-    border-right: solid 4px #102a42 !important;
-    background-color: #f3f7fd;
+    background-color: #ffffff;
 }
 .author-text {
   margin-bottom: 0.5rem !important;

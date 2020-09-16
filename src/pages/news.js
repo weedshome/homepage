@@ -16,62 +16,81 @@ import TrendingCanada from "../components/NewsBanner/TrendingCanada"
 import TrendingEurope from "../components/NewsBanner/TrendingEurope"
 import Breaking from "../components/NewsBanner/Breaking"
 import BreakingSide from "../components/NewsBanner/BreakingSide"
+import StrainSlider from "../components/StrainSlider"
 
 const News = ({ data }) => {
-    const {
-        allContentfulNews: { nodes: products },
-    } = data
+  const {
+    allContentfulNews: { nodes: products },
+  } = data
 
-    return (
-        <Wrapper>
-            <Layout>
-                <div className="breaking-news">
-                    <div className="news-grid-section2">
-                        <Breaking />
-                        <BreakingSide />
-                    </div>
-                </div>
-                <TrendingNews />
-                <div className="news-grid-section">
-                    <TrendingEurope />
-                    <TrendingUSA />
-                    <TrendingCanada />
-                </div>
-                <section className="posts">
-                    <h3 class="posts-title-products">recently published</h3>
-                    <div className="posts-center-grid">
-                        <div className="product-grid-strains">
-                            {products.map(product => {
-                                return (
-                                    <article key={product.id}>
-                                        <Link className="link" to={`/news/${product.slug}`}>
-                                            <div className="d">
-                                                <Image fixed={product.image.fixed} alt={product.title}></Image>
-                                                <div className="info">
-                                                    <h3 className="title-news">{product.title}</h3>
-                                                    <p className="readmore">{product.excerpt.excerpt}</p>
-                                                    <div className="article-info">
-                                                        <p className="author-text">{product.author}</p>
-                                                        <p className="author-text2">{product.date}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Link>
-                                    </article>
-                                )
-                            })}
+  return (
+    <Wrapper>
+      <Layout>
+        <div className="breaking-news">
+          <div className="news-grid-section2">
+            <Breaking />
+            <BreakingSide />
+          </div>
+        </div>
+        <TrendingNews />
+        <div className="news-grid-section">
+          <TrendingEurope />
+          <TrendingUSA />
+          <TrendingCanada />
+        </div>
+        <section className="posts">
+          <h3 class="posts-title-products">recently published</h3>
+          <div className="posts-center-grid">
+            <div className="product-grid-strains">
+              {products.map(product => {
+                return (
+                  <article key={product.id}>
+                    <Link className="link" to={`/news/${product.slug}`}>
+                      <div className="d">
+                        <Image fixed={product.image.fixed} alt={product.title}></Image>
+                        <div className="info">
+                          <h3 className="title-news">{product.title}</h3>
+                          <span class="post-card-badge">{product.category}</span>
+                          <p className="readmore">{product.excerpt.excerpt}</p>
+                          <div className="article-info">
+                            <p className="author-text">{product.author}</p>
+                            <p className="author-text2">{product.date}</p>
+                          </div>
                         </div>
-                        <article>
-                            <NewsBanner />
-                        </article>
-                    </div>
-                </section>
-            </Layout>
-        </Wrapper>
-    )
+                      </div>
+                    </Link>
+                  </article>
+                )
+              })}
+            </div>
+            <article>
+              <NewsBanner />
+            </article>
+          </div>
+        </section>
+      </Layout>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.article`
+.post-card-badge {
+  width: fit-content;
+    bottom: 16px;
+    right: 12px;
+    display: block;
+    padding: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .575rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap;
+    color: #ffffff;
+    background-color: #6e9654;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
+    border-radius: 4px;
+    font-family: optima;
+}
   margin-bottom: 1rem;
   .info {
     text-align: left;
@@ -115,7 +134,7 @@ const Wrapper = styled.article`
     font-weight: 400;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: poppins;
+    font-family: optima;
     line-height: 24px;
   }
   .underline {
@@ -132,7 +151,7 @@ const Wrapper = styled.article`
     color: var(--clr-grey-5);
     line-height: 1.8;
     font-size: 12px;
-    font-family: poppins;
+    font-family: optima;
     text-transform: none;
   }
   .link {
@@ -280,6 +299,11 @@ const Wrapper = styled.article`
     overflow: hidden;
     text-overflow: ellipsis;
 }
+p.readmore {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+}
 .title-news {
     font-size: .9rem;
     color: #102a42;
@@ -333,8 +357,9 @@ export const query = graphql`
         slug
         date
         author
+        category
         image {
-          fixed(width: 150, height: 150) {
+          fixed(width: 150, height: 160) {
           ...GatsbyContentfulFixed
           }
         }

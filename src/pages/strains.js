@@ -70,7 +70,7 @@ const Wrapper = styled.article`
     font-weight: 600;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: poppins;
+    font-family: optima;
     font-size: 0.8rem !important;
   }
   .underline {
@@ -92,7 +92,7 @@ const Wrapper = styled.article`
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-    font-family: poppins;
+    font-family: optima;
     letter-spacing: var(--spacing);
     color: rgb(37,41,53);
     font-weight: 400;
@@ -130,7 +130,7 @@ const Wrapper = styled.article`
     margin-bottom: 0.5rem;
   }
   .product-rating {
-    font-family: poppins;
+    font-family: optima;
     letter-spacing: var(--spacing);
     padding-right: 23px;
     font-size: 13px;
@@ -222,7 +222,7 @@ const Wrapper = styled.article`
   .posts-text-strains {
     padding: 20px;
     padding-top: 10px;
-    font-family: poppins;
+    font-family: optima;
   }
 `
 

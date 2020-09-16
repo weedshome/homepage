@@ -19,8 +19,6 @@ const Growing = ({ data }) => {
   return (
     <Wrapper>
       <Layout>
-        <GrowingFront />
-        <TrendingHowto />
         <section className="posts">
           <h3 class="posts-title-products">recently published</h3>
           <div className="posts-center-grid">
@@ -30,7 +28,10 @@ const Growing = ({ data }) => {
                   <article key={growing.id}>
                     <Link className="link" to={`/growing/${growing.slug}`}>
                       <div className="d">
-                        <Image fixed={growing.image.fixed} alt={growing.title}></Image>
+                        <figure className="post-card-figure">
+                          <Image fixed={growing.image.fixed} alt={growing.title}></Image>
+                          <span class="post-card-badge">{growing.category}</span>
+                        </figure>
                         <div className="info">
                           <h3>{growing.title}</h3>
                           <p className="readmore">{growing.info.info}</p>
@@ -57,6 +58,33 @@ const Growing = ({ data }) => {
 
 const Wrapper = styled.article`
   margin-bottom: 1rem;
+  .post-card-figure {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: #f6f7f8;
+    display: grid;
+  }
+  
+  .post-card-badge {
+    position: absolute;
+      top: 16px;
+      left: 12px;
+      display: block;
+      padding: 4px;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: .575rem !important;
+      font-weight: 500 !important;
+      white-space: nowrap;
+      color: #ffffff;
+      background-color: #6e9654;
+      box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
+      border-radius: 4px;
+      font-family: optima;
+  }
   article {
     margin-bottom: 1rem;
 }
@@ -65,6 +93,7 @@ const Wrapper = styled.article`
     padding-bottom: 0.5rem !important;
     border: none !important;
     padding: 10px;
+    background: #ffffff !important;
   }
   .posts-title-products {
     text-transform: uppercase;
@@ -100,7 +129,7 @@ const Wrapper = styled.article`
     font-weight: 400;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: poppins;
+    font-family: optima;
     line-height: 24px;
   }
   .underline {
@@ -112,12 +141,13 @@ const Wrapper = styled.article`
   }
   h3 {
     font-size: 1.1rem;
+    color: #102a42;
   }
   p {
     color: var(--clr-grey-5);
     line-height: 1.8;
     font-size: 12px;
-    font-family: poppins;
+    font-family: optima;
     text-transform: none;
   }
   .link {
@@ -245,8 +275,6 @@ const Wrapper = styled.article`
   }
   .d {
     box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
-    border-radius: 1rem;
-    border-bottom: solid 4px !important;
     background-color: #f8f8f8;
   }
   .article-info {
@@ -257,11 +285,8 @@ const Wrapper = styled.article`
     display: grid;
     grid-template-columns: 1fr 250px;
     column-gap: 1rem;
+    padding-top: 5rem;
   }
-  .gatsby-image-wrapper {
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-}
 .readmore {
   width: 250px;
     white-space: nowrap;
@@ -280,6 +305,7 @@ export const query = graphql`
         slug
         date
         author
+        category
         image {
           fixed(width: 300, height: 200) {
           ...GatsbyContentfulFixed

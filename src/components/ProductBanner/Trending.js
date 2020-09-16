@@ -63,7 +63,7 @@ const Wrapper = styled.div`
     font-weight: 400;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: poppins;
+    font-family: optima;
     line-height: 24px;
   }
   p {
@@ -82,7 +82,6 @@ const Wrapper = styled.div`
   display: flex;
  }
  .d {
-    padding-bottom: 1rem;
     display: block !important;
     border-right: 0px !important;
 }

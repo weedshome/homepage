@@ -9,46 +9,46 @@ import BlogFront from "../components/BlogFront"
 
 
 const Blog = ({ data }) => {
-    const {
-        allContentfulArticle: { nodes: articles },
-    } = data
+  const {
+    allContentfulArticle: { nodes: articles },
+  } = data
 
-    return (
-        <Wrapper>
-            <Layout>
-                <BlogFront />
-                <section className="posts">
-                    <h3 class="posts-title-products">recently published</h3>
-                    <div className="posts-center-grid">
-                        <div className="product-grid-strains">
-                            {articles.map(article => {
-                                return (
-                                    <article key={article.id}>
-                                        <Link className="link" to={`/blog/${article.slug}`}>
-                                            <div className="d">
-                                                <Image fixed={article.image.fixed} alt={article.title}></Image>
-                                                <div className="info">
-                                                    <h3>{article.title}</h3>
-                                                    <p>{article.excerpt.excerpt}</p>
-                                                    <div className="article-info">
-                                                        <p className="author-text">{article.author}</p>
-                                                        <p className="author-text2">{article.date}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Link>
-                                    </article>
-                                )
-                            })}
+  return (
+    <Wrapper>
+      <Layout>
+        <BlogFront />
+        <section className="posts">
+          <h3 class="posts-title-products">recently published</h3>
+          <div className="posts-center-grid">
+            <div className="product-grid-strains">
+              {articles.map(article => {
+                return (
+                  <article key={article.id}>
+                    <Link className="link" to={`/blog/${article.slug}`}>
+                      <div className="d">
+                        <Image fixed={article.image.fixed} alt={article.title}></Image>
+                        <div className="info">
+                          <h3>{article.title}</h3>
+                          <p>{article.excerpt.excerpt}</p>
+                          <div className="article-info">
+                            <p className="author-text">{article.author}</p>
+                            <p className="author-text2">{article.date}</p>
+                          </div>
                         </div>
-                        <article>
-                            <ProductBanner />
-                        </article>
-                    </div>
-                </section>
-            </Layout>
-        </Wrapper>
-    )
+                      </div>
+                    </Link>
+                  </article>
+                )
+              })}
+            </div>
+            <article>
+              <ProductBanner />
+            </article>
+          </div>
+        </section>
+      </Layout>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.article`
@@ -86,7 +86,7 @@ const Wrapper = styled.article`
     font-weight: 400;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: poppins;
+    font-family: optima;
     line-height: 24px;
   }
   .underline {
@@ -112,7 +112,7 @@ const Wrapper = styled.article`
     color: var(--clr-grey-5);
     line-height: 1.8;
     font-size: 12px;
-    font-family: poppins;
+    font-family: optima;
     text-transform: none;
   }
   .link {

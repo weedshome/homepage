@@ -27,7 +27,7 @@ const Newsletter = ({ }) => {
                                     <input type="email" name="email" placeholder="Your email" className="form-control" />
                                     <button type="submit" className="btn form-control submit-btn"> subscribe</button>
                                 </form>
-                                <h4 className="newsletter-terms">I've read and agree to Weed's Home written <a href="/">Privacy Policy</a> and <a href="/">Terms Conditions.</a></h4>
+                                <p className="newsletter-terms">I've read and agree to Weed's Home written <a href="/">Privacy Policy</a> and <a href="/">Terms Conditions.</a></p>
                             </div>
                         </section>
 

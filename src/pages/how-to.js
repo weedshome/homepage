@@ -9,53 +9,83 @@ import { IoMdArrowRoundForward } from 'react-icons/io'
 import ReactStars from "react-stars";
 import GrowingFront from "../components/GrowingFront"
 import TrendingThree from "../components/HomeBanner/TrendingThree"
+import HowtoBanner from "../components/HowtoBanner"
 
 
 const Howto = ({ data }) => {
-    const {
-        allContentfulHowto: { nodes: products },
-    } = data
+  const {
+    allContentfulHowto: { nodes: products },
+  } = data
 
-    return (
-        <Wrapper>
-            <Layout>
-                <GrowingFront />
-                <section className="posts">
-                    <h3 class="posts-title-products">recently published</h3>
-                    <div className="posts-center-grid">
-                        <div className="product-grid-strains">
-                            {products.map(product => {
-                                return (
-                                    <article key={product.id}>
-                                        <Link className="link" to={`/howto/${product.slug}`}>
-                                            <div className="d">
-                                                <div className="info">
-                                                    <h3>{product.title}</h3>
-                                                    <div className="article-info">
-                                                        <p className="author-text">{product.author}</p>
-                                                        <p className="author-text2">{product.date}</p>
-                                                    </div>
-                                                    <p className="readmore">{product.excerpt.excerpt}</p>
-                                                </div>
-                                                <Image fixed={product.image.fixed} alt={product.title}></Image>
-                                            </div>
-                                        </Link>
-                                    </article>
-                                )
-                            })}
+  return (
+    <Wrapper>
+      <Layout>
+        <section className="posts">
+          <h3 class="posts-title-products">recently published</h3>
+          <div className="posts-center-grid">
+            <div className="product-grid-strains">
+              {products.map(product => {
+                return (
+                  <article key={product.id}>
+                    <Link className="link" to={`/howto/${product.slug}`}>
+                      <div className="d">
+                        <div className="info">
+                          <h3>{product.title}</h3>
+                          <div className="article-info">
+                            <p className="author-text">{product.author}</p>
+                            <p className="author-text2">{product.date}</p>
+                          </div>
+                          <p className="readmore">{product.excerpt.excerpt}</p>
                         </div>
-                        <article>
-                            <ProductBanner />
-                        </article>
-                    </div>
-                </section>
-            </Layout>
-        </Wrapper>
-    )
+                        <figure className="post-card-figure">
+                          <Image fixed={product.image.fixed} alt={product.title}></Image>
+                          <span class="post-card-badge">{product.category}</span>
+                        </figure>
+                      </div>
+                    </Link>
+                  </article>
+                )
+              })}
+            </div>
+            <article>
+              <HowtoBanner />
+            </article>
+          </div>
+        </section>
+      </Layout>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.article`
   margin-bottom: 1rem;
+  .post-card-figure {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: #f6f7f8;
+    display: grid;
+  }
+  
+  .post-card-badge {
+    position: absolute;
+      bottom: 16px;
+      right: 12px;
+      display: block;
+      padding: 4px;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: .575rem !important;
+      font-weight: 500 !important;
+      white-space: nowrap;
+      color: #ffffff;
+      background-color: #6e9654;
+      box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
+      border-radius: 4px;
+      font-family: optima;
+  }
   article {
     margin-bottom: 1rem;
 }
@@ -103,7 +133,7 @@ const Wrapper = styled.article`
     font-weight: 400;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: poppins;
+    font-family: optima;
     line-height: 24px;
   }
   .underline {
@@ -115,12 +145,13 @@ const Wrapper = styled.article`
   }
   h3 {
     font-size: 1.1rem;
+    color: #102a42;
   }
   p {
     color: var(--clr-grey-5);
     line-height: 1.8;
     font-size: 12px;
-    font-family: poppins;
+    font-family: optima;
     text-transform: none;
   }
   .link {
@@ -249,7 +280,7 @@ const Wrapper = styled.article`
   .d {
     box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
     background-color: #ffffff;
-    grid-template-columns: 1fr 370px;
+    grid-template-columns: 534px 370px;
     display: grid;
   }
   .article-info {
@@ -258,11 +289,11 @@ const Wrapper = styled.article`
   }
   .posts-center-grid {
     display: grid;
-    grid-template-columns: 1fr 370px;
+    grid-template-columns: 1fr 250px;
     column-gap: 1rem;
+    padding-top: 5rem;
   }
 .readmore {
-  width: 250px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -279,6 +310,7 @@ export const query = graphql`
         slug
         date
         author
+        category
         image {
           fixed(width: 370, height: 200) {
           ...GatsbyContentfulFixed

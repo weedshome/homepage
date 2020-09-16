@@ -2,15 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import Trending from './Trending'
 import About from './About'
-import Newsletter from './Newsletter'
 
-const NewsBanner = () => {
-  return (
-    <Wrapper>
-      <Newsletter />
-      <Trending />
-    </Wrapper>
-  )
+const HowtoBanner = () => {
+    return (
+        <Wrapper>
+            <About />
+            <Trending />
+        </Wrapper>
+    )
 }
 
 
@@ -28,4 +27,4 @@ const Wrapper = styled.aside`
   }
 `
 
-export default NewsBanner
+export default HowtoBanner

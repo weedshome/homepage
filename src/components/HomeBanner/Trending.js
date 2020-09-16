@@ -32,36 +32,36 @@ const query = graphql`
   }
 `
 const Trending = () => {
-    useEffect(() => {
-        AOS.init({ duration: 2000 });
-    }, [])
-    const data = useStaticQuery(query)
-    const { allContentfulGrowing: { nodes: products }, } = data
-    return (
-        <section className="posts" data-aos="fade-left">
-            <Wrapper>
-                {products.map(product => {
-                    return (
-                        <article key={product.id}>
-                            <Link className="link" to={`/growing/${product.slug}`}>
-                                <div className="d">
-                                    <Image fixed={product.image.fixed} alt={product.title}></Image>
-                                    <div className="info">
-                                        <h3>{product.title}</h3>
-                                        <p className="readmore">{product.info.info}</p>
-                                        <div className="article-info">
-                                            <p className="author-text">{product.author}</p>
-                                            <p className="author-text2"><MdUpdate />{product.date}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Link>
-                        </article>
-                    )
-                })}
-            </Wrapper>
-        </section>
-    )
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, [])
+  const data = useStaticQuery(query)
+  const { allContentfulGrowing: { nodes: products }, } = data
+  return (
+    <section className="posts" data-aos="fade-left">
+      <Wrapper>
+        {products.map(product => {
+          return (
+            <article key={product.id}>
+              <Link className="link" to={`/growing/${product.slug}`}>
+                <div className="d">
+                  <Image fixed={product.image.fixed} alt={product.title}></Image>
+                  <div className="info">
+                    <h3>{product.title}</h3>
+                    <p className="readmore">{product.info.info}</p>
+                    <div className="article-info">
+                      <p className="author-text">{product.author}</p>
+                      <p className="author-text2"><MdUpdate />{product.date}</p>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </article>
+          )
+        })}
+      </Wrapper>
+    </section>
+  )
 }
 
 const Wrapper = styled.div`
@@ -78,7 +78,7 @@ margin-left: auto;
     font-weight: 600;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: poppins;
+    font-family: optima;
     line-height: 24px;
     font-size: 0.9rem;
   }
@@ -86,7 +86,7 @@ margin-left: auto;
     color: var(--clr-grey-5);
     line-height: 1.8;
     font-size: 12px;
-    font-family: poppins;
+    font-family: optima;
     text-transform: none;
   }
   .img {

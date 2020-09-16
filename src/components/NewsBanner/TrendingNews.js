@@ -13,7 +13,7 @@ const query = graphql`
         date
         author
         image {
-          fixed(width: 100, height: 100) {
+          fixed(width: 100, height: 130) {
           ...GatsbyContentfulFixed
           }
         }
@@ -25,30 +25,31 @@ const query = graphql`
   }
 `
 const TrendingNews = () => {
-    const data = useStaticQuery(query)
-    const { allContentfulNews: { nodes: products }, } = data
-    return (
-        <Wrapper>
-            <h3 className="posts-title-products">World</h3>
-            <div className="world-news">
-                {products.map(product => {
-                    return (
-                        <article key={product.id}>
-                            <Link className="link" to={`/news/${product.slug}`}>
-                                <div className="d">
-                                    <Image fixed={product.image.fixed} alt={product.title}></Image>
-                                    <div className="info">
-                                        <h3>{product.title}</h3>
-                                        <p className="readmore">{product.excerpt.excerpt}</p>
-                                    </div>
-                                </div>
-                            </Link>
-                        </article>
-                    )
-                })}
-            </div>
-        </Wrapper>
-    )
+  const data = useStaticQuery(query)
+  const { allContentfulNews: { nodes: products }, } = data
+  return (
+    <Wrapper>
+      <h3 className="posts-title-products">World</h3>
+      <div className="world-news">
+        {products.map(product => {
+          return (
+            <article key={product.id}>
+              <Link className="link" to={`/news/${product.slug}`}>
+                <div className="d">
+                  <Image fixed={product.image.fixed} alt={product.title}></Image>
+                  <div className="info">
+                    <h3>{product.title}</h3>
+                    <span class="post-card-badge"> World </span>
+                    <p className="readmore">{product.excerpt.excerpt}</p>
+                  </div>
+                </div>
+              </Link>
+            </article>
+          )
+        })}
+      </div>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`
@@ -66,10 +67,27 @@ display: grid;
     column-gap: 1rem;
     text-align: center;
 }
+.post-card-badge {
+  width: fit-content;
+    bottom: 16px;
+    right: 12px;
+    display: block;
+    padding: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .575rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap;
+    color: #ffffff;
+    background-color: #6e9654;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
+    border-radius: 4px;
+    font-family: optima;
+}
   h3 {
     font-weight: 400 !important;
     text-transform: initial;
-    font-family: poppins;
+    font-family: optima;
     line-height: 16px !important;
     font-size: 0.8rem !important;
     color: #102a42;
@@ -104,7 +122,7 @@ display: grid;
     font-weight: 500 !important;
     letter-spacing: var(--spacing);
     font-size: 18px !important;
-    font-family: Poppins;
+    font-family: optima;
     max-width: var(--max-width);
     margin: 0 auto;
   }

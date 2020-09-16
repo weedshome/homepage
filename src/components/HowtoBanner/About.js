@@ -18,15 +18,15 @@ const query = graphql`
 `
 
 const About = () => {
-  const data = useStaticQuery(query)
-  return (
-    <Wrapper>
-      <Title title="News" />
-      <Image fixed={data.person.childImageSharp.fixed} className="img" />
-      <p>Discover our latest News and education content.</p>
-      <SocialLinks styleClass="banner-icons" />
-    </Wrapper>
-  )
+    const data = useStaticQuery(query)
+    return (
+        <Wrapper>
+            <Title title="How To's" />
+            <Image fixed={data.person.childImageSharp.fixed} className="img" />
+            <p>Discover the latest how to trends.</p>
+            <SocialLinks styleClass="banner-icons" />
+        </Wrapper>
+    )
 }
 
 const Wrapper = styled.div`

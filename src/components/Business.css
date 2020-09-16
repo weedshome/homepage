@@ -32,7 +32,7 @@
     color: hsl(209deg 61% 16%);
     line-height: 1.8;
     font-size: 12px;
-    font-family: poppins;
+    font-family: optima;
     text-transform: none;
 }
 
@@ -140,7 +140,7 @@ p.third-para {
   color: hsl(209deg 61% 16%);
   line-height: 1.8;
   font-size: 12px;
-  font-family: poppins;
+  font-family: optima;
   text-transform: none;
   border-radius: var(--radius);
 }
@@ -148,14 +148,14 @@ p.third-para {
 p.third-para2 {
   color: hsl(209deg 61% 16%);
   font-size: 12px;
-  font-family: poppins;
+  font-family: optima;
   letter-spacing: var(--spacing);
 }
 
 li.third-space {
   color: hsl(209deg 61% 16%);
   font-size: 12px;
-  font-family: poppins;
+  font-family: optima;
   letter-spacing: var(--spacing);
 }
   
@@ -262,41 +262,4 @@ li.third-space {
   -o-transform: translate(3em,0);
   -ms-transform: translate(3em,0);
   transform: translate(3em,0);
-}
-
-
-
-
-.grid-container-newsletter {
-  display: grid;
-  grid-template-columns: ;
-  grid-template-rows: ;
-  gap: 1px 1px;
-  grid-template-areas: "newsletter";
-  place-items: center;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-
-.newsletter {
-  display: grid;
-  grid-template-columns: ;
-  grid-template-rows: ;
-  gap: 1px 1px;
-  grid-template-areas: "newsletter-inside";
-  grid-area: newsletter;
-}
-
-.newsletter-inside { grid-area: newsletter-inside; }
-
-.newsletter-terms {
-  padding-top: 20px;
-}
-
-.newsletter-title {
-  margin-bottom: 2.75rem !important;
 }

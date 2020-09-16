@@ -27,7 +27,6 @@ const BusinessFifth = ({ }) => {
         <section data-aos="flip-left">
             <div className="section-third">
                 <div className="hero-info-2">
-                    <div className="above-heading">DESCRIPTION</div>
                     <h2 className="h2-heading">Marketing Automation</h2>
                     <p className="third-para">Take your business strategy to the next level and automatize your marketing tasks to save time for product development. Tivo can provide results in less than 2 weeks</p>
                 </div>

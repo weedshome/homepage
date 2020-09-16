@@ -7,55 +7,82 @@ import Layout from "../components/Layout"
 import ProductBanner from "../components/ProductBanner"
 import ReactStars from "react-stars";
 import GrowingFront from "../components/GrowingFront"
-import LifestyleFront from "../components/LifestyleFront"
 import LifestyleBanner from "../components/LifestyleBanner"
 import { GoSettings } from 'react-icons/go'
 
 
 const Lifestyle = ({ data }) => {
-    const {
-        allContentfulLifestyle: { nodes: products },
-    } = data
+  const {
+    allContentfulLifestyle: { nodes: products },
+  } = data
 
-    return (
-        <Wrapper>
-            <Layout>
-                <LifestyleFront />
-                <section className="posts">
-                    <div className="posts-center-grid">
-                        <div className="product-grid-strains">
-                            {products.map(product => {
-                                return (
-                                    <article key={product.id}>
-                                        <Link className="link" to={`/lifestyle/${product.slug}`}>
-                                            <div className="d">
-                                                <Image fixed={product.image.fixed} alt={product.title}></Image>
-                                                <div className="info">
-                                                    <h3 className="title">{product.title}</h3>
-                                                    <p className="readmore">{product.excerpt.excerpt}</p>
-                                                    <div className="article-info">
-                                                        <p className="author-text">{product.author}</p>
-                                                        <p className="author-text2">{product.date}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Link>
-                                    </article>
-                                )
-                            })}
+  return (
+    <Wrapper>
+      <Layout>
+        <section className="posts">
+          <div className="posts-center-grid">
+            <div className="product-grid-strains">
+              {products.map(product => {
+                return (
+                  <article key={product.id}>
+                    <Link className="link" to={`/lifestyle/${product.slug}`}>
+                      <div className="d">
+                        <figure className="post-card-figure">
+                          <Image fixed={product.image.fixed} alt={product.title}></Image>
+                          <span class="post-card-badge">{product.category}</span>
+                        </figure>
+                        <div className="info">
+                          <h3 className="title">{product.title}</h3>
+                          <p className="readmore">{product.excerpt.excerpt}</p>
+                          <div className="article-info">
+                            <p className="author-text">{product.author}</p>
+                            <p className="author-text2">{product.date}</p>
+                          </div>
                         </div>
-                        <article>
-                            <LifestyleBanner />
-                        </article>
-                    </div>
-                </section>
-            </Layout>
-        </Wrapper>
-    )
+                      </div>
+                    </Link>
+                  </article>
+                )
+              })}
+            </div>
+            <article>
+              <LifestyleBanner />
+            </article>
+          </div>
+        </section>
+      </Layout>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.article`
   margin-bottom: 1rem;
+  .post-card-figure {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: #f6f7f8;
+  }
+  
+  .post-card-badge {
+    position: absolute;
+      top: 16px;
+      left: 12px;
+      display: block;
+      padding: 4px;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: .575rem !important;
+      font-weight: 500 !important;
+      white-space: nowrap;
+      color: #ffffff;
+      background-color: #6e9654;
+      box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
+      border-radius: 4px;
+      font-family: optima;
+  }
   article {
     margin-bottom: 1rem;
 }
@@ -101,7 +128,7 @@ const Wrapper = styled.article`
     font-weight: 400;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: poppins;
+    font-family: optima;
     line-height: 24px;
   }
   .underline {
@@ -118,7 +145,7 @@ const Wrapper = styled.article`
     color: var(--clr-grey-5);
     line-height: 1.8;
     font-size: 12px;
-    font-family: poppins;
+    font-family: optima;
     text-transform: none;
   }
   .link {
@@ -258,7 +285,8 @@ const Wrapper = styled.article`
     display: grid;
     grid-template-columns: 1fr 250px;
     column-gap: 1rem;
-    padding-top: 3rem;
+    padding-top: 5rem !important;
+
   }
 .readmore {
     white-space: nowrap;
@@ -282,6 +310,7 @@ export const query = graphql`
         slug
         date
         author
+        category
         image {
           fixed(width: 420, height: 140) {
           ...GatsbyContentfulFixed
