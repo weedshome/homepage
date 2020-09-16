@@ -8,6 +8,7 @@
     max-width: var(--max-width);
     margin: 0 auto;
     padding-top: 6rem;
+    padding-bottom: 4rem;
   }
 
   .business-hero-image {

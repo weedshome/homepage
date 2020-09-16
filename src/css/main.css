@@ -392,7 +392,6 @@ Hero
 
 .hero-front {
   background: hsl(220deg 86% 97%);
-  height: 85vh;
   position: relative;
   z-index: -1;
 }
