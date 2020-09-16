@@ -33,7 +33,7 @@
     letter-spacing: var(--spacing);
     font-size: 15px;
     cursor: pointer;
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
     padding: 0.25rem 1rem;
     border: none;
     display: flex;

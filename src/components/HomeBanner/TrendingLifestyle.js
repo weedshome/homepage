@@ -98,7 +98,7 @@ const Wrapper = styled.div`
     background-color: #6e9654;
     box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
     border-radius: 4px;
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
 }
 gap: 20px;
 grid-auto-flow: column;
@@ -112,7 +112,7 @@ column-gap: 20px;
   h3 {
     font-weight: 600 !important;
     text-transform: initial !important;
-    font-family: optima !important;
+    font-family: 'Montserrat', sans-serif !important;
     line-height: 20px !important;
     font-size: 0.9rem !important;
     color: #102a42 !important;
@@ -121,7 +121,7 @@ column-gap: 20px;
     color: var(--clr-grey-5);
     line-height: 1.8;
     font-size: 12px;
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
     text-transform: none;
   }
   .img {

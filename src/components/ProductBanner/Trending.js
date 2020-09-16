@@ -63,7 +63,7 @@ const Wrapper = styled.div`
     font-weight: 400;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
     line-height: 24px;
   }
   p {

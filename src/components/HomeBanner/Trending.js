@@ -78,7 +78,7 @@ margin-left: auto;
     font-weight: 600;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
     line-height: 24px;
     font-size: 0.9rem;
   }
@@ -86,7 +86,7 @@ margin-left: auto;
     color: var(--clr-grey-5);
     line-height: 1.8;
     font-size: 12px;
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
     text-transform: none;
   }
   .img {

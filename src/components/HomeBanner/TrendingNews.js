@@ -107,12 +107,12 @@ column-gap: 20px;
     background-color: #6e9654;
     box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
     border-radius: 4px;
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
 }
   h3 {
     font-weight: 600;
     text-transform: initial;
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
     line-height: 20px;
     font-size: 0.9rem;
     color: #102a42;
@@ -121,7 +121,7 @@ column-gap: 20px;
     color: var(--clr-grey-5);
     line-height: 1.8;
     font-size: 12px;
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
     text-transform: none;
   }
   .img {

@@ -177,48 +177,48 @@ const SideMenu = styled.div`
         justify-content: left;
     }
     .menu-item {
-        font-family: optima;
+        font-family: 'Montserrat', sans-serif;
         font-size: 12px;
         letter-spacing: var(--spacing);
     }
     .menu-item1 {
-        font-family: optima;
+        font-family: 'Montserrat', sans-serif;
         font-size: 12px;
         letter-spacing: var(--spacing);
        }
     .menu-item2 {
      padding-top: 1rem;
-     font-family: optima;
+     font-family: 'Montserrat', sans-serif;
      font-size: 12px;
      letter-spacing: var(--spacing);
     }
     .menu-item3 {
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     letter-spacing: var(--spacing);
     }
     .menu-item4 {
-        font-family: optima;
+        font-family: 'Montserrat', sans-serif;
         font-size: 12px;
         letter-spacing: var(--spacing);
     }
     .menu-item5 {
-        font-family: optima;
+        font-family: 'Montserrat', sans-serif;
         font-size: 12px;
         letter-spacing: var(--spacing);
     }
     .menu-item6 {
-        font-family: optima;
+        font-family: 'Montserrat', sans-serif;
         font-size: 12px;
         letter-spacing: var(--spacing);
     }
     .menu-item7 {
-        font-family: optima;
+        font-family: 'Montserrat', sans-serif;
         font-size: 12px;
         letter-spacing: var(--spacing);
     }
     .menu-item8 {
-        font-family: optima;
+        font-family: 'Montserrat', sans-serif;
         font-size: 12px;
         letter-spacing: var(--spacing);
     }
@@ -226,7 +226,7 @@ const SideMenu = styled.div`
         font-weight: 600 !important;
         letter-spacing: var(--spacing);
         font-size: 17px !important;
-        font-family: optima !important;
+        font-family: 'Montserrat', sans-serif !important;
         padding-bottom: 0.2rem !important;
         padding-top: 0.8rem !important;
         color: #6f9654;

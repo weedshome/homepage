@@ -89,7 +89,7 @@ const Wrapper = styled.article`
     background-color: #6e9654;
     box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
     border-radius: 4px;
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
 }
   .info {
     text-align: left;
@@ -133,7 +133,7 @@ const Wrapper = styled.article`
     font-weight: 400;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
     line-height: 24px;
   }
   .underline {
@@ -150,7 +150,7 @@ const Wrapper = styled.article`
     color: var(--clr-grey-5);
     line-height: 1.8;
     font-size: 12px;
-    font-family: optima;
+    font-family: 'Montserrat', sans-serif;
     text-transform: none;
   }
   .link {
