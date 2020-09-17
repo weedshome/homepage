@@ -12,55 +12,57 @@ import Image from 'gatsby-image'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import NewsBanner from "../components/NewsBanner"
 
 
 const NewsTemplate = ({
-    data: {
-        news: {
-            title,
-            date,
-            excerpt: { excerpt },
-            body,
-            image: { fixed },
-            author,
-        },
+  data: {
+    news: {
+      title,
+      date,
+      excerpt: { excerpt },
+      body,
+      image: { fixed },
+      author,
+      category,
     },
+  },
 }) => {
 
-    return (
-        <Layout>
-            <Wrapper>
-                <div className="search-text" style={{ textAlign: "left" }}>
-                    <Link to="/news" className="links"> back to all news <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
-                </div>
+  return (
+    <Layout>
+      <Wrapper>
+        <div className="search-text" style={{ textAlign: "left" }}>
+          <Link to="/news" className="links"> back to all news <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
+        </div>
+        <article>
+          <section className="posts">
+            <div className="posts-center-growing">
+              <div className="product-grid-strains">
                 <article>
-                    <section className="posts">
-                        <div className="posts-center-growing">
-                            <div className="product-grid-strains">
-                                <article>
-                                    <div className="post-info">
-                                        <h2>{title}</h2>
-                                        <p>{excerpt}</p>
-                                        <div className="article-info">
-                                            <p>{author}</p>
-                                            <p>{date}</p>
-                                        </div>
-                                        <span>{date}</span>
-                                        <div className="underline"></div>
-                                    </div>
-                                    <Image fixed={fixed} alt={title} />
-                                    {documentToReactComponents(body.json)}
-                                </article>
-                            </div>
-                            <article>
-                                <ProductBanner />
-                            </article>
-                        </div>
-                    </section>
+                  <div className="post-info">
+                    <span>{category}</span>
+                    <h2>{title}</h2>
+                    <p>{excerpt}</p>
+                    <div className="article-info">
+                      <p>{author}</p>
+                      <p>{date}</p>
+                    </div>
+                    <div className="underline"></div>
+                  </div>
+                  <Image fixed={fixed} alt={title} />
+                  {documentToReactComponents(body.json)}
                 </article>
-            </Wrapper>
-        </Layout >
-    )
+              </div>
+              <article>
+                <NewsBanner />
+              </article>
+            </div>
+          </section>
+        </article>
+      </Wrapper>
+    </Layout >
+  )
 }
 
 export const query = graphql`
@@ -69,6 +71,7 @@ query GetSingleNews($slug: String) {
         id
         title
         slug
+        category
         image {
             fixed(width: 630, height: 350) {
             ...GatsbyContentfulFixed
@@ -93,7 +96,6 @@ const Wrapper = styled.section`
   margin-bottom: 4rem;
   padding-top: 15px;
   .post-info {
-    margin: 2rem 0 4rem 0;
     text-align: left;
     span {
       background: var(--clr-primary-5);
@@ -186,6 +188,7 @@ text.CircularProgressbar-text {
     display: grid !important;
     grid-template-columns: 1fr 250px !important;
     column-gap: 1rem;
+    padding-top: 3rem;
   }
 .strain-info-first {
     width: 100%;
@@ -302,7 +305,6 @@ h2.title-strain {
 }
 .product-grid-strains {
     background: white;
-    padding: 45px;
 }
 .posts-center {
     margin-top: 1rem;

@@ -32,8 +32,10 @@ const Strains = ({ data }) => {
   )
 }
 
-const Wrapper = styled.article`
-  margin-bottom: 1rem;
+const Wrapper = styled.div`
+h3.posts-title-products {
+  padding-top: 2rem;
+}
   article {
     margin-bottom: 1rem;
 }

@@ -12,55 +12,57 @@ import Image from 'gatsby-image'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import HowtoBanner from "../components/HowtoBanner"
 
 
 const HowtoTemplate = ({
-    data: {
-        howto: {
-            title,
-            date,
-            excerpt: { excerpt },
-            body,
-            image: { fixed },
-            author,
-        },
+  data: {
+    howto: {
+      title,
+      date,
+      category,
+      excerpt: { excerpt },
+      body,
+      image: { fixed },
+      author,
     },
+  },
 }) => {
 
-    return (
-        <Layout>
-            <Wrapper>
-                <div className="search-text" style={{ textAlign: "left" }}>
-                    <Link to="/howto" className="links"> back to all lifestyle <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
-                </div>
+  return (
+    <Layout>
+      <Wrapper>
+        <div className="search-text" style={{ textAlign: "left" }}>
+          <Link to="/howto" className="links"> back to all lifestyle <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
+        </div>
+        <article>
+          <section className="posts">
+            <div className="posts-center-growing">
+              <div className="product-grid-strains">
                 <article>
-                    <section className="posts">
-                        <div className="posts-center-growing">
-                            <div className="product-grid-strains">
-                                <article>
-                                    <div className="post-info">
-                                        <h2>{title}</h2>
-                                        <p>{excerpt}</p>
-                                        <div className="article-info">
-                                            <p>{author}</p>
-                                            <p>{date}</p>
-                                        </div>
-                                        <span>{date}</span>
-                                        <div className="underline"></div>
-                                    </div>
-                                    <Image fixed={fixed} alt={title} />
-                                    {documentToReactComponents(body.json)}
-                                </article>
-                            </div>
-                            <article>
-                                <ProductBanner />
-                            </article>
-                        </div>
-                    </section>
+                  <div className="post-info">
+                    <span>{category}</span>
+                    <h2>{title}</h2>
+                    <p>{excerpt}</p>
+                    <div className="article-info">
+                      <p>{author}</p>
+                      <p>{date}</p>
+                    </div>
+                    <div className="underline"></div>
+                  </div>
+                  <Image fixed={fixed} alt={title} />
+                  {documentToReactComponents(body.json)}
                 </article>
-            </Wrapper>
-        </Layout >
-    )
+              </div>
+              <article>
+                <HowtoBanner />
+              </article>
+            </div>
+          </section>
+        </article>
+      </Wrapper>
+    </Layout >
+  )
 }
 
 export const query = graphql`
@@ -69,6 +71,7 @@ query GetSingleHowto($slug: String) {
         id
         title
         slug
+        category
         image {
             fixed(width: 630, height: 350) {
             ...GatsbyContentfulFixed
@@ -93,7 +96,6 @@ const Wrapper = styled.section`
   margin-bottom: 4rem;
   padding-top: 15px;
   .post-info {
-    margin: 2rem 0 4rem 0;
     text-align: left;
     span {
       background: var(--clr-primary-5);
@@ -302,7 +304,6 @@ h2.title-strain {
 }
 .product-grid-strains {
     background: white;
-    padding: 45px;
 }
 .posts-center {
     margin-top: 1rem;

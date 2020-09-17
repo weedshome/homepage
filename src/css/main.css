@@ -302,7 +302,7 @@ Navbar
   .nav-icons {
     display: flex;
     justify-content: space-between;
-    padding-top: 4px;
+    padding-top: 5px;
   }
   .nav-icons .social-icon {
     font-size: 1.5rem;
@@ -1179,7 +1179,7 @@ h3.posts-title-products svg {
 
 h2.news-title {
   color: #373a47;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   letter-spacing: var(--spacing);
   font-size: 15px !important;
   cursor: pointer;
@@ -1194,7 +1194,7 @@ h2.news-title {
 
 a.link-more {
   color: #6e9654;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   letter-spacing: var(--spacing);
   font-size: 15px;
   cursor: pointer;
@@ -1204,6 +1204,9 @@ a.link-more {
   align-items: center;
   background-color: white;
   padding-bottom: 8px;
+}
+a.link-more svg {
+  margin-left: 5px;
 }
 
 
@@ -1270,11 +1273,6 @@ h2.business-title {
 Home Posts Mobile
 ===============
 */
-
-.info {
-  background: #f3f7fd;
-  border-bottom: solid hsl(209deg 61% 16%) !important;
-}
 
 p.posts-text-strains {
   padding: 5px;
@@ -1343,4 +1341,12 @@ p.posts-text-strains {
 
 .footer-align {
   margin: 0 auto;
+}
+
+.section-third {
+  background: #f1f5fe;
+  padding-bottom: 6rem;
+}
+.hero-info-2 {
+  padding-top: 3rem;
 }

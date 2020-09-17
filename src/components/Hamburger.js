@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { slide as Menu } from 'react-burger-menu'
 import styled from '@emotion/styled'
 import SocialLinks from '../constants/socialLinks'
-import menu from '../assets/menu.svg'
+import menu from '../assets/right-menu-bars.svg'
 
 
 
@@ -230,6 +230,8 @@ const SideMenu = styled.div`
         padding-bottom: 0.2rem !important;
         padding-top: 0.8rem !important;
         color: #6f9654;
+        outline:none;
+        text-decoration:none;
     }
 `
 

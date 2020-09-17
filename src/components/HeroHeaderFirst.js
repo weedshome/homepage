@@ -4,6 +4,7 @@ import Image from 'gatsby-image'
 import './Business.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import styled from "styled-components"
 
 const query = graphql`
   {
@@ -18,34 +19,79 @@ const query = graphql`
 `
 
 const HeroHeaderFirst = ({ }) => {
-    useEffect(() => {
-        AOS.init({ duration: 2000 });
-    }, [])
-    const { headers } = useStaticQuery(query)
-    return (
-        <section data-aos="fade-right">
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, [])
+  const { headers } = useStaticQuery(query)
+  return (
+    <Wrapper>
+      <section data-aos="fade-right">
 
-            <div class="grid-container-business">
-                <div class="k-1">
-                    <div class="k-title">
-                        <h2 className="business-title">Learn more about the plant</h2>
-                    </div>
-                    <div class="k-description">
-                        <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience in the cannabis.</p>
-                    </div>
-                </div>
-                <div class="k-2">
-                    <div className="business-image-container">
-                        <div class="business-hero-image">
-                            <Image fluid={headers.childImageSharp.fluid} />
-                        </div>
-                    </div>
-                </div>
+        <div class="grid-container-business">
+          <div class="k-1">
+            <div class="k-title">
+              <h2 className="business-title">Learn more about the plant</h2>
             </div>
-
-        </section>
-    )
+            <div class="k-description">
+              <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience in the cannabis.</p>
+            </div>
+          </div>
+          <div class="k-2">
+            <div className="business-image-container">
+              <div class="business-hero-image">
+                <Image fluid={headers.childImageSharp.fluid} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Wrapper>
+  )
 }
+
+const Wrapper = styled.div`
+.grid-container-business {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "k-1 k-2";
+    place-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+  @media screen and (max-width: 792px) {
+    .grid-container-business {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+      grid-template-rows: 1fr !important;
+      gap: 1px 1px !important;
+      grid-template-areas: "k-1" !important;
+      padding: 1rem;
+      padding-bottom: 3rem;
+    }
+  }
+  .k-1 {
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+.business-title {
+    font-size: 3.3rem;
+    line-height: 3.4rem;
+    margin-bottom: 1rem;
+    color: #102a42;
+  }
+  .business-hero-image {
+    width: 630px;
+  }
+
+  .business-image-container {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+  }
+`
 
 
 export default HeroHeaderFirst

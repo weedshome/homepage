@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import Trending from './Trending'
 import TrendingThree from './TrendingThree'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { FaList, FaMailBulk, FaRegChartBar } from 'react-icons/fa'
+import { FaRegNewspaper, FaAngellist, FaLeanpub, FaSeedling } from 'react-icons/fa'
+import { GrYoga } from 'react-icons/gr'
 import TrendingNews from './TrendingNews';
 import TrendingLifestyle from './TrendingLifestyle';
 import TrendingHealth from './TrendingHealth';
@@ -14,11 +15,11 @@ const HomeBanner = () => {
         <Wrapper>
             <Tabs>
                 <TabList>
-                    <Tab><FaList className="icon-tabs"></FaList>News</Tab>
-                    <Tab><FaMailBulk className="icon-tabs"></FaMailBulk>Lifestyle</Tab>
-                    <Tab><FaRegChartBar className="icon-tabs"></FaRegChartBar>Health</Tab>
-                    <Tab><FaRegChartBar className="icon-tabs"></FaRegChartBar>How-To</Tab>
-                    <Tab><FaRegChartBar className="icon-tabs"></FaRegChartBar>Growing</Tab>
+                    <Tab><FaRegNewspaper className="icon-tabs"></FaRegNewspaper>News</Tab>
+                    <Tab><FaAngellist className="icon-tabs"></FaAngellist>Lifestyle</Tab>
+                    <Tab><GrYoga className="icon-tabs"></GrYoga>Health</Tab>
+                    <Tab><FaLeanpub className="icon-tabs"></FaLeanpub>How-To</Tab>
+                    <Tab><FaSeedling className="icon-tabs"></FaSeedling>Growing</Tab>
                 </TabList>
 
                 <TabPanel>

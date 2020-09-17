@@ -100,14 +100,19 @@ const Wrapper = styled.div`
   }
   p {
     color: var(--clr-grey-5);
+    line-height: 1.8;
+    font-size: 12px;
+    font-family: 'Montserrat',sans-serif;
+    text-transform: none;
   }
   .img {
     border-radius: 50%;
   }
  .info {
     text-align: left;
+    padding: 10px;
     padding-bottom: 0.5rem !important;
-    border-bottom: solid 2px !important;
+    border: none !important;
  }
  .article-info {
   align-items: center;
@@ -116,10 +121,18 @@ const Wrapper = styled.div`
  .d {
     display: block !important;
     border-right: 0px !important;
+    margin-bottom: 1rem;
+    box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
 }
 .author-text {
+  margin-bottom: 0;
   margin-right: auto;
   margin-left: 0;
+  font-weight: bold;
+}
+.author-text2 {
+  margin-bottom: 0;
+  text-align: right;
 }
 `
 export default Trending

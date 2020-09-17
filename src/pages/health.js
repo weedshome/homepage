@@ -20,7 +20,6 @@ const Health = ({ data }) => {
     <Wrapper>
       <Layout>
         <section className="posts">
-          <h3 class="posts-title-products">recently published</h3>
           <div className="posts-center-grid">
             <div className="product-grid-strains">
               {products.map(product => {
@@ -93,12 +92,6 @@ const Wrapper = styled.article`
     border: none !important;
     padding: 10px;
     background: #ffffff !important;
-  }
-  .posts-title-products {
-    text-transform: uppercase;
-    color: black;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
   }
   .img {
     height: 10rem;
