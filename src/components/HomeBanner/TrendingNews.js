@@ -3,8 +3,6 @@ import Image from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { Link } from "gatsby"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { MdUpdate } from 'react-icons/md'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 
@@ -32,13 +30,10 @@ const query = graphql`
   }
 `
 const TrendingNews = () => {
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  }, [])
   const data = useStaticQuery(query)
   const { allContentfulNews: { nodes: products }, } = data
   return (
-    <section className="posts" data-aos="fade-left">
+    <section className="posts">
       <div className="more-links">
         <h2 className="news-title">Latest from News</h2>
         <Link className="link-more" to={`/news/`}>View all <FaLongArrowAltRight /></Link>
@@ -100,6 +95,7 @@ column-gap: 20px;
     grid-template-columns: 1fr !important;
   }
 }
+
 .post-card-figure {
   position: relative;
   display: block;

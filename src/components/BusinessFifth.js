@@ -3,8 +3,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 import './Business.css';
 import { FaStop } from 'react-icons/fa';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import styled from "styled-components"
 
 const query = graphql`
@@ -20,13 +18,10 @@ const query = graphql`
 `
 
 const BusinessFifth = ({ }) => {
-    useEffect(() => {
-        AOS.init({ duration: 2000 });
-    }, [])
     const { featuresThird } = useStaticQuery(query)
     return (
         <Wrapper>
-            <section data-aos="flip-left">
+            <section>
                 <div className="section-third">
                     <div className="section-width">
                         <div className="hero-info-2">
