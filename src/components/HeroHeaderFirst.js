@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 import './Business.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import styled from "styled-components"
 
 const query = graphql`
@@ -17,10 +19,13 @@ const query = graphql`
 `
 
 const HeroHeaderFirst = ({ }) => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, [])
   const { headers } = useStaticQuery(query)
   return (
     <Wrapper>
-      <section>
+      <section data-aos="fade-right">
         <div className="home-width">
           <div class="grid-container-business">
             <div class="k-1">
@@ -130,7 +135,6 @@ const Wrapper = styled.div`
       padding: 2rem;
       padding-top: 6rem;
       padding-bottom: 3rem;
-      margin: 0 auto;
     }
     .business-hero-image {
       width: 300px;

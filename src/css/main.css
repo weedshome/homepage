@@ -216,6 +216,11 @@ Navbar
   max-width: 1230px;
   margin: 0 auto;
 }
+@media screen and (max-width: 767px) {
+.nav-center {
+  width: 100vw;
+}
+}
 .nav-header {
   display: flex;
   justify-content: space-between;
