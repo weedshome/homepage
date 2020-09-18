@@ -26,20 +26,21 @@ const HeroHeaderFirst = ({ }) => {
   return (
     <Wrapper>
       <section data-aos="fade-right">
-
-        <div class="grid-container-business">
-          <div class="k-1">
-            <div class="k-title">
-              <h2 className="business-title">Learn more about the plant</h2>
+        <div className="home-width">
+          <div class="grid-container-business">
+            <div class="k-1">
+              <div class="k-title">
+                <h2 className="business-title">Learn more about the plant</h2>
+              </div>
+              <div class="k-description">
+                <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience in the cannabis.</p>
+              </div>
             </div>
-            <div class="k-description">
-              <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience in the cannabis.</p>
-            </div>
-          </div>
-          <div class="k-2">
-            <div className="business-image-container">
-              <div class="business-hero-image">
-                <Image fluid={headers.childImageSharp.fluid} />
+            <div class="k-2">
+              <div className="business-image-container">
+                <div class="business-hero-image">
+                  <Image fluid={headers.childImageSharp.fluid} />
+                </div>
               </div>
             </div>
           </div>
@@ -66,10 +67,10 @@ const Wrapper = styled.div`
   }
   .k-1 {
     padding-bottom: 20px;
-}
-.business-title {
-    font-size: 3.3rem;
-    line-height: 3.4rem;
+   }
+   .business-title {
+    font-size: 2rem;
+    line-height: 2.4rem;
     margin-bottom: 1rem;
     color: #102a42;
   }

@@ -59,7 +59,10 @@ const BusinessFifth = ({ }) => {
 }
 
 const Wrapper = styled.div`
+background: #f1f5fe;
+padding-bottom: 6rem;
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding-bottom: 0rem;
 .section-width {
     width: 85vw;
     max-width: var(--max-width);
@@ -72,9 +75,6 @@ p.third-para {
 .third-text-box {
     padding-top: 2rem;
 }
-.section-third {
-    padding-bottom: 6rem;
-}
 .third-image {
     width: 300px;
 }
@@ -86,7 +86,6 @@ p.third-para {
         width: 85vw;
         max-width: var(--max-width);
         margin: 0 auto;
-        margin-bottom: 4rem;
     }
     p.third-para {
         width: 100%;
