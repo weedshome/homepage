@@ -53,13 +53,13 @@ const BeforeFooter = () => {
     </div>
 
     <div className="grid-4">
-      <h4 className="footer-big-text">Stay Connnected</h4>
+      <h4 className="footer-big-text">Links</h4>
       <div className="underline-footer"></div>
       <ul className="social-list">
         <li className="list-inline-item"><a href="" className="footer-tx">Our Story</a></li>
         <li className="list-inline-item"><a href="" className="footer-tx">Pricing</a></li>
         <li className="list-inline-item"><a href="" className="footer-tx">Contact</a></li>
-        <li className="list-inline-item"><a href="" className="footer-tx">Jobs</a></li>
+        <li className="list-inline-item"><a href="" className="footer-tx">Terms of Services</a></li>
       </ul>
     </div>
   </div>
@@ -78,48 +78,6 @@ const Wrapper = styled.div`
   place-items: center;
   max-width: var(--max-width);
   margin: 0 auto;
-}
-
-@media screen and (max-width: 768px) {
-.grid-container {
-  display: table-row !important;
-}
-}
-
-.grid-1 { grid-area: grid-1; }
-
-@media screen and (max-width: 768px) {
-.grid-1 { 
-  grid-area: grid-1;
-  text-align: center; 
-}
-}
-
-.grid-2 { grid-area: grid-2; }
-
-@media screen and (max-width: 768px) {
-.grid-2 { 
-  grid-area: grid-1;
-  text-align: center; 
-}
-}
-
-.grid-3 { grid-area: grid-3; }
-
-@media screen and (max-width: 768px) {
-.grid-3 { 
-  grid-area: grid-1;
-  text-align: center; 
-}
-}
-
-.grid-4 { grid-area: grid-4; }
-
-@media screen and (max-width: 768px) {
-.grid-4 { 
-  grid-area: grid-1;
-  text-align: center; 
-}
 }
 
 ul.social-list {
@@ -142,27 +100,6 @@ ul.social-list {
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-.footer-big-text {
-  display: block;
-  padding-top: 2rem;
-}
-}
-
-@media screen and (max-width: 768px) {
-.img.footer-logo.gatsby-image-wrapper {
-  margin-top: 1rem;
-}
-}
-
-@media screen and (max-width: 768px) {
-p.footer-text {
-  padding: 2rem;
-  padding-bottom: 0rem;
-  padding-top: 1rem;
-}
-}
-
 a.footer-tx {
   display: block;
   letter-spacing: var(--spacing);
@@ -176,8 +113,6 @@ a.footer-tx {
 }
 
 a.footer-tx:hover {
-  background: black;
-  border-radius: 5px;
   color: #6e9654;
 }
 
@@ -191,12 +126,6 @@ hr {
     background: var(--clr-black);
     margin-top: -5px;
     margin-bottom: 10px;
-}
-
-@media screen and (max-width: 768px) {
-.underline-footer {
-  margin: 0 auto;
-}
 }
 
 .footer-logo {
@@ -216,6 +145,31 @@ hr {
   font-family: 'Montserrat', sans-serif;
   text-transform: none;
   border-radius: var(--radius);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .grid-container {
+    max-width: var(--max-width);
+    width: 85vw;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px 10px;
+    grid-template-areas: "grid-1 grid-2";
+    height: 20rem;
+    place-items: left;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 `
 

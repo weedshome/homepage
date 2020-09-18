@@ -50,6 +50,8 @@ const HeroHeaderFirst = ({ }) => {
 }
 
 const Wrapper = styled.div`
+
+@media screen and (min-width: 1024px) {
 .grid-container-business {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -62,20 +64,8 @@ const Wrapper = styled.div`
     padding-top: 6rem;
     padding-bottom: 3rem;
   }
-  @media screen and (max-width: 792px) {
-    .grid-container-business {
-      display: grid !important;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
-      grid-template-rows: 1fr !important;
-      gap: 1px 1px !important;
-      grid-template-areas: "k-1" !important;
-      padding: 1rem;
-      padding-bottom: 3rem;
-    }
-  }
   .k-1 {
     padding-bottom: 20px;
-    padding-left: 20px;
 }
 .business-title {
     font-size: 3.3rem;
@@ -90,6 +80,76 @@ const Wrapper = styled.div`
   .business-image-container {
     margin-top: 1rem;
     margin-left: 1.5rem;
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .grid-container-business {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "k-1 k-2";
+    place-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    width: 85vw;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+  .k-1 {
+    padding-bottom: 20px;
+}
+.business-title {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    margin-bottom: 0.5rem;
+    color: #102a42;
+  }
+  .business-text {
+    font-size: 13px;
+  }
+  .business-hero-image {
+    width: 300px;
+  }
+
+  .business-image-container {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+    .grid-container-business {
+      display: grid !important;
+      grid-template-columns:  1fr !important;
+      grid-template-rows: 1fr !important;
+      gap: 1px 1px !important;
+      grid-template-areas: "k-1" !important;
+      padding: 2rem;
+      padding-top: 6rem;
+      padding-bottom: 3rem;
+    }
+    .business-hero-image {
+      width: 300px;
+      margin: 0 auto
+    }
+    .business-title {
+      font-size: 1.2rem;
+      line-height: 2.4rem;
+      margin-bottom: 0.5rem;
+      color: #102a42;
+      text-align: center;
+    }
+    .business-text {
+      font-size: 13px;
+      text-align: center;
+    }
   }
 `
 

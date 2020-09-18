@@ -1223,50 +1223,7 @@ Home Header
 ===============
 */
 
-@media screen and (max-width: 792px) {
-  .grid-container-business {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
-    grid-template-rows: 1fr !important;
-    gap: 1px 1px !important;
-    grid-template-areas: "k-1" !important;
-    padding: 1rem;
-  }
-}
 
-
-@media screen and (max-width: 768px) {
-.hero-front {
-  height: auto !important;
-}
-}
-
-@media screen and (max-width: 768px) {
-.business-hero-image {
-  width: 350px !important;
-}
-}
-
-@media screen and (max-width: 768px) {
-.business-image-container {
-  margin: 1rem !important;
-}
-}
-
-@media screen and (max-width: 768px) {
-.k-1 {
-  padding-bottom: 0px !important;
-  padding-left: 0px !important;
-  text-align: center !important;
-}
-}
-
-@media screen and (max-width: 768px) {
-h2.business-title {
-  font-size: 1.7rem;
-  line-height: 2.3rem;
-}
-}
 
 /*
 ===============
@@ -1341,11 +1298,6 @@ p.posts-text-strains {
 
 .footer-align {
   margin: 0 auto;
-}
-
-.section-third {
-  background: #f1f5fe;
-  padding-bottom: 6rem;
 }
 .hero-info-2 {
   padding-top: 3rem;

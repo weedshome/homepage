@@ -49,7 +49,7 @@ const TrendingLifestyle = () => {
             <article key={product.id}>
               <Link className="link" to={`/lifestyle/${product.slug}`}>
                 <div className="d">
-                  <div className="grid">
+                  <div className="grid-news">
                     <figure className="post-card-figure">
                       <Image fixed={product.image.fixed} alt={product.title}></Image>
                       <span class="post-card-badge">{product.category}</span>
@@ -74,6 +74,34 @@ const TrendingLifestyle = () => {
 }
 
 const Wrapper = styled.div`
+gap: 20px;
+grid-auto-flow: column;
+max-width: var(--max-width);
+display: grid;
+grid-template-rows: 1fr 1fr;
+column-gap: 20px;
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  grid-auto-flow: column;
+  .gatsby-image-wrapper {
+    width: 100% !important;
+  }
+  .grid-news {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  grid-auto-flow: row !important;
+  .gatsby-image-wrapper {
+    width: 100% !important;
+  }
+  .grid-news {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+}
+
 .post-card-figure {
   position: relative;
   display: block;
@@ -100,22 +128,13 @@ const Wrapper = styled.div`
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
 }
-gap: 20px;
-grid-auto-flow: column;
-max-width: var(--max-width);
-display: grid;
-grid-template-rows: 1fr 1fr;
-column-gap: 20px;
-@media screen and (max-width: 768px) {
-    grid-auto-flow: row !important;
-}
   h3 {
-    font-weight: 600 !important;
-    text-transform: initial !important;
-    font-family: 'Montserrat', sans-serif !important;
-    line-height: 20px !important;
-    font-size: 0.9rem !important;
-    color: #102a42 !important;
+    font-weight: 600;
+    text-transform: initial;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 20px;
+    font-size: 0.9rem;
+    color: #102a42;
   }
   p {
     color: var(--clr-grey-5);
@@ -132,6 +151,7 @@ column-gap: 20px;
     padding-bottom: 0.5rem !important;
     border: none !important;
     padding: 10px;
+    padding-bottom: 0px !important;
     background: #ffffff;
  }
  .article-info {
@@ -141,9 +161,6 @@ column-gap: 20px;
  .d {
     box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
     background-color: #ffffff;
-    grid-template-columns: 1fr 1fr !important;
-
-
 }
 .author-text {
   margin-bottom: 0.5rem !important;
@@ -166,7 +183,7 @@ p.author-text2 svg {
     text-overflow: ellipsis;
     margin-bottom: 0.5rem;
 }
-.grid {
+.grid-news {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -180,11 +197,6 @@ p.author-text2 svg {
     padding-bottom: 20px;
     max-width: var(--max-width);
 }
-@media screen and (max-width: 768px) {
-    .grid {
-      display: grid !important;
-      grid-template-columns: 1fr !important;
-    }
-    }
 `
+
 export default TrendingLifestyle

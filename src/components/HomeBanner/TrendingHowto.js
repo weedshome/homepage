@@ -48,7 +48,7 @@ const TrendingHowto = () => {
             <article key={product.id}>
               <Link className="link" to={`/growing/${product.slug}`}>
                 <div className="d">
-                  <div className="grid">
+                  <div className="grid-news">
                     <figure className="post-card-figure">
                       <Image fixed={product.image.fixed} alt={product.title}></Image>
                       <span class="post-card-badge">{product.category}</span>
@@ -79,9 +79,28 @@ max-width: var(--max-width);
 display: grid;
 grid-template-rows: 1fr 1fr;
 column-gap: 20px;
-@media screen and (max-width: 768px) {
-  grid-auto-flow: row !important;
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  grid-auto-flow: column;
+  .gatsby-image-wrapper {
+    width: 100% !important;
+  }
+  .grid-news {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
 }
+@media screen and (max-width: 767px) {
+  grid-auto-flow: row !important;
+  .gatsby-image-wrapper {
+    width: 100% !important;
+  }
+  .grid-news {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+}
+
 .post-card-figure {
   position: relative;
   display: block;
@@ -163,7 +182,7 @@ p.author-text2 svg {
     text-overflow: ellipsis;
     margin-bottom: 0.5rem;
 }
-.grid {
+.grid-news {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -177,11 +196,6 @@ p.author-text2 svg {
     padding-bottom: 20px;
     max-width: var(--max-width);
 }
-@media screen and (max-width: 768px) {
-  .grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-  }
-  }
 `
+
 export default TrendingHowto
