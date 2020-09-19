@@ -1161,6 +1161,10 @@ h3.posts-title-products svg {
   display: inline-block;
 }
 
+button.dropbtn {
+  margin-right: 1.5rem;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
