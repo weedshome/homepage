@@ -20,6 +20,7 @@ export default () => {
       <TopNav className="sticky-top">
         <SideMenu>
           <Menu customBurgerIcon={<img src={menu} />} isOpen={menuState.menuOpen}>
+            <h3 className="menu-header">Featured Categories</h3>
             <Link className="menu-item8" to="/" onClick={() => closeMenu()}>
               Home
                 </Link>
@@ -44,6 +45,7 @@ export default () => {
             <Link className="menu-item7" to="/growing" onClick={() => closeMenu()}>
               Growing
                 </Link>
+            <h3 className="menu-header">Website Links</h3>
             <Link className="menu-item" to="/business" onClick={() => closeMenu()}>
               Business
                 </Link>
@@ -65,6 +67,7 @@ export default () => {
             <Link className="menu-item" to="/privacy" onClick={() => closeMenu()}>
               Privacy
                 </Link>
+            <h3 className="menu-header">Social Links</h3>
             <SocialLinks styleClass="banner-icons" />
           </Menu>
         </SideMenu>

@@ -140,15 +140,5 @@ display: grid;
     margin: 0 auto;
   }
 
-    @media screen and (max-width: 768px) {
-    h3.posts-title-products {
-        margin-left: 0 !important;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .d {
-        grid-template-columns: 1fr !important;
-    }
-
 `
 export default Breaking

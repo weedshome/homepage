@@ -315,13 +315,25 @@ p.readmore {
     margin: 0 auto;
     column-gap: 1rem;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 .news-grid-section2 {
     display: grid;
-    grid-template-columns: 775px 375px;
+    grid-template-columns: 320px 375px !important;
     max-width: var(--max-width);
     margin: 0 auto;
     column-gap: 1rem; 
     padding-top: 6rem;
+    width: 85vw;
+}
+}
+.news-grid-section2 {
+  display: grid;
+  grid-template-columns: 775px 375px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  column-gap: 1rem; 
+  padding-top: 6rem;
 }
 .breaking-news {
 }
