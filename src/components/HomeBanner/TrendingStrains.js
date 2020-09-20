@@ -33,8 +33,9 @@ const TrendingStrains = () => {
     return (
         <section className="posts">
             <Wrapper>
-                <div className="hero-info-2">
-                    <h2 className="h2-heading">Explore Cannabis Strains</h2>
+                <div className="hero-info-3">
+                    <h2 className="news-title">Browse Cannabis Strains</h2>
+                    <Link className="link-more" to={`/news/`}>View all <FaLongArrowAltRight /></Link>
                 </div>
                 <div className="grid-trending-strains">
                     {products.map(product => {
@@ -73,6 +74,38 @@ const TrendingStrains = () => {
 }
 
 const Wrapper = styled.div`
+.hero-info-3 {
+    align-items: center;
+    display: flex;
+    padding-top: 1rem;
+}
+.link-more {
+    color: #6e9654;
+    font-weight: 500 !important;
+    letter-spacing: var(--spacing);
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 4rem !important;
+}
+.news-title {
+        color: #373a47;
+    font-weight: 500 !important;
+    letter-spacing: var(--spacing);
+    font-size: 15px !important;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-right: auto;
+    margin-left: 0;
+}
 .grid-trending-strains {
 display: grid;
 place-content: center;
@@ -150,6 +183,22 @@ h2 {
     border-radius: 4px;
     font-family: 'Montserrat',sans-serif;
     margin-bottom: .5rem;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .grid-trending-strains {
+        display: grid;
+        place-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3rem;
+        }
+  }
+  @media screen and (max-width: 767px)  {
+    .grid-trending-strains {
+        display: grid;
+        place-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+        }
   }
 `
 export default TrendingStrains

@@ -209,7 +209,7 @@ Navbar
   width: 100%;
   background: transparent;
   background: #ffffff;
-  box-shadow: 0 0 15px 0 black;
+  box-shadow: 0 0 8px 0 #0000006e;
 }
 .nav-center {
   width: 90vw;
@@ -515,7 +515,7 @@ Single Pages
 .newsletter-page,
 .success-page,
 .error-page {
-  min-height: calc(100vh - 7rem);
+
   background: var(--clr-grey-10);
 }
 .newsletter-page,

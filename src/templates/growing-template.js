@@ -11,12 +11,16 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { GiSeedling } from 'react-icons/gi'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { DiscussionEmbed } from "disqus-react"
 
 import Image from 'gatsby-image'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+const disqusConfig = {
+  shortname: process.env.GATSBY_DISQUS_NAME,
+}
 
 const GrowingTemplate = ({
   data: {
@@ -26,7 +30,7 @@ const GrowingTemplate = ({
       category,
       info: { info },
       body,
-      image: { fixed },
+      image: { fluid },
       author,
     },
   },
@@ -56,14 +60,11 @@ const GrowingTemplate = ({
                     <span>{category}</span>
                     <h2>{title}</h2>
                     <p>{info}</p>
-                    <div className="article-info">
-                      <p>{author}</p>
-                      <p>{date}</p>
-                    </div>
                     <div className="underline"></div>
                   </div>
-                  <Image fixed={fixed} alt={title} />
+                  <Image fluid={fluid} alt={title} />
                   {documentToReactComponents(body.json, options)}
+                  <DiscussionEmbed {...disqusConfig} />
                 </article>
               </div>
               <article>
@@ -86,8 +87,8 @@ query GetSingleGrowing($slug: String) {
         slug
         category
         image {
-            fixed(width: 630, height: 350) {
-            ...GatsbyContentfulFixed
+            fluid {
+            ...GatsbyContentfulFluid
           }
         }
         rating
@@ -203,6 +204,13 @@ text.CircularProgressbar-text {
     grid-template-columns: 1fr 250px !important;
     column-gap: 1rem;
   }
+  @media screen and (max-width: 768px) {
+    .posts-center-growing {
+    grid-template-columns: 1fr !important;
+    column-gap: 1rem;
+    padding-top: 3rem;
+    }
+  }
 .strain-info-first {
     width: 100%;
     padding: 25px;
@@ -317,6 +325,8 @@ h2.title-strain {
     margin-bottom: 1rem;
 }
 .product-grid-strains {
+  padding: 25px;
+  margin: 0 auto;
     background: white;
 }
 .posts-center {

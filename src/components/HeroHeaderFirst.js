@@ -125,6 +125,18 @@ const Wrapper = styled.div`
     margin-right: 24px;
     background-color: transparent;
   }
+  p.business-text {
+    margin: 0 auto;
+    padding: 5px;
+    display: block;
+    letter-spacing: var(--spacing);
+    color: hsl(209deg 61% 16%);
+    line-height: 1.8;
+    font-size: 12px !important;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    border-radius: var(--radius);
+  }
 }
 
 
@@ -154,8 +166,17 @@ const Wrapper = styled.div`
     margin-bottom: 0.5rem;
     color: #102a42;
   }
-  .business-text {
-    font-size: 13px;
+   p.business-text {
+    margin: 0 auto;
+    padding: 5px;
+    display: block;
+    letter-spacing: var(--spacing);
+    color: hsl(209deg 61% 16%);
+    line-height: 1.8;
+    font-size: 12px !important;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    border-radius: var(--radius);
   }
   .business-hero-image {
     width: 300px;
@@ -229,8 +250,17 @@ const Wrapper = styled.div`
       color: #102a42;
       text-align: center;
     }
-    .business-text {
-      font-size: 13px;
+    p.business-text {
+      margin: 0 auto;
+      padding: 5px;
+      display: block;
+      letter-spacing: var(--spacing);
+      color: hsl(209deg 61% 16%);
+      line-height: 1.8;
+      font-size: 12px !important;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: none;
+      border-radius: var(--radius);
       text-align: center;
     }
     .buttons-header {

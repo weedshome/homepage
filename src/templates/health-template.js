@@ -7,6 +7,7 @@ import { IoMdArrowRoundBack } from 'react-icons/io'
 import "react-sweet-progress/lib/style.css";
 import 'react-circular-progressbar/dist/styles.css';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { DiscussionEmbed } from "disqus-react"
 
 import Image from 'gatsby-image'
 
@@ -14,6 +15,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import HealthBanner from "../components/HealthBanner"
 
+const disqusConfig = {
+  shortname: process.env.GATSBY_DISQUS_NAME,
+}
 
 const HealthTemplate = ({
   data: {
@@ -22,7 +26,7 @@ const HealthTemplate = ({
       date,
       excerpt: { excerpt },
       body,
-      image: { fixed },
+      image: { fluid },
       author,
       category,
     },
@@ -44,14 +48,11 @@ const HealthTemplate = ({
                     <span>{category}</span>
                     <h2>{title}</h2>
                     <p>{excerpt}</p>
-                    <div className="article-info">
-                      <p>{author}</p>
-                      <p>{date}</p>
-                    </div>
                     <div className="underline"></div>
                   </div>
-                  <Image fixed={fixed} alt={title} />
+                  <Image fluid={fluid} alt={title} />
                   {documentToReactComponents(body.json)}
+                  <DiscussionEmbed {...disqusConfig} />
                 </article>
               </div>
               <article>
@@ -73,8 +74,8 @@ query GetSingleHealth($slug: String) {
         slug
         category
         image {
-            fixed(width: 630, height: 350) {
-            ...GatsbyContentfulFixed
+            fluid {
+            ...GatsbyContentfulFluid
           }
         }
         date
@@ -188,6 +189,13 @@ text.CircularProgressbar-text {
     display: grid !important;
     grid-template-columns: 1fr 250px !important;
     column-gap: 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    .posts-center-growing {
+    grid-template-columns: 1fr !important;
+    column-gap: 1rem;
+    padding-top: 3rem;
+    }
   }
 .strain-info-first {
     width: 100%;
@@ -303,6 +311,8 @@ h2.title-strain {
     margin-bottom: 1rem;
 }
 .product-grid-strains {
+  padding: 25px;
+  margin: 0 auto;
     background: white;
 }
 .posts-center {

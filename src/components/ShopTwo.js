@@ -36,11 +36,6 @@ const ShopTwo = ({ }) => {
   return (
     <section data-aos="fade-left">
       <div class="grid-container-third">
-        <div class="third-image">
-          <div class="image-third">
-            <Image fluid={featuresThird.childImageSharp.fluid} />
-          </div>
-        </div>
         <div class="third-text">
           <div class="third-text-box">
             <h2 className="strain-header-text">Cannabis Marketin Automation</h2>
@@ -50,6 +45,11 @@ const ShopTwo = ({ }) => {
               <li className="third-space"><FaStop className="third-icon" />Targeted client base with Tivo's efficient technology</li>
             </ul>
             <button className="third-button">Learn More</button>
+          </div>
+        </div>
+        <div class="third-image">
+          <div class="image-third">
+            <Image fluid={featuresThird.childImageSharp.fluid} />
           </div>
         </div>
       </div>

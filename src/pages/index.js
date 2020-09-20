@@ -6,6 +6,7 @@ import HomeBanner from '../components/HomeBanner'
 import HeroHeader from '../components/HeroHeader'
 import BusinessFifth from '../components/BusinessFifth'
 import TrendingStrains from '../components/HomeBanner/TrendingStrains'
+import ShopFront from '../components/ShopFront'
 
 
 const IndexPage = ({ data }) => {
@@ -16,6 +17,7 @@ const IndexPage = ({ data }) => {
       <HomeBanner />
       <BusinessFifth />
       <TrendingStrains />
+      <ShopFront />
     </Layout>
   )
 }

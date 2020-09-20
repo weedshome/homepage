@@ -129,7 +129,7 @@ column-gap: 20px;
     font-family: 'Montserrat', sans-serif;
 }
   h3 {
-    font-weight: 600;
+    font-weight: 500;
     text-transform: initial;
     font-family: 'Montserrat', sans-serif;
     line-height: 20px;

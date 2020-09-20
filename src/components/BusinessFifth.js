@@ -97,6 +97,21 @@ p.third-para {
 .third-image {
     width: 300px;
 }
+.button-first {
+    border: 2px solid;
+    display: inline-block;
+    border-radius: 8px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 1;
+    background-color: #102a42;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.09);
+    border-color: transparent;
+    color: #FFFFFF;
+    font-size: 11px;
+    padding: 12px 16px;
+  }
   }
   
   
@@ -118,6 +133,22 @@ p.third-para {
     .section-third {
         padding-bottom: 12rem;
     }
+    .button-first {
+        border: 2px solid;
+        display: inline-block;
+        border-radius: 8px;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        font-weight: 500;
+        line-height: 1;
+        background-color: #102a42;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.09);
+        border-color: transparent;
+        color: #FFFFFF;
+        font-size: 11px;
+        padding: 12px 16px;
+        margin: 0 auto;
+      }
     }
 `
 
