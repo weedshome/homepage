@@ -42,8 +42,9 @@ const BusinessFifth = ({ }) => {
                                         <li className="third-space"><FaStop className="third-icon" />Understand customers and meet their requirements</li>
                                         <li className="third-space"><FaStop className="third-icon" />Targeted client base with Tivo's efficient technology</li>
                                     </ul>
-                                    <button className="third-button">Learn More</button>
-                                </div>
+                                    <div className="buttons-header">
+                                        <button class="button-first">Request a demo</button>
+                                    </div>                                </div>
                             </div>
                         </div>
                     </div>
@@ -56,6 +57,29 @@ const BusinessFifth = ({ }) => {
 const Wrapper = styled.div`
 background: #f1f5fe;
 padding-bottom: 6rem;
+.buttons-header {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    margin-top: 32px;
+    display: flex;
+  }
+  .button-first {
+    border: 2px solid;
+    display: inline-block;
+    border-radius: 8px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 1;
+    background-color: #102a42;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.09);
+    border-color: transparent;
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 12px 16px;
+    margin-right: 24px;
+  }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     padding-bottom: 0rem;
 .section-width {

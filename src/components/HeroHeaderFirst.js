@@ -34,6 +34,10 @@ const HeroHeaderFirst = ({ }) => {
               </div>
               <div class="k-description">
                 <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience in the cannabis.</p>
+                <div className="buttons-header">
+                  <button class="button-first">Request a demo</button>
+                  <button class="button-second">Start a free trial</button>
+                </div>
               </div>
             </div>
             <div class="k-2">
@@ -66,7 +70,7 @@ const Wrapper = styled.div`
     padding-bottom: 3rem;
   }
   .k-1 {
-    padding-bottom: 20px;
+    padding-bottom: 3.5rem;
    }
    .business-title {
     font-size: 2rem;
@@ -81,6 +85,45 @@ const Wrapper = styled.div`
   .business-image-container {
     margin-top: 1rem;
     margin-left: 1.5rem;
+  }
+  .buttons-header {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    margin-top: 32px;
+    display: flex;
+  }
+  .button-first {
+    border: 2px solid;
+    display: inline-block;
+    border-radius: 8px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 1;
+    background-color: #102a42;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.09);
+    border-color: transparent;
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 12px 16px;
+    margin-right: 24px;
+  }
+  .button-second {
+    border: 2px solid;
+    display: inline-block;
+    border-radius: 8px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 1;
+    background: #FFFFFF;
+    border-color: #102a42;
+    color: #102a42;
+    font-size: 15px;
+    padding: 12px 16px;
+    margin-right: 24px;
+    background-color: transparent;
   }
 }
 
@@ -122,6 +165,45 @@ const Wrapper = styled.div`
     margin-top: 1rem;
     margin-left: 1.5rem;
   }
+  .buttons-header {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    margin-top: 32px;
+    display: flex;
+  }
+  .button-first {
+    border: 2px solid;
+    display: inline-block;
+    border-radius: 8px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 1;
+    background-color: #102a42;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.09);
+    border-color: transparent;
+    color: #FFFFFF;
+    font-size: 13px;
+    padding: 12px 16px;
+    margin-right: 24px;
+  }
+  .button-second {
+    border: 2px solid;
+    display: inline-block;
+    border-radius: 8px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 1;
+    background: #FFFFFF;
+    border-color: #102a42;
+    color: #102a42;
+    font-size: 13px;
+    padding: 12px 16px;
+    margin-right: 24px;
+    background-color: transparent;
+  }
 }
 
 
@@ -150,6 +232,46 @@ const Wrapper = styled.div`
     .business-text {
       font-size: 13px;
       text-align: center;
+    }
+    .buttons-header {
+      box-sizing: border-box;
+      justify-content: center;
+      min-width: 0;
+      margin-top: 32px;
+      margin-bottom: 32px;
+      display: flex;
+    }
+    .button-first {
+      border: 2px solid;
+      display: inline-block;
+      border-radius: 8px;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      font-weight: 500;
+      line-height: 1;
+      background-color: #102a42;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.09);
+      border-color: transparent;
+      color: #FFFFFF;
+      font-size: 11px;
+      padding: 12px 16px;
+      margin-right: 24px;
+    }
+    .button-second {
+      border: 2px solid;
+      display: inline-block;
+      border-radius: 8px;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      font-weight: 500;
+      line-height: 1;
+      background: #FFFFFF;
+      border-color: #102a42;
+      color: #102a42;
+      font-size: 11px;
+      padding: 12px 16px;
+      margin-right: 24px;
+      background-color: transparent;
     }
   }
 `

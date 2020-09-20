@@ -5,6 +5,7 @@ import SEO from '../components/SEO'
 import HomeBanner from '../components/HomeBanner'
 import HeroHeader from '../components/HeroHeader'
 import BusinessFifth from '../components/BusinessFifth'
+import TrendingStrains from '../components/HomeBanner/TrendingStrains'
 
 
 const IndexPage = ({ data }) => {
@@ -14,6 +15,7 @@ const IndexPage = ({ data }) => {
       <HeroHeader />
       <HomeBanner />
       <BusinessFifth />
+      <TrendingStrains />
     </Layout>
   )
 }
