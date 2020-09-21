@@ -48,7 +48,7 @@ const BusinessFifth = ({ }) => {
                                         <li className="third-space"><FaStop className="third-icon" />Targeted client base with Tivo's efficient technology</li>
                                     </ul>
                                     <div className="buttons-header">
-                                        <button class="button-first">Request a demo</button>
+                                        <button class="button-first">Learn More</button>
                                     </div>                                </div>
                             </div>
                         </div>

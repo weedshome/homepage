@@ -1178,7 +1178,7 @@ h3.posts-title-products svg {
 }
 
 .dropbtn {
-    color: #102a42;
+    color: #ffffff;
     font-weight: 600 !important;
     letter-spacing: var(--spacing);
     font-size: 15px;
@@ -1188,7 +1188,7 @@ h3.posts-title-products svg {
     display: flex;
     align-items: center;
     border: none;
-    background: white;
+    background: #fff0;
 }
 .dropdown {
   position: relative;
@@ -1219,7 +1219,7 @@ button.dropbtn {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #ffffff;}
+.dropdown:hover .dropbtn {background-color: #fff0;}
 
 .more-links {
   align-items: center;

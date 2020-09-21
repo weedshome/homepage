@@ -224,7 +224,6 @@ li.third-space {
   }
   .image-third {
     width: 300px !important;
-    margin: 0 auto;
     margin-top: 1rem;
 }
 .third-image2 {
@@ -234,6 +233,9 @@ h2.strain-header-text {
   font-size: 1.5rem !important;
 }
 .shopfront {
-  padding-bottom: .1rem;
+  padding-bottom: 5rem;
+  width: 85vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
   }

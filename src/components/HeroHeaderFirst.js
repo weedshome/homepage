@@ -35,8 +35,8 @@ const HeroHeaderFirst = ({ }) => {
               <div class="k-description">
                 <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience in the cannabis.</p>
                 <div className="buttons-header">
-                  <button class="button-first">Request a demo</button>
-                  <button class="button-second">Start a free trial</button>
+                  <button class="button-first">More Information</button>
+                  <button class="button-second">Search Strains</button>
                 </div>
               </div>
             </div>
