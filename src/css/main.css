@@ -1099,8 +1099,8 @@ a.ais-Pagination-link.ais-Pagination-link--selected {
 
 a.ais-Pagination-link {
   color: black;
-  font-family: teko;
-  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
 }
 
 button.ais-ClearRefinements-button:hover {

@@ -13,6 +13,11 @@ const query = graphql`
         date
         author
         category
+        image {
+          fixed(width: 100, height: 130) {
+          ...GatsbyContentfulFixed
+          }
+        }
         excerpt {
           excerpt
         }
@@ -32,6 +37,7 @@ const BreakingSide = () => {
             <article key={product.id}>
               <Link className="link" to={`/news/${product.slug}`}>
                 <div className="d">
+                  <Image fixed={product.image.fixed} alt={product.title}></Image>
                   <div className="info">
                     <h3>{product.title}</h3>
                     <span class="post-card-badge">{product.category}</span>
@@ -48,6 +54,29 @@ const BreakingSide = () => {
 }
 
 const Wrapper = styled.div`
+.gatsby-image-wrapper {
+  display: none !important;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .world-news {
+      justify-items: center;
+      grid-template-columns: 1fr 1fr !important;
+  }
+  }
+  @media screen and (max-width: 767px) {
+    .gatsby-image-wrapper {
+      display: !important;
+    }
+    .world-news {
+        justify-items: center;
+        grid-template-columns: 1fr !important;
+    }
+    }
+    @media screen and (max-width: 768px) {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      width: 82vw;
+    }
 .post-card-badge {
   width: fit-content;
     bottom: 16px;
@@ -78,6 +107,9 @@ display: grid;
     text-align: center;
 }
 @media screen and (max-width: 768px) {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 82vw;
     .world-news {
         grid-template-columns: 1fr !important;
         padding: 10px;
@@ -134,6 +166,9 @@ display: grid;
   p.readmore {
     margin: 2px;
     width: 330px;
+}
+.d {
+  grid-template-columns: 1fr 1fr !important;
 }
 `
 export default BreakingSide

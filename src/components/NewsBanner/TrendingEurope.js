@@ -129,7 +129,7 @@ display: grid;
   @media screen and (max-width: 768px) {
     .world-news {
       grid-template-columns: 1fr;
-      padding: 10px;
+      padding: 0px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -142,10 +142,14 @@ display: grid;
   }
 }
 @media screen and (max-width: 768px) {
-    h3.posts-title-products {
-        padding-left: 10px;
-        margin: unset;
-    }
-    }
+h3.posts-title-products {
+  padding-left: 0px;
+}
+}
+@media screen and (max-width: 768px) {
+max-width: var(--max-width);
+margin: 0 auto;
+width: 85vw;
+}
 `
 export default TrendingEurope

@@ -145,7 +145,7 @@ const Wrapper = styled.article`
   .link {
     text-transform: uppercase;
     letter-spacing: var(--spacing);
-    font-family: teko;
+    font-family: 'Montserrat', sans-serif;
     color: var(--clr-primary-5);
     padding-bottom: 0.1rem;
     display: flex;
@@ -182,7 +182,7 @@ const Wrapper = styled.article`
     margin-bottom: 0.5rem;
   }
   .product-rating {
-    font-family: teko;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: var(--spacing);
     padding-right: 30px;
     font-size: 18px;
@@ -200,7 +200,7 @@ const Wrapper = styled.article`
     font-weight: 400;
     transition: var(--transition);
     font-size: 18px;
-    font-family: teko;
+    font-family: 'Montserrat', sans-serif;
     border: 2px solid transparent;
     cursor: pointer;
   }
@@ -216,7 +216,7 @@ const Wrapper = styled.article`
   }
   .span-float {
     float: left;
-    font-family: teko;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     letter-spacing: var(--spacing);
     text-align: center;
@@ -229,7 +229,7 @@ const Wrapper = styled.article`
   .span-float2 {
     float: right;
     text-align: center;
-    font-family: teko;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     letter-spacing: var(--spacing);
     background: #000000;

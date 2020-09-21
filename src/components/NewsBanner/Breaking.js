@@ -14,9 +14,10 @@ const query = graphql`
         author
         category
         image {
-          fixed(width: 390, height: 214) {
-          ...GatsbyContentfulFixed
-          }
+          fluid {
+          ...GatsbyContentfulFluid 
+        
+        }
         }
         excerpt {
           excerpt
@@ -38,7 +39,7 @@ const Breaking = () => {
               <Link className="link" to={`/news/${product.slug}`}>
                 <div className="d">
                   <figure className="post-card-figure">
-                    <Image fixed={product.image.fixed} alt={product.title}></Image>
+                    <Image fluid={product.image.fluid} alt={product.title}></Image>
                     <span class="post-card-badge">{product.category}</span>
                   </figure>
                   <div className="info">
@@ -138,6 +139,19 @@ display: grid;
     width: 90vw;
     max-width: var(--max-width);
     margin: 0 auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .breaking-news {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      width: 92vw;
+  }
+}
+  @media screen and (max-width: 768px) {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 82vw;
   }
 
 `

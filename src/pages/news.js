@@ -47,7 +47,7 @@ const News = ({ data }) => {
                   <article key={product.id}>
                     <Link className="link" to={`/news/${product.slug}`}>
                       <div className="d">
-                        <Image fixed={product.image.fixed} alt={product.title}></Image>
+                        <Image fluid={product.image.fluid} alt={product.title}></Image>
                         <div className="info">
                           <h3 className="title-news">{product.title}</h3>
                           <span class="post-card-badge">{product.category}</span>
@@ -316,15 +316,21 @@ p.readmore {
     column-gap: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+  .news-grid-section {
+  grid-template-columns: 1fr !important;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 .news-grid-section2 {
     display: grid;
-    grid-template-columns: 320px 375px !important;
+    grid-template-columns: 1fr !important;
     max-width: var(--max-width);
     margin: 0 auto;
     column-gap: 1rem; 
     padding-top: 6rem;
-    width: 85vw;
+    width: 92vw;
 }
 }
 .news-grid-section2 {
@@ -334,8 +340,6 @@ p.readmore {
   margin: 0 auto;
   column-gap: 1rem; 
   padding-top: 6rem;
-}
-.breaking-news {
 }
 @media screen and (max-width: 768px) {
     .news-grid-section2 {
@@ -355,6 +359,7 @@ p.readmore {
       @media screen and (max-width: 768px) {
       .d {   
       grid-template-columns: 1fr;
+      width: 100%;
       }
     }
 `
@@ -370,8 +375,8 @@ export const query = graphql`
         author
         category
         image {
-          fixed(width: 150, height: 160) {
-          ...GatsbyContentfulFixed
+          fluid {
+          ...GatsbyContentfulFluid
           }
         }
         excerpt {
