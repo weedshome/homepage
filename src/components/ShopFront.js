@@ -8,7 +8,7 @@ import ShopFrontTwo from './ShopFrontTwo'
 const ShopFront = ({ }) => {
     return (
         <div className="shop-front">
-            <section>
+            <section className="shopfront">
                 <ShopFrontTwo />
             </section>
         </div>

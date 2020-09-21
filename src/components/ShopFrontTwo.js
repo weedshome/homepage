@@ -6,9 +6,9 @@ import ShopTwo from './ShopTwo'
 
 const ShopFrontTwo = ({ }) => {
     return (
-        <section>
+        <div>
             <ShopTwo />
-        </section>
+        </div>
     )
 }
 

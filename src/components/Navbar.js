@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../assets/main-logo.png'
+import logo from '../assets/wh-logo-main.png'
 import Links from '../constants/links'
 import SocialLinks from '../constants/socialLinks'
 import Hamburger from './Hamburger'
+import { FaBars } from 'react-icons/fa';
 
 const Navbar = ({ }) => {
   return <nav className="navbar">

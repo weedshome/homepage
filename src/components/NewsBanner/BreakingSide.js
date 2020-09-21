@@ -107,9 +107,7 @@ display: grid;
     text-align: center;
 }
 @media screen and (max-width: 768px) {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  width: 82vw;
+  display: none !important;
     .world-news {
         grid-template-columns: 1fr !important;
         padding: 10px;

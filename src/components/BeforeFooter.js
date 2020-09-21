@@ -158,6 +158,8 @@ hr {
 }
 
 @media screen and (max-width: 767px) {
+  padding-top: 3rem;
+    padding-bottom: 8rem;
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -168,8 +170,6 @@ hr {
     place-items: left;
     max-width: var(--max-width);
     margin: 0 auto;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
   }
 }
 `

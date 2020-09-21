@@ -126,32 +126,8 @@ display: grid;
     max-width: var(--max-width);
     margin: 0 auto;
   }
-  @media screen and (max-width: 768px) {
-      .world-news {
-        grid-template-columns: 1fr;
-        padding: 0px;
-      }
-  }
-  @media screen and (max-width: 768px) {
-    .d {
-    grid-template-columns: 80px 1fr !important;
-}
 @media screen and (max-width: 768px) {
-    .gatsby-image-wrapper {
-        width: 80px !important;
-    }
-}
-@media screen and (max-width: 768px) {
-h3.posts-title-products {
-    padding-left: 0px;
-}
-}
-@media screen and (max-width: 768px) {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  width: 85vw;
-  padding: 2rem;
-  margin-bottom: 2rem;
+  display: none !important;
 }
 `
 export default TrendingNews

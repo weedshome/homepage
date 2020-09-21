@@ -45,7 +45,7 @@ const TrendingStrains = () => {
                     {products.map(product => {
                         return (
                             <article key={product.id}>
-                                <Link className="link" to={`/news/${product.slug}`}>
+                                <Link className="link" to={`/strains/${product.slug}`}>
                                     <div className="d">
                                         <div className="grid-news">
                                             <Image fixed={product.image.fixed} alt={product.title}></Image>

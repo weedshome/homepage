@@ -210,3 +210,30 @@ li.third-space {
   -ms-transform: translate(3em,0);
   transform: translate(3em,0);
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+ .shopfront {
+  width: 85vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+ }
+}
+  @media screen and (max-width: 767px) {
+    .grid-container-fourth {
+      display: block !important;
+  }
+  .image-third {
+    width: 300px !important;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.third-image2 {
+  margin: 0 auto
+}
+h2.strain-header-text {
+  font-size: 1.5rem !important;
+}
+.shopfront {
+  padding-bottom: .1rem;
+}
+  }
