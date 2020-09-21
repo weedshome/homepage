@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { slide as Menu } from 'react-burger-menu'
 import styled from '@emotion/styled'
 import SocialLinks from '../constants/socialLinks'
-import menu from '../assets/right-menu-bars.svg'
+import menu from '../assets/hamburger-png.png'
 
 
 
@@ -71,7 +71,6 @@ export default () => {
             <SocialLinks styleClass="banner-icons" />
           </Menu>
         </SideMenu>
-
       </TopNav>
     </>
 

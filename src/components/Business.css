@@ -58,6 +58,16 @@
     width: 500px;
     justify-self: left;
   }
+  .third-image2 {
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: ;
+    gap: 1px 1px;
+    grid-template-areas: "image-third";
+    grid-area: third-image;
+    width: 500px;
+    justify-self: right;
+  }
   
   .image-third { grid-area: image-third; }
   
@@ -136,7 +146,6 @@ li.third-space {
     place-items: center;
     max-width: var(--max-width);
     margin: 0 auto;
-    margin-bottom: 10rem;
   }
 
   .section-fourth {

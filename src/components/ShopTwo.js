@@ -47,7 +47,7 @@ const ShopTwo = ({ }) => {
             <button className="third-button">Learn More</button>
           </div>
         </div>
-        <div class="third-image">
+        <div class="third-image2">
           <div class="image-third">
             <Image fluid={featuresThird.childImageSharp.fluid} />
           </div>

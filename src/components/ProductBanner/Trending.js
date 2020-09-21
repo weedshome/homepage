@@ -84,7 +84,7 @@ const Wrapper = styled.div`
       font-weight: 500 !important;
       white-space: nowrap;
       color: #ffffff;
-      background-color: #6e9654;
+      background-color: #102a42;
       box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
       border-radius: 4px;
       font-family: 'Montserrat', sans-serif;

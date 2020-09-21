@@ -67,14 +67,14 @@ const BeforeFooter = () => {
 }
 
 const Wrapper = styled.div`
-
+background: #102a42;
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 1px 1px;
   grid-template-areas: "grid-1 grid-2 grid-3 grid-4";
-  height: 20rem;
+  height: 14rem;
   place-items: center;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -98,13 +98,14 @@ ul.social-list {
   border: none;
   display: flex;
   align-items: center;
+  color: #ffffff;
 }
 
 a.footer-tx {
   display: block;
   letter-spacing: var(--spacing);
   transition: var(--transition);
-  color: hsl(209deg 61% 16%);
+  color: #ffffff;
   line-height: 1.8;
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;
@@ -123,7 +124,7 @@ hr {
 .underline-footer {
     width: 3rem;
     height: 3px;
-    background: var(--clr-black);
+    background: hsl(95, 28%, 46%);
     margin-top: -5px;
     margin-bottom: 10px;
 }
@@ -163,7 +164,7 @@ hr {
     grid-template-rows: 1fr;
     gap: 30px 10px;
     grid-template-areas: "grid-1 grid-2";
-    height: 20rem;
+    height: 14rem;
     place-items: left;
     max-width: var(--max-width);
     margin: 0 auto;

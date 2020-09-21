@@ -118,7 +118,7 @@ const Wrapper = styled.article`
   .link {
     text-transform: uppercase;
     letter-spacing: var(--spacing);
-    font-family: teko;
+    font-family: 'Montserrat', sans-serif;
     color: var(--clr-primary-5);
     padding-bottom: 0.1rem;
     display: flex;
@@ -134,9 +134,7 @@ const Wrapper = styled.article`
     color: #0a0c10;
   }
   footer {
-    margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--clr-grey-9);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -155,7 +153,7 @@ const Wrapper = styled.article`
     margin-bottom: 0.5rem;
   }
   .product-rating {
-    font-family: teko;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: var(--spacing);
     padding-right: 30px;
     font-size: 18px;

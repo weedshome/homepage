@@ -107,9 +107,7 @@ h3.posts-title-products {
     color: #0a0c10;
   }
   footer {
-    margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--clr-grey-9);
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -34,6 +34,7 @@ export default ({ hit }) => (
 const Wrapper = styled.div`
 .info {
  background: #ffffff;
+ border-bottom: none !important;
 }
 .hit-p {
     box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;

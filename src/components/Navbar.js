@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../assets/weeds-home-logo.png'
+import logo from '../assets/main-logo.png'
 import Links from '../constants/links'
 import SocialLinks from '../constants/socialLinks'
 import Hamburger from './Hamburger'

@@ -5,7 +5,8 @@ import styled from 'styled-components'
 import { Link } from "gatsby"
 import { MdUpdate } from 'react-icons/md'
 import { FaLongArrowAltRight } from 'react-icons/fa'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const query = graphql`
 {
@@ -30,10 +31,13 @@ const query = graphql`
   }
 `
 const TrendingNews = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, [])
   const data = useStaticQuery(query)
   const { allContentfulNews: { nodes: products }, } = data
   return (
-    <section className="posts">
+    <section className="posts" data-aos="fade-left">
       <div className="more-links">
         <h2 className="news-title">Latest from News</h2>
         <Link className="link-more" to={`/news/`}>View all <FaLongArrowAltRight /></Link>
@@ -117,7 +121,7 @@ column-gap: 20px;
     font-weight: 500 !important;
     white-space: nowrap;
     color: #ffffff;
-    background-color: #6e9654;
+    background-color: #102a42 !important;
     box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;

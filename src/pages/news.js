@@ -86,7 +86,7 @@ const Wrapper = styled.article`
     font-weight: 500 !important;
     white-space: nowrap;
     color: #ffffff;
-    background-color: #6e9654;
+    background-color: #102a42 !important;
     box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
@@ -172,9 +172,7 @@ const Wrapper = styled.article`
     color: #0a0c10;
   }
   footer {
-    margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--clr-grey-9);
     display: flex;
     align-items: center;
     justify-content: space-between;

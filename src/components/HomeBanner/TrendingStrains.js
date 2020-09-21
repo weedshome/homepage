@@ -6,7 +6,8 @@ import { Link } from "gatsby"
 import { MdUpdate } from 'react-icons/md'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import ReactStars from "react-stars";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const query = graphql`
 {
@@ -28,10 +29,13 @@ const query = graphql`
   }
 `
 const TrendingStrains = () => {
+    useEffect(() => {
+        AOS.init({ duration: 2000 });
+    }, [])
     const data = useStaticQuery(query)
     const { allContentfulStrains: { nodes: products }, } = data
     return (
-        <section className="posts">
+        <section className="posts" data-aos="fade-up">
             <Wrapper>
                 <div className="hero-info-3">
                     <h2 className="news-title">Browse Cannabis Strains</h2>
@@ -178,7 +182,7 @@ h2 {
     font-weight: 500 !important;
     white-space: nowrap;
     color: #ffffff;
-    background-color: #6e9654;
+    background-color: #102a42 !important;
     box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
     border-radius: 4px;
     font-family: 'Montserrat',sans-serif;

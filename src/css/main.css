@@ -208,7 +208,7 @@ Navbar
   position: fixed;
   width: 100%;
   background: transparent;
-  background: #ffffff;
+  background: #102a42;
   box-shadow: 0 0 8px 0 #0000006e;
 }
 .nav-center {
@@ -279,7 +279,7 @@ Navbar
     margin-right: 1.5rem;
   }
   .page-link {
-    color: #102a42;
+    color: #ffffff;
     font-weight: 600 !important;
     letter-spacing: var(--spacing);
     font-size: 15px;
@@ -291,7 +291,7 @@ Navbar
     border: none;
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: #fff0;
   }
   button.page-link svg {
     padding-top: 1px;
@@ -313,7 +313,7 @@ Navbar
     font-size: 1.5rem;
     transition: var(--transition);
     margin-left: 0.5rem;
-    color: #102a42;
+    color: #ffffff;
   }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .nav-icons .social-icon {
@@ -1303,7 +1303,7 @@ p.posts-text-strains {
     display: block;
     letter-spacing: var(--spacing);
     transition: var(--transition);
-    color: #ffffff;
+    color: #ffffff !important;
     line-height: 1.6;
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;

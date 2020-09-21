@@ -26,31 +26,31 @@ const query = graphql`
   }
 `
 const Trending = () => {
-    const data = useStaticQuery(query)
-    const { allContentfulHowto: { nodes: products }, } = data
-    return (
-        <Wrapper>
-            <Title title="Latest from How To" />
-            {products.map(product => {
-                return (
-                    <article key={product.id}>
-                        <Link className="link" to={`/how-to/${product.slug}`}>
-                            <div className="d">
-                                <Image fluid={product.image.fluid} alt={product.title}></Image>
-                                <div className="info">
-                                    <h3 className="howto-title">{product.title}</h3>
-                                    <div className="article-info">
-                                        <p className="author-text">{product.author}</p>
-                                        <p className="author-text2">{product.date}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </article>
-                )
-            })}
-        </Wrapper>
-    )
+  const data = useStaticQuery(query)
+  const { allContentfulHowto: { nodes: products }, } = data
+  return (
+    <Wrapper>
+      <Title title="Latest from How To" />
+      {products.map(product => {
+        return (
+          <article key={product.id}>
+            <Link className="link" to={`/how-to/${product.slug}`}>
+              <div className="d">
+                <Image fluid={product.image.fluid} alt={product.title}></Image>
+                <div className="info">
+                  <h3 className="howto-title">{product.title}</h3>
+                  <div className="article-info">
+                    <p className="author-text">{product.author}</p>
+                    <p className="author-text2">{product.date}</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </article>
+        )
+      })}
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`
@@ -81,7 +81,7 @@ const Wrapper = styled.div`
       font-weight: 500 !important;
       white-space: nowrap;
       color: #ffffff;
-      background-color: #6e9654;
+      background-color: #102a42 !important; 
       box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
       border-radius: 4px;
       font-family: 'Montserrat', sans-serif;
