@@ -20,40 +20,39 @@ const query = graphql`
 `
 
 const Newsletter = () => {
-    const data = useStaticQuery(query)
-    useEffect(() => {
-        AOS.init({ duration: 2000 });
-    }, [])
-    return (
-        <Wrapper>
-            <Title title="Newsletter" />
-            <section data-aos="flip-left">
-                <div class="grid-container-newsletter">
-                    <div class="newsletter">
-                        <div class="newsletter-inside">
-                            <section className="newsletter-page">
-                                <div className="page-center">
-                                    <Image fixed={data.person.childImageSharp.fixed} className="img" />
-                                    <h2 className="newsletter-title">Get all the latest stories to your inbox</h2>
-                                    <p className="newsletter-terms">I've read and agree to Weed's Home written I've read and agree to Weed's Home written.I've read and agree to Weed's Home written.</p>
-                                    <form className="contact-form" name="test-contact" method="post" netlify-honeypot="bot-field" data-netlify="true" action="/success">
-                                        <input type="hidden" name="bot-field" />
-                                        <input type="hidden" name="form-name" value="testing-contact" />
-                                        <input type="text" name="name" placeholder="Your name" className="form-control" />
-                                        <input type="email" name="email" placeholder="Your email" className="form-control" />
-                                        <button type="submit" className="btn form-control submit-btn"> subscribe</button>
-                                    </form>
-                                    <p className="newsletter-terms">I've read and agree to Weed's Home written <a href="/">Privacy Policy</a> and <a href="/">Terms Conditions.</a></p>
-                                    <SocialLinks styleClass="banner-icons" />
-                                </div>
-                            </section>
-
-                        </div>
-                    </div>
+  const data = useStaticQuery(query)
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, [])
+  return (
+    <Wrapper>
+      <Title title="Newsletter" />
+      <section data-aos="flip-left">
+        <div class="grid-container-newsletter">
+          <div class="newsletter">
+            <div class="newsletter-inside">
+              <section className="newsletter-page">
+                <div className="page-center">
+                  <Image fixed={data.person.childImageSharp.fixed} className="img" />
+                  <h2 className="newsletter-title">Get all the latest stories to your inbox</h2>
+                  <form className="contact-form" name="test-contact" method="post" netlify-honeypot="bot-field" data-netlify="true" action="/success">
+                    <input type="hidden" name="bot-field" />
+                    <input type="hidden" name="form-name" value="testing-contact" />
+                    <input type="text" name="name" placeholder="Your name" className="form-control" />
+                    <input type="email" name="email" placeholder="Your email" className="form-control" />
+                    <button type="submit" className="btn form-control submit-btn"> subscribe</button>
+                  </form>
+                  <p className="newsletter-terms">I've read and agree to Weed's Home written <a href="/">Privacy Policy</a> and <a href="/">Terms Conditions.</a></p>
+                  <SocialLinks styleClass="banner-icons" />
                 </div>
-            </section>
-        </Wrapper>
-    )
+              </section>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`
@@ -73,7 +72,22 @@ const Wrapper = styled.div`
     grid-template-areas: "newsletter-inside";
     grid-area: newsletter;
   }
+
+  h2.newsletter-title {
+    padding: 20px;
+}
+
+form.contact-form {
+  flex-direction: inherit;
+}
   
+.img.gatsby-image-wrapper {
+  margin-bottom: 0rem !important;
+  margin-top: 1rem;
+}
+ul.banner-icons {
+  padding-bottom: 0.5rem;
+}
   .newsletter-inside { grid-area: newsletter-inside; }
   
   .newsletter-terms {

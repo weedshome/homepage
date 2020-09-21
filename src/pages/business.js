@@ -7,6 +7,7 @@ import BusinessHero from '../components/BusinessHero'
 import BusinessThird from '../components/BusinessThird'
 import BusinessFourth from '../components/BusinessFourth'
 import BusinessFifth from '../components/BusinessFifth'
+import BusinessSix from '../components/BusinessSix'
 
 const Business = ({ }) => {
 
@@ -14,9 +15,8 @@ const Business = ({ }) => {
         <Layout>
             <SEO title="Home" />
             <BusinessHero />
-            <BusinessThird />
             <BusinessFourth />
-            <BusinessFifth />
+            <BusinessSix />
         </Layout>
     )
 }

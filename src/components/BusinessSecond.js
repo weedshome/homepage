@@ -7,21 +7,21 @@ import styled from "styled-components"
 
 const query = graphql`
   {
-    description: file(relativePath: {eq: "automation.png" }) {
+    description: file(relativePath: {eq: "automation2.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    descriptions: file(relativePath: {eq: "list-building-1.png" }) {
+    descriptions: file(relativePath: {eq: "list-building-2.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      descriptionss: file(relativePath: {eq: "marketing-concept.png" }) {
+      descriptionss: file(relativePath: {eq: "marketing-concept-2.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -80,7 +80,7 @@ const BusinessSecond = ({ }) => {
 }
 
 const Wrapper = styled.div`
-padding-top: 9rem;
+padding-top: 6rem;
 .grid-container-hero {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -159,14 +159,36 @@ padding-top: 9rem;
   display: inline-block;
 }
 .card-text {
-  color: hsl(220, 23%, 5%);
-  padding: 10px;
-  margin-bottom: 0;
+  color: hsl(209deg 61% 16%);
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: var(--spacing);
+    padding: 20px;
 }
 .h2-heading {
   margin: 0 auto;
   width: 50%;
   padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .grid-container-hero {
+    display: block;
+    padding: 20px;
+}
+.b-1 {
+  margin-bottom: 1rem;
+}
+.b-2 {
+  margin-bottom: 1rem;
+}
+.b-3 {
+  margin-bottom: 1rem;
+}
+h2.h2-heading {
+  font-size: 20px;
+  width: 100% !important;
+}
 }
 `
 

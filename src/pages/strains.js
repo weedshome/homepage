@@ -218,7 +218,10 @@ h3.posts-title-products {
   .posts-text-strains {
     padding: 20px;
     padding-top: 10px;
+    color: hsl(209deg 61% 16%);
+    font-size: 12px;
     font-family: 'Montserrat', sans-serif;
+    letter-spacing: var(--spacing);
   }
   section.posts {
     padding-top: 3rem;

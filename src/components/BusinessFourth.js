@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 
 const query = graphql`
   {
-    featuresThird: file(relativePath: {eq: "worldwide.png" }) {
+    featuresThird: file(relativePath: {eq: "worldwide2.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -32,7 +32,7 @@ const BusinessFourth = ({ }) => {
                     <div class="v-text">
                         <div class="inside-text">
                             <h3>Now Is The Time To Upgrade Your Marketing Solution</h3>
-                            <p>Target the right customers for your business with the help of Tivo's patented segmentation technology and deploy efficient marketing campaigns. Keep your customers happy and loyal.</p>
+                            <p className="text-fourth-biz">Target the right customers for your business with the help of Tivo's patented segmentation technology and deploy efficient marketing campaigns. Keep your customers happy and loyal.</p>
                             <ul>
                                 <li className="third-space"><FaStop className="third-icon" />Understand customers and meet their requirements</li>
                                 <li className="third-space"><FaStop className="third-icon" />Targeted client base with Tivo's efficient technology</li>

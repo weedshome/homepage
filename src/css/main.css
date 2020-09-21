@@ -1293,6 +1293,17 @@ p.posts-text-strains {
   border-radius: var(--radius);
 }
 
+.text-fourth-biz {
+  display: block;
+  letter-spacing: var(--spacing);
+  color: hsl(209deg 61% 16%);
+  line-height: 1.8;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: none;
+  border-radius: var(--radius);
+}
+
 .CookieConsent {
   background: rgb(10 13 15);
   font-family: 'Montserrat', sans-serif;
