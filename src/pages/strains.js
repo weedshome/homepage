@@ -3,13 +3,9 @@ import { graphql } from "gatsby"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout"
-import ProductBanner from "../components/ProductBanner"
-import ShopFront from '../components/ShopFront'
 import { GoSettings } from 'react-icons/go'
-import ReactStars from "react-stars";
 import SearchComp from '../components/search/searchComp'
 import 'instantsearch.css/themes/algolia.css';
-import StrainSlider from "../components/StrainSlider"
 
 const Strains = ({ data }) => {
   const {
@@ -19,7 +15,6 @@ const Strains = ({ data }) => {
   return (
     <Wrapper>
       <Layout>
-        <ShopFront />
         <section className="posts">
           <h3 className="posts-title-products"><GoSettings />Browse Seeds</h3>
           <p className="posts-text-strains">Auto-flowering marijuana seeds | Autoflowering cannabis plants start flowering on their own within 2-4 weeks of germination. Classic varieties, both Indica and Sativa dominant, are photoperiodic plants. Therefore, they are traditionally exposed to 12 hours of light in order to induce flowering indoors but might not have enough time to finish outdoors before the days get shorter – unlike autoflowering strains.They are Indica or Sativa plants crossbred with a Ruderalis representative, making them the perfect choice for areas where summer.</p>
@@ -227,6 +222,9 @@ h3.posts-title-products {
     padding-top: 10px;
     font-family: 'Montserrat', sans-serif;
   }
+  section.posts {
+    padding-top: 3rem;
+}
 `
 
 export const query = graphql`

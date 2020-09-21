@@ -4,12 +4,12 @@ require("dotenv").config({
 const queries = require("./src/constants/algolia")
 module.exports = {
   siteMetadata: {
-    title: `Gatsby MDX Blog`,
-    description: `Awesome Blog built with Gatsby and MDX`,
-    titleTemplate: `%s MDX Blog`,
-    url: `https://mdx-blog.netlify.app/`,
+    title: `Weed's Home`,
+    description: `Awesome Cannabis Blog built with Gatsby and Contentful`,
+    titleTemplate: `Weed's Home`,
+    url: `https://weedshome.com/`,
     image: `mainImg.png`,
-    twitterUsername: `@john_smilga`,
+    twitterUsername: `@weedshome`,
   },
 
   plugins: [

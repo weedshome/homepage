@@ -35,7 +35,7 @@ const ShopTwo = ({ }) => {
   const { featuresThird, featuresThirdTwo } = useStaticQuery(query)
   return (
     <section data-aos="fade-left">
-      <div class="grid-container-third">
+      <div class="grid-container-fourth">
         <div class="third-text">
           <div class="third-text-box">
             <h2 className="strain-header-text">Cannabis Marketin Automation</h2>

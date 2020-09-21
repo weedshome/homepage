@@ -15,6 +15,18 @@
     margin: 0 auto;
   }
 
+  .grid-container-fourth {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "third-text third-image";
+    height: 25rem;
+    place-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
   @media screen and (max-width: 768px) {
   .grid-container-third {
     display: block;

@@ -11,6 +11,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { GiSeedling } from 'react-icons/gi'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import Image from 'gatsby-image'
 
 
 
@@ -29,6 +30,8 @@ const StrainTemplate = ({
             indica,
             hybrid,
             body,
+            affiliatelink,
+            image: { fixed },
             info: { info },
         },
     },
@@ -54,6 +57,7 @@ const StrainTemplate = ({
                         <div class="grid-container3">
                             <div class="strain-image">
                                 <div class="strain-image">
+                                    <Image fixed={fixed} alt={title} />
                                 </div>
                             </div>
                             <div class="strain-text">
@@ -76,8 +80,7 @@ const StrainTemplate = ({
                                     </div>
                                 </div>
                                 <div class="strain-button">
-                                    <button className="info-btn">get it now <GiSeedling /></button>
-                                    <button className="info-btn2">get it now <GiSeedling /></button>
+                                    <a href={affiliatelink}><button className="button-first">Get it now <GiSeedling /></button></a>
                                 </div>
                             </div>
                             <div class="strain-info-first">
@@ -85,7 +88,7 @@ const StrainTemplate = ({
                                     <CircularProgressbar value={sativa} text={`${sativa}%`}
                                         styles={buildStyles({
                                             strokeLinecap: 'butt',
-                                            textSize: '28px',
+                                            textSize: '20px',
                                             pathTransitionDuration: 0.5,
                                             pathColor: `rgb(126, 167, 72), ${sativa / 100})`,
                                             textColor: 'white',
@@ -99,7 +102,7 @@ const StrainTemplate = ({
                                     <CircularProgressbar value={indica} text={`${indica}%`}
                                         styles={buildStyles({
                                             strokeLinecap: 'butt',
-                                            textSize: '28px',
+                                            textSize: '20px',
                                             pathTransitionDuration: 0.5,
                                             pathColor: `rgb(126, 167, 72), ${indica / 100})`,
                                             textColor: 'white',
@@ -113,7 +116,7 @@ const StrainTemplate = ({
                                     <CircularProgressbar value={hybrid} text={`${hybrid}%`}
                                         styles={buildStyles({
                                             strokeLinecap: 'butt',
-                                            textSize: '28px',
+                                            textSize: '20px',
                                             pathTransitionDuration: 0.5,
                                             pathColor: `rgb(126, 167, 72), ${hybrid / 100})`,
                                             textColor: 'white',
@@ -215,6 +218,7 @@ query GetSingleStrain($slug: String) {
     sativa
     indica
     hybrid
+    affiliatelink,
     image {
       fixed(width: 400, height: 200) {
         ...GatsbyContentfulFixed
@@ -237,6 +241,39 @@ const Wrapper = styled.section`
   margin: 0 auto;
   margin-bottom: 4rem;
   padding-top: 15px;
+  .button-first {
+    border: 2px solid;
+    display: inline-block;
+    border-radius: 8px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 1;
+    background-color: #102a42;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.09);
+    border-color: transparent;
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 12px 16px;
+    margin-right: 24px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .grid-container {
+        display: block !important;
+    }
+}
+  @media screen and (max-width: 768px) {
+    .grid-container {
+        display: block !important;
+    }
+    .grid-container3 {
+        margin-bottom: 25rem !important;
+        display: block !important;
+    }
+    .posts-center {
+        grid-template-columns: 1fr !important;
+    }
+  }
   .post-info {
     margin: 2rem 0 4rem 0;
     text-align: center;
@@ -287,13 +324,14 @@ const Wrapper = styled.section`
     padding: 45px;
     padding-top: 30px;
     padding-bottom: 30px;
-    font-family: teko;
+    font-family: 'Montserrat', sans-serif;
 }
 span.product-rating {
     color: rgb(16 42 66);
-    font-family: teko;
-    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
     padding-top: 2px;
+    padding-left: 1rem;
 }
 p.strain-info-text-2 {
     color: rgb(16, 42, 66)!important;
@@ -305,7 +343,7 @@ text.CircularProgressbar-text {
     fill: rgb(16, 42, 66) !important;
 }
 .heading-info {
-    color: white;
+    color: #102a42;
     font-size: 20px;
     margin-bottom: inherit;
 }
@@ -320,14 +358,14 @@ text.CircularProgressbar-text {
     padding: 45px;
     padding-top: 30px;
     padding-bottom: 30px;
-    font-family: teko;
+    font-family: 'Montserrat', sans-serif;
 }
 .strain-info-first {
     width: 100%;
     padding: 25px;
     padding-left: 0px;
     padding-right: 35px;
-    font-family: teko;
+    font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -337,6 +375,7 @@ text.CircularProgressbar-text {
     stroke: #7da748;
     stroke-linecap: round !important;
     transition: stroke-dashoffset 0.5s ease 0s;
+    font-size: 14px;
 }
 }
 .react-sweet-progress-symbol {
@@ -353,11 +392,13 @@ text.CircularProgressbar-text {
     grid-template-areas: "strain-image strain-text strain-info .";
     height: 100%;
     width: 100%;
+    background: #f1f5fe;
   }
 
   p.strain-info-text {
-    color: white;
-    font-family: teko;
+    font-size: 14px;
+    color: #102a42;
+    font-family: 'Montserrat', sans-serif;
     padding-top: 7px;
     margin-bottom: 0rem;
     letter-spacing: var(--spacing);
@@ -365,37 +406,11 @@ text.CircularProgressbar-text {
 p.strain-info-text-2 {
     text-align: center;
     color: white;
-    font-family: teko;
-    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
     margin-bottom: 0rem;
     margin-top: 0.5rem;
     letter-spacing: var(--spacing);
-}
-
-  button.info-btn {
-    font-family: teko;
-    padding-top: 4.5px;
-    font-size: 20px;
-    height: 35px;
-    width: 150px;
-    background: #7EA748;
-    border: none;
-    color: white;
-    text-transform: uppercase;
-    border-radius: 5px;
-}
-button.info-btn2 {
-    font-family: teko;
-    padding-top: 4.5px;
-    font-size: 20px;
-    margin-left: 10px;
-    height: 35px;
-    width: 150px;
-    background: rgb(16 42 66);
-    border: none;
-    color: white;
-    text-transform: uppercase;
-    border-radius: 5px;
 }
 h2.title-strain {
     color: rgb(16 42 66);
@@ -434,6 +449,7 @@ h2.title-strain {
     max-width: var(--max-width);
     margin: 0 auto;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 .product-grid-strains {
     background: white;
@@ -441,11 +457,15 @@ h2.title-strain {
 }
 .posts-center {
     margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    -webkit-column-gap: 1rem;
+    column-gap: 1rem;
 }
 .search-text {
     text-transform: uppercase;
     letter-spacing: var(--spacing);
-    font-family: teko;
+    font-family: 'Montserrat', sans-serif;
     color: var(--clr-primary-5);
     padding-bottom: 0.1rem;
     display: flex;
@@ -485,6 +505,7 @@ h2.title-strain {
       grid-area: strain-title; 
     
     }
+
   
   .strain-review { grid-area: strain-review; }
   
@@ -506,7 +527,6 @@ h2.title-strain {
   .strain-info-3 { grid-area: strain-info-3; }
   
   .strain-info-4 { grid-area: strain-info-4; }
-
 `
 
 

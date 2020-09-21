@@ -7,11 +7,11 @@ import ShopFrontTwo from './ShopFrontTwo'
 
 const ShopFront = ({ }) => {
     return (
-        <header className="shop-front">
+        <div className="shop-front">
             <section>
                 <ShopFrontTwo />
             </section>
-        </header >
+        </div>
 
     )
 }

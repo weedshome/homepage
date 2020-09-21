@@ -10,8 +10,8 @@ export default ({ hit }) => (
     <Wrapper>
         <div className="hit-p">
             <div className="info">
+                <span class="post-card-badge">{hit.category}</span>
                 <div className="rating">
-                    <span class="post-card-badge">{hit.category}</span>
                     <div className="rating-stars">
                         <ReactStars
                             count={5}
