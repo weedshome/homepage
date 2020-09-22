@@ -13,9 +13,14 @@ import BeforeFooter from './BeforeFooter'
 import CookieConsent from 'react-cookie-consent';
 
 const Layout = ({ children }) => {
+  const [isOpen, setIsOpen] = React.useState(false)
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
   return (
     <>
-      <Navbar />
+      <Navbar toggle={toggle} />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
       <main>{children}</main>
       <BeforeFooter />
       <CookieConsent
