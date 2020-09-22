@@ -16,9 +16,6 @@ const Navbar = ({ }) => {
       </div>
       <Links styleClass="nav-links" />
       <SocialLinks styleClass="nav-icons"></SocialLinks>
-      <div className="hamburger-section">
-        <Hamburger pageWrapId={"page-wrap"} outerContainerId={"App"} />
-      </div>
     </div>
   </nav>
 }
