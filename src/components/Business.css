@@ -227,7 +227,8 @@ li.third-space {
     margin-top: 1rem;
 }
 .third-image2 {
-  margin: 0 auto
+  margin: 0 auto;
+  width: auto;
 }
 h2.strain-header-text {
   font-size: 1.5rem !important;

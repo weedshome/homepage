@@ -12,12 +12,12 @@ const Navbar = ({ toggle }) => {
         <Link to="/" className="nav-logo">
           <img src={logo} alt="weeds home" />
         </Link>
+        <button className="toggle-btn" onClick={toggle}>
+          <FaBars />
+        </button>
       </div>
       <Links styleClass="nav-links" />
       <SocialLinks styleClass="nav-icons"></SocialLinks>
-      <button className="toggle-btn" onClick={toggle}>
-        <FaBars />
-      </button>
     </div>
   </nav>
 }
