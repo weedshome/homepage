@@ -19,7 +19,7 @@ export default () => {
     <>
       <TopNav className="sticky-top">
         <SideMenu>
-          <Menu customBurgerIcon={<img src={menu} />} isOpen={menuState.menuOpen}>
+          <Menu isOpen={menuState.menuOpen}>
             <h3 className="menu-header">Featured Categories</h3>
             <Link className="menu-item8" to="/" onClick={() => closeMenu()}>
               Home

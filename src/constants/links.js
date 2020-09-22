@@ -49,6 +49,9 @@ const Links = ({ styleClass }) => {
       <Link to="/business" className="page-link">
         Business
         </Link>
+      <Link to="/about" className="page-link">
+        About
+        </Link>
       <Link to="/contact" className="page-link">
         Contact
         </Link>

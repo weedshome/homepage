@@ -263,6 +263,7 @@ const Wrapper = styled.section`
     }
 }
   @media screen and (max-width: 768px) {
+    margin: inherit !important;
     .grid-container {
         display: block !important;
     }
@@ -379,7 +380,7 @@ text.CircularProgressbar-text {
 }
 }
 .react-sweet-progress-symbol {
-    color: white;
+    color: #102a42;
 }
 .react-sweet-progress-line-inner.react-sweet-progress-line-inner-status-active {
     background-color: rgb(126, 167, 72) !important;

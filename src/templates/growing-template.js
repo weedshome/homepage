@@ -229,7 +229,7 @@ text.CircularProgressbar-text {
 }
 }
 .react-sweet-progress-symbol {
-    color: white;
+    color: #102a42;
 }
 .react-sweet-progress-line-inner.react-sweet-progress-line-inner-status-active {
     background-color: rgb(126, 167, 72) !important;

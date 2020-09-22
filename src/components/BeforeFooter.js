@@ -20,46 +20,46 @@ const BeforeFooter = () => {
   return <Wrapper><div className="grid-container">
 
     <div className="grid-1">
-      <h4 className="footer-big-text">Resources</h4>
+      <h4 className="footer-big-text">Links</h4>
       <div className="underline-footer"></div>
       <ul className="social-list">
         <li className="list-inline-item"><a href="" className="footer-tx">FAQs</a></li>
         <li className="list-inline-item"><a href="" className="footer-tx">Blog</a></li>
         <li className="list-inline-item"><a href="" className="footer-tx">Support</a></li>
-        <li className="list-inline-item"><a href="" className="footer-tx">Developers APIs</a></li>
+        <li className="list-inline-item"><a href="" className="footer-tx">Develop</a></li>
       </ul>
     </div>
 
     <div className="grid-2">
-      <h4 className="footer-big-text">Legal</h4>
+      <h4 className="footer-big-text">Cannabis</h4>
       <div className="underline-footer"></div>
       <ul className="social-list">
-        <li className="list-inline-item"><a href="" className="footer-tx">Privacy</a></li>
-        <li className="list-inline-item"><a href="" className="footer-tx">Terms of Services</a></li>
+        <li className="list-inline-item"><a href="/strains/" className="footer-tx">Strains</a></li>
+        <li className="list-inline-item"><a href="/growing/" className="footer-tx">Growing</a></li>
         <li className="list-inline-item"><a href="" className="footer-tx">Security</a></li>
-        <li className="list-inline-item"><a href="" className="footer-tx">My Personal Info</a></li>
+        <li className="list-inline-item"><a href="" className="footer-tx">Personal</a></li>
       </ul>
     </div>
 
     <div className="grid-3">
-      <h4 className="footer-big-text">Legal</h4>
+      <h4 className="footer-big-text">Blog</h4>
       <div className="underline-footer"></div>
       <ul className="social-list">
-        <li className="list-inline-item"><a href="" className="footer-tx">Privacy</a></li>
-        <li className="list-inline-item"><a href="" className="footer-tx">Terms of Services</a></li>
-        <li className="list-inline-item"><a href="" className="footer-tx">Security</a></li>
-        <li className="list-inline-item"><a href="" className="footer-tx">My Personal Info</a></li>
+        <li className="list-inline-item"><a href="/news/" className="footer-tx">News</a></li>
+        <li className="list-inline-item"><a href="/lifestyle/" className="footer-tx">Lifestyle</a></li>
+        <li className="list-inline-item"><a href="/health/" className="footer-tx">Health</a></li>
+        <li className="list-inline-item"><a href="/how-to/" className="footer-tx">How-to</a></li>
       </ul>
     </div>
 
     <div className="grid-4">
-      <h4 className="footer-big-text">Links</h4>
+      <h4 className="footer-big-text">About</h4>
       <div className="underline-footer"></div>
       <ul className="social-list">
-        <li className="list-inline-item"><a href="" className="footer-tx">Our Story</a></li>
-        <li className="list-inline-item"><a href="" className="footer-tx">Pricing</a></li>
-        <li className="list-inline-item"><a href="" className="footer-tx">Contact</a></li>
-        <li className="list-inline-item"><a href="" className="footer-tx">Terms of Services</a></li>
+        <li className="list-inline-item"><a href="/about/" className="footer-tx">About Us</a></li>
+        <li className="list-inline-item"><a href="/impressum/" className="footer-tx">Impressum</a></li>
+        <li className="list-inline-item"><a href="/terms/" className="footer-tx">Terms</a></li>
+        <li className="list-inline-item"><a href="/privacy/" className="footer-tx">Privacy</a></li>
       </ul>
     </div>
   </div>
