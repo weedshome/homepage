@@ -21,54 +21,7 @@ export default () => {
         <SideMenu>
           <Menu isOpen={menuState.menuOpen}>
             <h3 className="menu-header">Featured Categories</h3>
-            <Link className="menu-item8" to="/" onClick={() => closeMenu()}>
-              Home
-                </Link>
-            <Link className="menu-item1" to="/strains" onClick={() => closeMenu()}>
-              Strains
-                </Link>
-            <Link className="menu-item3" to="/news" onClick={() => closeMenu()}>
-              News
-                </Link>
-
-            <Link className="menu-item4" to="/lifestyle" onClick={() => closeMenu()}>
-              Lifestyle
-                </Link>
-
-            <Link className="menu-item5" to="/health" onClick={() => closeMenu()}>
-              Health
-                </Link>
-
-            <Link className="menu-item6" to="/how-to" onClick={() => closeMenu()}>
-              How-To
-                </Link>
-            <Link className="menu-item7" to="/growing" onClick={() => closeMenu()}>
-              Growing
-                </Link>
-            <h3 className="menu-header">Website Links</h3>
-            <Link className="menu-item" to="/business" onClick={() => closeMenu()}>
-              Business
-                </Link>
-            <Link className="menu-item" to="/about" onClick={() => closeMenu()}>
-              About Us
-                </Link>
-            <Link className="menu-item" to="/contact" onClick={() => closeMenu()}>
-              Contact
-                </Link>
-            <Link className="menu-item" to="/impressum" onClick={() => closeMenu()}>
-              Impressum
-                </Link>
-            <Link className="menu-item" to="/advertise" onClick={() => closeMenu()}>
-              Advertise
-                </Link>
-            <Link className="menu-item" to="/terms" onClick={() => closeMenu()}>
-              Terms
-                </Link>
-            <Link className="menu-item" to="/privacy" onClick={() => closeMenu()}>
-              Privacy
-                </Link>
-            <h3 className="menu-header">Social Links</h3>
-            <SocialLinks styleClass="banner-icons" />
+            <a id="home" className="menu-item" href="/">Home</a>
           </Menu>
         </SideMenu>
       </TopNav>
@@ -232,4 +185,3 @@ const SideMenu = styled.div`
         text-decoration:none;
     }
 `
-
