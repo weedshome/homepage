@@ -68,7 +68,7 @@ padding-bottom: 6rem;
     box-sizing: border-box;
     margin: 0;
     min-width: 0;
-    justify-content: center;
+    justify-content: left;
     margin-top: 32px;
     display: flex;
   }
@@ -120,6 +120,8 @@ p.third-para {
     font-size: 11px;
     padding: 12px 16px;
   }
+  .buttons-header {
+    justify-content: center !important;
   }
   
   

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'gatsby-image'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import styled from 'styled-components'
 
 const query = graphql`
@@ -34,8 +34,12 @@ const BeforeFooter = () => {
       <h4 className="footer-big-text">Cannabis</h4>
       <div className="underline-footer"></div>
       <ul className="social-list">
-        <li className="list-inline-item"><a href="/strains/" className="footer-tx">Strains</a></li>
-        <li className="list-inline-item"><a href="/growing/" className="footer-tx">Growing</a></li>
+        <li className="list-inline-item"><Link className="link" to="/strains/">
+          <p class="footer-tx">Strains</p>
+        </Link></li>
+        <li className="list-inline-item"><Link className="link" to="/growing/">
+          <p class="footer-tx">Growing</p>
+        </Link></li>
         <li className="list-inline-item"><a href="" className="footer-tx">Security</a></li>
         <li className="list-inline-item"><a href="" className="footer-tx">Personal</a></li>
       </ul>
@@ -45,10 +49,18 @@ const BeforeFooter = () => {
       <h4 className="footer-big-text">Blog</h4>
       <div className="underline-footer"></div>
       <ul className="social-list">
-        <li className="list-inline-item"><a href="/news/" className="footer-tx">News</a></li>
-        <li className="list-inline-item"><a href="/lifestyle/" className="footer-tx">Lifestyle</a></li>
-        <li className="list-inline-item"><a href="/health/" className="footer-tx">Health</a></li>
-        <li className="list-inline-item"><a href="/how-to/" className="footer-tx">How-to</a></li>
+        <li className="list-inline-item"><Link className="link" to="/news/">
+          <p class="footer-tx">News</p>
+        </Link></li>
+        <li className="list-inline-item"><Link className="link" to="/lifestyle/">
+          <p class="footer-tx">Lifestyle</p>
+        </Link></li>
+        <li className="list-inline-item"><Link className="link" to="/health/">
+          <p class="footer-tx">Health</p>
+        </Link></li>
+        <li className="list-inline-item"><Link className="link" to="/how-to/">
+          <p class="footer-tx">How To</p>
+        </Link></li>
       </ul>
     </div>
 
@@ -56,10 +68,18 @@ const BeforeFooter = () => {
       <h4 className="footer-big-text">About</h4>
       <div className="underline-footer"></div>
       <ul className="social-list">
-        <li className="list-inline-item"><a href="/about/" className="footer-tx">About Us</a></li>
-        <li className="list-inline-item"><a href="/impressum/" className="footer-tx">Impressum</a></li>
-        <li className="list-inline-item"><a href="/terms/" className="footer-tx">Terms</a></li>
-        <li className="list-inline-item"><a href="/privacy/" className="footer-tx">Privacy</a></li>
+        <li className="list-inline-item"><Link className="link" to="/about/">
+          <p class="footer-tx">About Us</p>
+        </Link></li>
+        <li className="list-inline-item"><Link className="link" to="/impressum/">
+          <p class="footer-tx">Impressum</p>
+        </Link></li>
+        <li className="list-inline-item"><Link className="link" to="/terms/">
+          <p class="footer-tx">Terms</p>
+        </Link></li>
+        <li className="list-inline-item"><Link className="link" to="/privacy/">
+          <p class="footer-tx">Privacy</p>
+        </Link></li>
       </ul>
     </div>
   </div>
@@ -111,6 +131,19 @@ a.footer-tx {
   font-family: 'Montserrat', sans-serif;
   text-transform: none;
   border-radius: var(--radius);
+}
+
+p.footer-tx {
+    display: block;
+    letter-spacing: var(--spacing);
+    transition: var(--transition);
+    line-height: 1.8;
+    font-size: 12px;
+    margin-bottom: 0rem !important;
+    color: white !important;
+    font-family: 'Montserrat',sans-serif;
+    text-transform: none;
+    border-radius: var(--radius);
 }
 
 a.footer-tx:hover {

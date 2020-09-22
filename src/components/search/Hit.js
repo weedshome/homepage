@@ -59,7 +59,7 @@ span.post-card-badge {
 
   @media screen and (max-width: 767px) {
     li.ais-Hits-item {
-        margin-right: 0.1rem !important;    
+        margin-right: .65rem !important;    
     }
     .grid-filter {
         grid-template-columns: 1fr !important;
