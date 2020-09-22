@@ -91,12 +91,13 @@ const Wrapper = styled.div`
   }
     text-align: center;
     h3 {
-      font-size: 0.9rem !important;
-      font-weight: 400;
-      margin-bottom: 0.5rem;
-      text-transform: initial;
-      font-family: 'Montserrat', sans-serif;
-      line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    text-transform: initial;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 0.75rem !important;
+    line-height: 16px;
+    color: #102a42;
     }
     p {
       color: var(--clr-grey-5);
@@ -110,7 +111,7 @@ const Wrapper = styled.div`
     }
    .info {
       text-align: left;
-      padding: 10px;
+      padding: 10px !important;
       padding-bottom: 0.5rem !important;
       border: none !important;
    }

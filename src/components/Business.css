@@ -149,7 +149,9 @@ li.third-space {
   }
 
   .section-fourth {
-    padding: 8rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
 }
   
   .inside-image {

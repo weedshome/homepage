@@ -93,7 +93,7 @@ query GetSingleNews($slug: String) {
 
 const Wrapper = styled.section`
   width: 85vw;
-  max-width: 1100px;
+  max-width: var(--max-width);
   margin: 0 auto;
   margin-bottom: 4rem;
   padding-top: 15px;

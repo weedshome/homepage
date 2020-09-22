@@ -8,6 +8,7 @@ import BusinessThird from '../components/BusinessThird'
 import BusinessFourth from '../components/BusinessFourth'
 import BusinessFifth from '../components/BusinessFifth'
 import BusinessSix from '../components/BusinessSix'
+import ShopFront from '../components/ShopFront'
 
 const Business = ({ }) => {
 
@@ -16,6 +17,7 @@ const Business = ({ }) => {
             <SEO title="Home" />
             <BusinessHero />
             <BusinessFourth />
+            <ShopFront />
             <BusinessSix />
         </Layout>
     )

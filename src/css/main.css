@@ -205,7 +205,8 @@ Navbar
   z-index: 1000;
   display: flex;
   align-items: center;
-  position: 100%;
+  position: fixed;
+  width: 100%;
   background: transparent;
   background: #102a42;
   box-shadow: 0 0 8px 0 #0000006e;
@@ -232,8 +233,9 @@ Navbar
 .nav-logo img {
   height: 100%;
 }
+
 .toggle-btn {
-  padding-right: 10px !important;
+  padding-right: 2rem !important;
   padding-top: 7px !important;
   font-size: 2rem;
   background: transparent;
@@ -359,6 +361,8 @@ Sidebar
   display: block;
   color: var(--clr-grey-1);
   font-weight: 700;
+  background: none;
+  border: none;
 }
 .sidebar .categories {
   flex-direction: column;
@@ -406,7 +410,6 @@ Hero
 
 .hero-front {
   background: hsl(220deg 86% 97%);
-  position: relative;
   z-index: -1;
 }
 

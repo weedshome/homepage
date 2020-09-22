@@ -106,7 +106,7 @@ query GetSingleGrowing($slug: String) {
 
 const Wrapper = styled.section`
   width: 85vw;
-  max-width: 1100px;
+  max-width: var(--max-width);
   margin: 0 auto;
   margin-bottom: 4rem;
   padding-top: 15px;
@@ -203,6 +203,7 @@ text.CircularProgressbar-text {
     display: grid !important;
     grid-template-columns: 1fr 250px !important;
     column-gap: 1rem;
+    padding-top: 3rem;
   }
   @media screen and (max-width: 768px) {
     .posts-center-growing {

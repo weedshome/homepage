@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import Image from 'gatsby-image';
 import './Business.css';
 import { FaStop } from 'react-icons/fa';
@@ -48,7 +48,9 @@ const BusinessFifth = ({ }) => {
                                         <li className="third-space"><FaStop className="third-icon" />Targeted client base with Tivo's efficient technology</li>
                                     </ul>
                                     <div className="buttons-header">
-                                        <button class="button-first">Learn More</button>
+                                        <Link className="link" to="/business/">
+                                            <p class="button-first">Learn More</p>
+                                        </Link>
                                     </div>                                </div>
                             </div>
                         </div>
@@ -66,6 +68,7 @@ padding-bottom: 6rem;
     box-sizing: border-box;
     margin: 0;
     min-width: 0;
+    justify-content: center;
     margin-top: 32px;
     display: flex;
   }

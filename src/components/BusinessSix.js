@@ -47,7 +47,9 @@ const BusinessSix = ({ }) => {
 }
 
 const Wrapper = styled.div`
-background: #f1f5fe;
+width: 85vw;
+max-width: var(--max-width);
+margin: 0 auto;
 padding-bottom: 6rem;
 button {
     border: 2px solid;

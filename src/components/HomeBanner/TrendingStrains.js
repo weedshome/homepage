@@ -39,7 +39,7 @@ const TrendingStrains = () => {
             <Wrapper>
                 <div className="hero-info-3">
                     <h2 className="news-title">Browse Cannabis Strains</h2>
-                    <Link className="link-more" to={`/news/`}>View all <FaLongArrowAltRight /></Link>
+                    <Link className="link-more" to={`/strains/`}>View all <FaLongArrowAltRight /></Link>
                 </div>
                 <div className="grid-trending-strains">
                     {products.map(product => {
@@ -70,7 +70,9 @@ const TrendingStrains = () => {
                     })}
                 </div>
                 <div className="buttons-header">
-                    <button class="button-first">View all strains</button>
+                    <Link className="link" to="/strains/">
+                        <p class="button-first">View all strains</p>
+                    </Link>
                 </div>
             </Wrapper>
         </section>
@@ -124,7 +126,7 @@ grid-gap: 4rem;
     bottom: 40px;
 }
 h3 {
-    font-weight: 600;
+    font-weight: 500;
     text-transform: initial;
     font-family: 'Montserrat',sans-serif;
     line-height: 20px;

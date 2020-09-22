@@ -237,7 +237,7 @@ query GetSingleStrain($slug: String) {
 
 const Wrapper = styled.section`
   width: 85vw;
-  max-width: 1100px;
+  max-width: var(--max-width);
   margin: 0 auto;
   margin-bottom: 4rem;
   padding-top: 15px;
@@ -263,7 +263,6 @@ const Wrapper = styled.section`
     }
 }
   @media screen and (max-width: 768px) {
-    margin: inherit !important;
     .grid-container {
         display: block !important;
     }
@@ -273,6 +272,10 @@ const Wrapper = styled.section`
     }
     .posts-center {
         grid-template-columns: 1fr !important;
+    }
+    .strain-text {
+        text-align-last: center;
+    padding-top: 2.5rem;
     }
   }
   .post-info {
@@ -345,7 +348,9 @@ text.CircularProgressbar-text {
 }
 .heading-info {
     color: #102a42;
-    font-size: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
     margin-bottom: inherit;
 }
 .strain-text {
@@ -454,7 +459,6 @@ h2.title-strain {
 }
 .product-grid-strains {
     background: white;
-    padding: 45px;
 }
 .posts-center {
     margin-top: 1rem;

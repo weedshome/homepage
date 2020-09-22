@@ -17,7 +17,6 @@ const IndexPage = ({ data }) => {
       <HomeBanner />
       <BusinessFifth />
       <TrendingStrains />
-      <ShopFront />
     </Layout>
   )
 }

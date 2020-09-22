@@ -80,6 +80,9 @@ const BusinessSecond = ({ }) => {
 }
 
 const Wrapper = styled.div`
+width: 85vw;
+max-width: var(--max-width);
+margin: 0 auto;
 padding-top: 6rem;
 .grid-container-hero {
   display: grid;
@@ -154,7 +157,7 @@ padding-top: 6rem;
 .card-title {
   text-transform: uppercase;
   font-weight: 500;
-  color: #6f9654;
+  color: #102a42;
   padding: 0 0.6rem;
   display: inline-block;
 }

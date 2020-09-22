@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import Image from 'gatsby-image'
 import './Business.css'
 import AOS from 'aos';
@@ -32,12 +32,14 @@ const HeroHeaderFirst = ({ }) => {
               <div class="k-title">
                 <h2 className="business-title">Learn more about the plant</h2>
               </div>
-              <div class="k-description">
-                <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience in the cannabis.</p>
-                <div className="buttons-header">
-                  <button class="button-first">More Information</button>
-                  <button class="button-second">Search Strains</button>
-                </div>
+              <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience in the cannabis.</p>
+              <div className="buttons-header">
+                <Link className="link" to="/business/">
+                  <p class="button-first">More Information</p>
+                </Link>
+                <Link className="link" to="/strains/">
+                  <p class="button-second">Search Strains</p>
+                </Link>
               </div>
             </div>
             <div class="k-2">
