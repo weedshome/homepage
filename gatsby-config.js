@@ -1,6 +1,7 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+
 const queries = require("./src/constants/algolia")
 module.exports = {
   siteMetadata: {
@@ -29,20 +30,6 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/src/images/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `products`,
-        path: `${__dirname}/src/products`,
       },
     },
     `gatsby-transformer-sharp`,

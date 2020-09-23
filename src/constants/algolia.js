@@ -20,8 +20,8 @@ const contentfulQuery = `
   }
 `
 
-function pageToAlgoliaRecords({ id, title, price, indica, sativa, hybrid }) {
-  return { objectID: id, title, price, indica, sativa, hybrid }
+function pageToAlgoliaRecords({ id, title, price, indica, sativa, hybrid, image }) {
+  return { objectID: id, title, price, indica, sativa, hybrid, image }
 
 }
 

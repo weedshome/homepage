@@ -4,12 +4,8 @@ import Layout from "../components/Layout"
 import styled from 'styled-components'
 import ProductBanner from "../components/ProductBanner"
 import { IoMdArrowRoundBack } from 'react-icons/io'
-import ReactStars from "react-stars";
-import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import { GiSeedling } from 'react-icons/gi'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { DiscussionEmbed } from "disqus-react"
 

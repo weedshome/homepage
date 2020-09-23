@@ -4,11 +4,7 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout"
-import ProductBanner from "../components/ProductBanner"
-import ReactStars from "react-stars";
-import GrowingFront from "../components/GrowingFront"
 import LifestyleBanner from "../components/LifestyleBanner"
-import { GoSettings } from 'react-icons/go'
 
 
 const Lifestyle = ({ data }) => {
@@ -28,7 +24,7 @@ const Lifestyle = ({ data }) => {
                     <Link className="link" to={`/lifestyle/${product.slug}`}>
                       <div className="d">
                         <figure className="post-card-figure">
-                          <Image fixed={product.image.fixed} alt={product.title}></Image>
+                          <Image fluid={product.image.fluid} alt={product.title}></Image>
                           <span class="post-card-badge">{product.category}</span>
                         </figure>
                         <div className="info">
@@ -56,52 +52,52 @@ const Lifestyle = ({ data }) => {
 }
 
 const Wrapper = styled.article`
-  .post-card-figure {
-    position: relative;
-    display: grid;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    background-color: #f6f7f8;
-  }
-  
-  .post-card-badge {
-    position: absolute;
-      top: 16px;
-      left: 12px;
-      display: block;
-      padding: 4px;
-      text-transform: uppercase;
-      text-align: center;
-      font-size: .575rem !important;
-      font-weight: 500 !important;
-      white-space: nowrap;
-      color: #ffffff;
-      background-color: #102a42 !important;
-      box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
-      border-radius: 4px;
-      font-family: 'Montserrat', sans-serif;
-  }
-  article {
-    margin-bottom: 1rem;
+.post-card-figure {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background-color: #f6f7f8;
+  display: grid;
 }
+
+.post-card-badge {
+  position: absolute;
+    top: 16px;
+    left: 12px;
+    display: block;
+    padding: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .575rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap;
+    color: #ffffff;
+    background-color: #102a42 !important;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    height: fit-content;
+}
+
   .info {
     text-align: left;
     padding-bottom: 0.5rem !important;
     border: none !important;
-    padding: 22px;
-    align-self: center;
+    padding: 10px;
     background: #ffffff;
+    align-self: center;
   }
   .posts-title-products {
     text-transform: uppercase;
     color: black;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: var(--spacing);
+    font-size: 18px !important;
   }
   .img {
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
     height: 17rem;
   }
   .category {
@@ -124,11 +120,22 @@ const Wrapper = styled.article`
     margin-bottom: 0;
   }
   h3 {
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-    text-transform: initial;
-    font-family: 'Montserrat', sans-serif;
     line-height: 24px;
+    font-weight: 500;
+    text-transform: initial;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 1rem;
+    color: #102a42;
+    margin-bottom: 0rem !important;
+  }
+  .title {
+    line-height: 24px;
+    font-weight: 500;
+    text-transform: initial;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 1rem !important;
+    color: #102a42;
+    margin-bottom: 0rem !important;
   }
   .underline {
     width: 5rem;
@@ -209,8 +216,8 @@ const Wrapper = styled.article`
   }
   .product-grid-strains {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     column-gap: 1rem;
   }
   .info-text {
@@ -241,11 +248,39 @@ const Wrapper = styled.article`
     padding-left: 5px;
     padding-right: 5px;
   }
+  @media (min-width: 600px) {
+    .img {
+      height: 20rem;
+    }
+  }
+  @media (min-width: 800px) {
+    .img {
+      height: 25rem;
+    }
+  }
+  @media (min-width: 992px) {
+    & {
+      .info {
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .img {
+        max-height: 10rem;
+        background: #6f9654;
+      }
+      .underline {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
   .d {
     box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
     background-color: #ffffff;
     display: grid;
-    grid-template-columns: 1fr 480px;
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
   }
   .article-info {
     align-items: center;
@@ -257,61 +292,85 @@ const Wrapper = styled.article`
     column-gap: 1rem;
     padding-top: 5rem !important;
   }
-
-
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .posts-center-grid {
-      display: grid;
-      grid-template-columns: 1fr !important;
-      column-gap: 1rem;
-      padding-top: 5rem !important;
-  }
-  .d {
-    display: grid;
-    grid-template-columns: 1fr 1fr !important;
-
-  }
-  .product-grid-strains {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-.info {
-  min-width: -webkit-fill-available;
-}
-
-  }
-
-  @media screen and (max-width: 767px) {
-  grid-auto-flow: row !important;
-  .d {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-  }
-  .posts-center-grid {
-    display: grid;
-    grid-template-columns: 1fr !important;
-    column-gap: 1rem;
-    padding-top: 5rem !important;
-}
 .readmore {
-  width: 450px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-}
-
-.readmore {
+  width: 250px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.title {
+p.readmore {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+}
+.title-news {
+    font-size: .9rem;
     color: #102a42;
 }
-.posts-title-products {
- padding-top: 3rem;
+
+.news-grid-section {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    max-width: var(--max-width);
+    margin: 0 auto;
+    column-gap: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  .news-grid-section {
+  grid-template-columns: 1fr !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.news-grid-section2 {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    column-gap: 1rem; 
+    padding-top: 6rem;
+    width: 92vw;
+}
+}
+.news-grid-section2 {
+  display: grid;
+  grid-template-columns: 775px 375px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  column-gap: 1rem; 
+  padding-top: 6rem;
+}
+@media screen and (max-width: 768px) {
+    .news-grid-section2 {
+        grid-template-columns: 1fr;
+    }
+    }
+    @media screen and (max-width: 768px) {
+        .product-grid-strains {
+            grid-template-columns: 1fr;
+        }
+      }
+      @media screen and (max-width: 768px) {
+      .posts-center-grid {
+        grid-template-columns: 1fr;
+      }
+      }
+      @media screen and (max-width: 768px) {
+      .d {   
+      grid-template-columns: 1fr;
+      width: 100%;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .product-grid-strains {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .posts-center-grid {
+      grid-template-columns: 1fr !important;
+  }
+    }
 
 `
 
@@ -326,8 +385,8 @@ export const query = graphql`
         author
         category
         image {
-          fixed(width: 420, height: 140) {
-          ...GatsbyContentfulFixed
+          fluid {
+          ...GatsbyContentfulFluid
           }
         }
         excerpt {

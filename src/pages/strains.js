@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout"
 import { GoSettings } from 'react-icons/go'
@@ -8,9 +7,6 @@ import SearchComp from '../components/search/searchComp'
 import 'instantsearch.css/themes/algolia.css';
 
 const Strains = ({ data }) => {
-  const {
-    allContentfulStrains: { nodes: strains },
-  } = data
 
   return (
     <Wrapper>

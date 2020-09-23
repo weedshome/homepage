@@ -39,9 +39,6 @@ exports.createPages = async ({ graphql, actions }) => {
         slug
       }
     }
-    categories: allContentfulStrains {
-      distinct(field: category)
-    }
   }
   `)
 

@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
 import './Business.css';
-import { FaStop } from 'react-icons/fa';
 import styled from "styled-components"
 import AOS from 'aos';
 import 'aos/dist/aos.css';

@@ -39,7 +39,6 @@ const BusinessFourth = ({ }) => {
                                     <li className="third-space"><FaStop className="third-icon" />Understand customers and meet their requirements</li>
                                     <li className="third-space"><FaStop className="third-icon" />Targeted client base with Tivo's efficient technology</li>
                                 </ul>
-                                <button className="third-button">Learn More</button>
                             </div>
                         </div>
                         <div class="v-image">

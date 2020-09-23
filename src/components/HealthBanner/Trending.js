@@ -13,6 +13,7 @@ const query = graphql`
         slug
         date
         author
+        category
         image {
           fluid {
           ...GatsbyContentfulFluid
@@ -36,7 +37,10 @@ const Trending = () => {
           <article key={product.id}>
             <Link className="link" to={`/health/${product.slug}`}>
               <div className="d">
-                <Image fluid={product.image.fluid} alt={product.title}></Image>
+                <figure className="post-card-figure">
+                  <Image fluid={product.image.fluid} alt={product.title}></Image>
+                  <span class="post-card-badge3">{product.category}</span>
+                </figure>
                 <div className="info">
                   <h3>{product.title}</h3>
                   <div className="article-info">
@@ -69,7 +73,7 @@ const Wrapper = styled.div`
     background-color: #f6f7f8;
   }
   
-  .post-card-badge {
+  .post-card-badge3 {
     position: absolute;
       bottom: 16px;
       right: 12px;

@@ -66,7 +66,7 @@
     grid-template-areas: "image-third";
     grid-area: third-image;
     width: 500px;
-    justify-self: right;
+    justify-self: left;
   }
   
   .image-third { grid-area: image-third; }
@@ -142,7 +142,7 @@ li.third-space {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 1px 1px;
-    grid-template-areas: "third-text third-image";
+    grid-template-areas: "third-image third-text";
     place-items: center;
     max-width: var(--max-width);
     margin: 0 auto;

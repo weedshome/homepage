@@ -5,9 +5,7 @@ import './Business.css';
 import { FaStop } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import '../css/tabs.css'
-import { FaList, FaMailBulk, FaRegChartBar } from 'react-icons/fa'
 
 const query = graphql`
   {
@@ -44,7 +42,6 @@ const ShopTwo = ({ }) => {
               <li className="third-space"><FaStop className="third-icon" />Understand customers and meet their requirements</li>
               <li className="third-space"><FaStop className="third-icon" />Targeted client base with Tivo's efficient technology</li>
             </ul>
-            <button className="third-button">Learn More</button>
           </div>
         </div>
         <div class="third-image2">

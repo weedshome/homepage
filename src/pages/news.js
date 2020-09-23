@@ -4,19 +4,13 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout"
-import ProductBanner from "../components/ProductBanner"
-import { IoMdArrowRoundForward } from 'react-icons/io'
-import ReactStars from "react-stars";
-import GrowingFront from "../components/GrowingFront"
 import NewsBanner from "../components/NewsBanner"
-import NewsFront from "../components/NewsFront"
 import TrendingNews from "../components/NewsBanner/TrendingNews"
 import TrendingUSA from "../components/NewsBanner/TrendingUSA"
 import TrendingCanada from "../components/NewsBanner/TrendingCanada"
 import TrendingEurope from "../components/NewsBanner/TrendingEurope"
 import Breaking from "../components/NewsBanner/Breaking"
 import BreakingSide from "../components/NewsBanner/BreakingSide"
-import StrainSlider from "../components/StrainSlider"
 
 const News = ({ data }) => {
   const {

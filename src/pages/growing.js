@@ -5,15 +5,11 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout"
 import ProductBanner from "../components/ProductBanner"
-import { IoMdArrowRoundForward } from 'react-icons/io'
-import ReactStars from "react-stars";
-import GrowingFront from "../components/GrowingFront"
-import TrendingHowto from "../components/HomeBanner/Trending"
 
 
 const Growing = ({ data }) => {
   const {
-    allContentfulGrowing: { nodes: growing },
+    allContentfulGrowing: { nodes: products },
   } = data
 
   return (
@@ -22,21 +18,21 @@ const Growing = ({ data }) => {
         <section className="posts">
           <div className="posts-center-grid">
             <div className="product-grid-strains">
-              {growing.map(growing => {
+              {products.map(product => {
                 return (
-                  <article key={growing.id}>
-                    <Link className="link" to={`/growing/${growing.slug}`}>
+                  <article key={product.id}>
+                    <Link className="link" to={`/growing/${product.slug}`}>
                       <div className="d">
                         <figure className="post-card-figure">
-                          <Image fixed={growing.image.fixed} alt={growing.title}></Image>
-                          <span class="post-card-badge">{growing.category}</span>
+                          <Image fluid={product.image.fluid} alt={product.title}></Image>
+                          <span class="post-card-badge">{product.category}</span>
                         </figure>
                         <div className="info">
-                          <h3>{growing.title}</h3>
-                          <p className="readmore">{growing.info.info}</p>
+                          <h3 className="title">{product.title}</h3>
+                          <p className="readmore">{product.info.info}</p>
                           <div className="article-info">
-                            <p className="author-text">{growing.author}</p>
-                            <p className="author-text2">{growing.date}</p>
+                            <p className="author-text">{product.author}</p>
+                            <p className="author-text2">{product.date}</p>
                           </div>
                         </div>
                       </div>
@@ -56,46 +52,52 @@ const Growing = ({ data }) => {
 }
 
 const Wrapper = styled.article`
-  .post-card-figure {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    background-color: #f6f7f8;
-    display: grid;
-  }
-  
-  .post-card-badge {
-    position: absolute;
-      top: 16px;
-      left: 12px;
-      display: block;
-      padding: 4px;
-      text-transform: uppercase;
-      text-align: center;
-      font-size: .575rem !important;
-      font-weight: 500 !important;
-      white-space: nowrap;
-      color: #ffffff;
-      background-color: #102a42 !important;
-      box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
-      border-radius: 4px;
-      font-family: 'Montserrat', sans-serif;
-  }
-  article {
-    margin-bottom: 1rem;
+.post-card-figure {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background-color: #f6f7f8;
+  display: grid;
 }
+
+.post-card-badge {
+  position: absolute;
+    top: 16px;
+    left: 12px;
+    display: block;
+    padding: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: .575rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap;
+    color: #ffffff;
+    background-color: #102a42 !important;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    height: fit-content;
+}
+
   .info {
     text-align: left;
     padding-bottom: 0.5rem !important;
     border: none !important;
     padding: 10px;
-    background: #ffffff !important;
+    background: #ffffff;
+    align-self: center;
+  }
+  .posts-title-products {
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    letter-spacing: var(--spacing);
+    font-size: 18px !important;
   }
   .img {
-    border-top-left-radius: var(--radius);
-    border-top-right-radius: var(--radius);
     height: 17rem;
   }
   .category {
@@ -118,11 +120,22 @@ const Wrapper = styled.article`
     margin-bottom: 0;
   }
   h3 {
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-    text-transform: initial;
-    font-family: 'Montserrat', sans-serif;
     line-height: 24px;
+    font-weight: 500;
+    text-transform: initial;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 1rem;
+    color: #102a42;
+    margin-bottom: 0rem !important;
+  }
+  .title {
+    line-height: 24px;
+    font-weight: 500;
+    text-transform: initial;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 1rem !important;
+    color: #102a42;
+    margin-bottom: 0rem !important;
   }
   .underline {
     width: 5rem;
@@ -133,7 +146,6 @@ const Wrapper = styled.article`
   }
   h3 {
     font-size: 1.1rem;
-    color: #102a42;
   }
   p {
     color: var(--clr-grey-5);
@@ -145,7 +157,7 @@ const Wrapper = styled.article`
   .link {
     text-transform: uppercase;
     letter-spacing: var(--spacing);
-    font-family: 'Montserrat', sans-serif;
+    font-family: teko;
     color: var(--clr-primary-5);
     padding-bottom: 0.1rem;
     display: flex;
@@ -180,7 +192,7 @@ const Wrapper = styled.article`
     margin-bottom: 0.5rem;
   }
   .product-rating {
-    font-family: 'Montserrat', sans-serif;
+    font-family: teko;
     letter-spacing: var(--spacing);
     padding-right: 30px;
     font-size: 18px;
@@ -198,14 +210,14 @@ const Wrapper = styled.article`
     font-weight: 400;
     transition: var(--transition);
     font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: teko;
     border: 2px solid transparent;
     cursor: pointer;
   }
   .product-grid-strains {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 1rem;
   }
   .info-text {
@@ -214,7 +226,7 @@ const Wrapper = styled.article`
   }
   .span-float {
     float: left;
-    font-family: 'Montserrat', sans-serif;
+    font-family: teko;
     font-size: 18px;
     letter-spacing: var(--spacing);
     text-align: center;
@@ -227,7 +239,7 @@ const Wrapper = styled.article`
   .span-float2 {
     float: right;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: teko;
     font-size: 18px;
     letter-spacing: var(--spacing);
     background: #000000;
@@ -265,7 +277,10 @@ const Wrapper = styled.article`
   }
   .d {
     box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
   }
   .article-info {
     align-items: center;
@@ -275,7 +290,7 @@ const Wrapper = styled.article`
     display: grid;
     grid-template-columns: 1fr 250px;
     column-gap: 1rem;
-    padding-top: 5rem;
+    padding-top: 5rem !important;
   }
 .readmore {
   width: 250px;
@@ -283,6 +298,80 @@ const Wrapper = styled.article`
     overflow: hidden;
     text-overflow: ellipsis;
 }
+p.readmore {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+}
+.title-news {
+    font-size: .9rem;
+    color: #102a42;
+}
+
+.news-grid-section {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    max-width: var(--max-width);
+    margin: 0 auto;
+    column-gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .news-grid-section {
+  grid-template-columns: 1fr !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.news-grid-section2 {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    column-gap: 1rem; 
+    padding-top: 6rem;
+    width: 92vw;
+}
+}
+.news-grid-section2 {
+  display: grid;
+  grid-template-columns: 775px 375px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  column-gap: 1rem; 
+  padding-top: 6rem;
+}
+@media screen and (max-width: 768px) {
+    .news-grid-section2 {
+        grid-template-columns: 1fr;
+    }
+    }
+    @media screen and (max-width: 768px) {
+        .product-grid-strains {
+            grid-template-columns: 1fr;
+        }
+      }
+      @media screen and (max-width: 768px) {
+      .posts-center-grid {
+        grid-template-columns: 1fr;
+      }
+      }
+      @media screen and (max-width: 768px) {
+      .d {   
+      grid-template-columns: 1fr;
+      width: 100%;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      .product-grid-strains {
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .posts-center-grid {
+      grid-template-columns: 1fr !important;
+  }
+    }
+
 `
 
 export const query = graphql`
@@ -290,18 +379,16 @@ export const query = graphql`
     allContentfulGrowing(filter: {node_locale: {eq: "en-US"}}) {
       nodes {
         id
-        price
         title
         slug
         date
         author
         category
         image {
-          fixed(width: 300, height: 200) {
-          ...GatsbyContentfulFixed
+          fluid {
+          ...GatsbyContentfulFluid
           }
         }
-        rating
         info {
           info
         }
