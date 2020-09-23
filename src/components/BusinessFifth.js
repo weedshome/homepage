@@ -123,9 +123,13 @@ p.third-para {
   .buttons-header {
     justify-content: center !important;
   }
+}
   
   
   @media screen and (max-width: 767px) {
+    .buttons-header {
+        justify-content: center !important;
+    }
     .section-width {
         width: 85vw;
         max-width: var(--max-width);

@@ -53,7 +53,7 @@ const Wrapper = styled.section`
       font-size: 35px !important;
   }
   @media screen and (max-width: 767px) {
-    padding-top: 0px;
+    padding-top: 4rem;
     .height-page {
         width: auto !important;
         padding-top: 0px !important;

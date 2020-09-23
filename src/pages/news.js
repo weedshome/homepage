@@ -353,6 +353,9 @@ p.readmore {
       grid-template-columns: 1fr;
       width: 100%;
       }
+      section.posts {
+        margin-top: 4rem !important;
+    }
     }
 `
 

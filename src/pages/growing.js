@@ -361,6 +361,9 @@ p.readmore {
       grid-template-columns: 1fr;
       width: 100%;
       }
+      .product-grid-strains {
+        grid-template-rows: 1fr !important;
+    }
     }
 
     @media screen and (min-width: 768px) and (max-width: 1023px) {
