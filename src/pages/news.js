@@ -18,8 +18,8 @@ const News = ({ data }) => {
   } = data
 
   return (
-    <Wrapper>
-      <Layout>
+    <Layout>
+      <Wrapper>
         <div className="breaking-news">
           <div className="news-grid-section2">
             <Breaking />
@@ -62,8 +62,10 @@ const News = ({ data }) => {
             </article>
           </div>
         </section>
-      </Layout>
-    </Wrapper>
+
+      </Wrapper>
+    </Layout>
+
   )
 }
 
