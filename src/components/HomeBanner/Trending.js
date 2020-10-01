@@ -13,7 +13,6 @@ const query = graphql`
     allContentfulGrowing(filter: {}, limit: 4) {
       nodes {
         id
-        price
         title
         slug
         date
@@ -23,7 +22,6 @@ const query = graphql`
           ...GatsbyContentfulFixed
           }
         }
-        rating
         info {
           info
         }

@@ -14,11 +14,6 @@ exports.createPages = async ({ graphql, actions }) => {
         slug
       }
     }
-    article: allContentfulArticle(filter: {node_locale: {eq: "en-US"}}) {
-      nodes {
-        slug
-      }
-    }
     news: allContentfulNews(filter: {node_locale: {eq: "en-US"}}) {
       nodes {
         slug
@@ -57,15 +52,6 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`src/templates/growing-template.js`),
       context: {
         slug: growing.slug
-      },
-    })
-  })
-  result.data.article.nodes.forEach(article => {
-    createPage({
-      path: `/blog/${article.slug}`,
-      component: path.resolve(`src/templates/post-template.js`),
-      context: {
-        slug: article.slug
       },
     })
   })

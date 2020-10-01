@@ -61,11 +61,6 @@ const Breaking = () => {
 }
 
 const Wrapper = styled.div`
-@media screen and (max-width: 768px) {
-  .news-grid-section2 {
-    display: none !important;
-}
-}
 .post-card-figure {
   position: relative;
   display: grid;

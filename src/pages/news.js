@@ -356,7 +356,7 @@ p.readmore {
       width: 100%;
       }
       section.posts {
-        margin-top: 4rem !important;
+        padding-top: 4rem !important;
     }
     }
 `

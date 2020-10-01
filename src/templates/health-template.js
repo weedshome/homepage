@@ -13,6 +13,7 @@ import Image from 'gatsby-image'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import HealthBanner from "../components/HealthBanner"
+import { FaSignLanguage } from "react-icons/fa"
 
 const disqusConfig = {
   shortname: process.env.GATSBY_DISQUS_NAME,

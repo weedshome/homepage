@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+process.env.GATSBY_CONCURRENT_DOWNLOAD = 1
+
 const queries = require("./src/constants/algolia")
 module.exports = {
   siteMetadata: {
@@ -46,6 +48,7 @@ module.exports = {
         spaceId: `9o07roe0gz0h`,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: `KL4_SRyDhpmqnlqsJ1cMlfeuXOSFQ6MBGlA-dUrd-MM`,
+        downloadLocal: true,
         forceFullSync: true,
       },
     },

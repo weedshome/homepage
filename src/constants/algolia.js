@@ -11,13 +11,13 @@ const contentfulQuery = `
         category
         hybrid
         image {
-          file {
-            url
+            fluid {
+              src
+            }
           }
         }
       }
     }
-  }
 `
 
 function pageToAlgoliaRecords({ id, title, price, indica, sativa, hybrid, image }) {

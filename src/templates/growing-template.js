@@ -14,15 +14,13 @@ import Image from 'gatsby-image'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const disqusConfig = {
-  shortname: process.env.GATSBY_DISQUS_NAME,
-}
 
 const GrowingTemplate = ({
   data: {
     growing: {
       title,
       date,
+      slug,
       category,
       info: { info },
       body,
@@ -40,7 +38,10 @@ const GrowingTemplate = ({
       },
     },
   }
-
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: slug, title },
+  }
   return (
     <Layout>
       <Wrapper>
@@ -78,7 +79,6 @@ export const query = graphql`
 query GetSingleGrowing($slug: String) {
   growing: contentfulGrowing(slug: {eq: $slug}) {
         id
-        price
         title
         slug
         category
@@ -87,7 +87,6 @@ query GetSingleGrowing($slug: String) {
             ...GatsbyContentfulFluid
           }
         }
-        rating
         date
         author
         body {

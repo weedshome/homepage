@@ -9,6 +9,7 @@ import styled from 'styled-components'
 export default ({ hit }) => (
     <Wrapper>
         <div className="hit-p">
+            <img src={hit.image}></img>
             <div className="info">
                 <span class="post-card-badge">{hit.category}</span>
                 <div className="rating">
