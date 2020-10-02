@@ -49,7 +49,7 @@ const BusinessFifth = ({ }) => {
                                     </ul>
                                     <div className="buttons-header">
                                         <Link className="link" to="/business/">
-                                            <p class="button-first">Learn More</p>
+                                            <p class="button-first">See how</p>
                                         </Link>
                                     </div>                                </div>
                             </div>

@@ -64,7 +64,7 @@ const BusinessThird = ({ }) => {
                       <li className="third-space"><FaStop className="third-icon" />Understand customers and meet their requirements</li>
                       <li className="third-space"><FaStop className="third-icon" />Targeted client base with Tivo's efficient technology</li>
                     </ul>
-                    <button className="third-button">Learn More</button>
+                    <button className="third-button">See how</button>
                   </div>
                 </div>
               </div>
@@ -84,7 +84,7 @@ const BusinessThird = ({ }) => {
                       <li className="third-space"><FaStop className="third-icon" />Understand customers and meet their requirements</li>
                       <li className="third-space"><FaStop className="third-icon" />Targeted client base with Tivo's efficient technology</li>
                     </ul>
-                    <button className="third-button">Learn More</button>
+                    <button className="third-button">See how</button>
                   </div>
                 </div>
               </div>
@@ -104,7 +104,7 @@ const BusinessThird = ({ }) => {
                       <li className="third-space"><FaStop className="third-icon" />Understand customers and meet their requirements</li>
                       <li className="third-space"><FaStop className="third-icon" />Targeted client base with Tivo's efficient technology</li>
                     </ul>
-                    <button className="third-button">Learn More</button>
+                    <button className="third-button">See how</button>
                   </div>
                 </div>
               </div>

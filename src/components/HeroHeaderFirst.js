@@ -35,7 +35,7 @@ const HeroHeaderFirst = ({ }) => {
               <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience in the cannabis.</p>
               <div className="buttons-header">
                 <Link className="link" to="/business/">
-                  <p class="button-first">More Information</p>
+                  <p class="button-first">Get started here</p>
                 </Link>
                 <Link className="link" to="/strains/">
                   <p class="button-second">Search Strains</p>

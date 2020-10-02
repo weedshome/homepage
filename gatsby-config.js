@@ -10,7 +10,7 @@ module.exports = {
     title: `Weed's Home`,
     description: `Awesome Cannabis Blog built with Gatsby and Contentful`,
     titleTemplate: `Weed's Home`,
-    url: `https://weedshome.com/`,
+    siteUrl: `https://weedshome.com/`,
     image: `mainImg.png`,
     twitterUsername: `@weedshome`,
   },
@@ -20,6 +20,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-remark-images`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -48,7 +49,6 @@ module.exports = {
         spaceId: `9o07roe0gz0h`,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: `KL4_SRyDhpmqnlqsJ1cMlfeuXOSFQ6MBGlA-dUrd-MM`,
-        downloadLocal: true,
         forceFullSync: true,
       },
     },
@@ -98,6 +98,27 @@ module.exports = {
         },
         // Defines the environments where the tracking should be available  - default is ["production"]
         environments: ['production', 'development']
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }],
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+        },
       },
     },
   ],

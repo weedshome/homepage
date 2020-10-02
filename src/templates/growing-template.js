@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import styled from 'styled-components'
-import ProductBanner from "../components/ProductBanner"
 import { IoMdArrowRoundBack } from 'react-icons/io'
 import "react-sweet-progress/lib/style.css";
 import 'react-circular-progressbar/dist/styles.css';
@@ -13,40 +12,32 @@ import Image from 'gatsby-image'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import HealthBanner from "../components/HealthBanner"
+import { FaSignLanguage } from "react-icons/fa"
 
+const disqusConfig = {
+  shortname: process.env.GATSBY_DISQUS_NAME,
+}
 
 const GrowingTemplate = ({
   data: {
     growing: {
       title,
       date,
-      slug,
-      category,
       info: { info },
       body,
       image: { fluid },
       author,
+      category,
     },
   },
 }) => {
-  const options = {
-    renderNode: {
-      "embedded-asset-block": node => {
-        const alt = node.data.target.fields.title["en-US"]
-        const url = node.data.target.fields.file["en-US"].url
-        return <img alt={alt} src={url} />
-      },
-    },
-  }
-  const disqusConfig = {
-    shortname: process.env.GATSBY_DISQUS_NAME,
-    config: { identifier: slug, title },
-  }
+
   return (
     <Layout>
       <Wrapper>
         <div className="search-text" style={{ textAlign: "left" }}>
-          <Link to="/growing" className="links"> back to growing <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
+          <Link to="/health" className="links"> back to all news <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
         </div>
         <article>
           <section className="posts">
@@ -60,12 +51,12 @@ const GrowingTemplate = ({
                     <div className="underline"></div>
                   </div>
                   <Image fluid={fluid} alt={title} />
-                  {documentToReactComponents(body.json, options)}
+                  {documentToReactComponents(body.json)}
                   <DiscussionEmbed {...disqusConfig} />
                 </article>
               </div>
               <article>
-                <ProductBanner />
+                <HealthBanner />
               </article>
             </div>
           </section>
