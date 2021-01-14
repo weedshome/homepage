@@ -1,36 +1,22 @@
 import React, { useEffect } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import './Business.css';
 import styled from "styled-components"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ContactForm from '../components/ContactForm'
 
-const query = graphql`
-  {
-    featuresThird: file(relativePath: {eq: "cannabis-strains-finder.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
-const BusinessSix = ({ }) => {
+const BusinessSix = () => {
     useEffect(() => {
         AOS.init({ duration: 2000 });
     }, [])
-    const { featuresThird } = useStaticQuery(query)
     return (
         <Wrapper>
             <section data-aos="fade-right">
                 <div className="section-third">
                     <div className="section-width">
                         <div className="hero-info-2">
-                            <h2 className="h2-heading">Marketing Automation</h2>
-                            <p className="third-para">Take your business strategy to the next level and automatize your marketing tasks to save time for product development. Tivo can provide results in less than 2 weeks</p>
+                            <h2 className="h2-heading">Contact Us</h2>
                         </div>
                         <section id="contactUs" className="main special">
                             <div className="major">
@@ -57,7 +43,7 @@ button {
     cursor: pointer;
     font-weight: 500;
     line-height: 1;
-    background-color: #102a42;
+    background-color: #3d796d;
     box-shadow: 0 3px 8px rgba(0,0,0,0.09);
     border-color: transparent;
     color: #FFFFFF;
@@ -82,13 +68,56 @@ textarea#body {
 }
 form {
     margin: 0 auto;
+    display: block;
 }
+input#name {
+    width: 100%;
+    min-height: 2.8rem;
+    padding: 0 4.6rem 0 1.5rem;
+    border: 0;
+    color: #3f7e72;
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: var(--spacing);
+    font-size: 1rem;
+    transition: var(--transition);
+    cursor: pointer;
+    border-radius: var(--radius);
+}
+input#website {
+    width: 100%;
+    min-height: 2.8rem;
+    padding: 0 4.6rem 0 1.5rem;
+    border: 0;
+    color: #3f7e72;
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: var(--spacing);
+    font-size: 1rem;
+    transition: var(--transition);
+    cursor: pointer;
+    border-radius: var(--radius);
+}
+input#subject {
+    width: 100%;
+    min-height: 2.8rem;
+    padding: 0 4.6rem 0 1.5rem;
+    border: 0;
+    color: #3f7e72;
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: var(--spacing);
+    font-size: 1rem;
+    transition: var(--transition);
+    cursor: pointer;
+    border-radius: var(--radius);
+}
+
 label {
     letter-spacing: var(--spacing);
     color: hsl(209deg 61% 16%);
     line-height: 1.8;
     font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
     text-transform: none;
     border-radius: var(--radius);
     padding-top: 2rem;
@@ -108,7 +137,7 @@ label {
     cursor: pointer;
     font-weight: 500;
     line-height: 1;
-    background-color: #102a42;
+    background-color: #3d796d;
     box-shadow: 0 3px 8px rgba(0,0,0,0.09);
     border-color: transparent;
     color: #FFFFFF;
@@ -124,9 +153,7 @@ label {
     margin: 0 auto;
     margin-bottom: 4rem;
 }
-p.third-para {
-                        width: 100%;
-}
+
 .third-text-box {
                         padding - top: 2rem;
 }
@@ -141,7 +168,7 @@ p.third-para {
     cursor: pointer;
     font-weight: 500;
     line-height: 1;
-    background-color: #102a42;
+    background-color: #3d796d;
     box-shadow: 0 3px 8px rgba(0,0,0,0.09);
     border-color: transparent;
     color: #FFFFFF;
@@ -157,9 +184,7 @@ p.third-para {
         max-width: var(--max-width);
         margin: 0 auto;
     }
-    p.third-para {
-                        width: 100%;
-    }
+
     .third-text-box {
                         padding - top: 2rem;
     }
@@ -177,7 +202,7 @@ p.third-para {
         cursor: pointer;
         font-weight: 500;
         line-height: 1;
-        background-color: #102a42;
+        background-color: #3d796d;
         box-shadow: 0 3px 8px rgba(0,0,0,0.09);
         border-color: transparent;
         color: #FFFFFF;

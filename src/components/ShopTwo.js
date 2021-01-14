@@ -26,11 +26,11 @@ const query = graphql`
   }
 `
 
-const ShopTwo = ({ }) => {
+const ShopTwo = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, [])
-  const { featuresThird, featuresThirdTwo } = useStaticQuery(query)
+  const { featuresThird } = useStaticQuery(query)
   return (
     <section data-aos="fade-left">
       <div class="grid-container-fourth">

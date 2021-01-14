@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-backgroundStrain">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="backgroundStrain" clip-path="url(#clip-backgroundStrain)">
+    <rect width="1920" height="1080" fill="#f1f5fe"/>
+    <ellipse id="Ellipse_9" data-name="Ellipse 9" cx="281" cy="275" rx="281" ry="275" transform="translate(-281 433)" fill="rgba(61,121,109,0.8)"/>
+    <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="187" cy="183" rx="187" ry="183" transform="translate(-187 525)" fill="rgba(61,121,109,0.8)"/>
+    <ellipse id="Ellipse_13" data-name="Ellipse 13" cx="281" cy="275" rx="281" ry="275" transform="translate(1639 225)" fill="rgba(61,121,109,0.8)"/>
+    <ellipse id="Ellipse_14" data-name="Ellipse 14" cx="187" cy="183" rx="187" ry="183" transform="translate(1733 317)" fill="rgba(61,121,109,0.8)"/>
+  </g>
+</svg>

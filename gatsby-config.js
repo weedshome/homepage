@@ -59,6 +59,7 @@ module.exports = {
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: `KL4_SRyDhpmqnlqsJ1cMlfeuXOSFQ6MBGlA-dUrd-MM`,
         forceFullSync: true,
+        downloadLocal: true,
       },
     },
     {
@@ -78,6 +79,28 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `weedshome_backup`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://weedshome.us2.list-manage.com/subscribe/post?u=fd9a17c64e85917ad604485c7&amp;id=ba7c85c13d',
+        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+      },
+    },
+    {
+      resolve: `@contentful/gatsby-transformer-contentful-richtext`,
+    },
+    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
@@ -92,21 +115,6 @@ module.exports = {
             family: `Teko`,
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-gdpr-cookies`,
-      options: {
-        googleAnalytics: {
-          trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
-          // Setting this parameter is optional
-          anonymize: true
-        },
-        facebookPixel: {
-          pixelId: 'YOUR_FACEBOOK_PIXEL_ID'
-        },
-        // Defines the environments where the tracking should be available  - default is ["production"]
-        environments: ['production', 'development']
       },
     },
     {

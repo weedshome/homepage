@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-backgroundStrains">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="backgroundStrains" clip-path="url(#clip-backgroundStrains)">
+    <rect width="1920" height="1080" fill="#fff"/>
+    <path id="Pfad_1" data-name="Pfad 1" d="M-2189.291,210.739s577.6,50.408,728.685,18.477,202.744,195.935,202.744,195.935,32.556,172.224,0,308.594-496.6,97.83-496.6,97.83l-501.693,20.763Z" transform="translate(2160)" fill="#8e8e8e"/>
+    <path id="Pfad_2" data-name="Pfad 2" d="M-1214.092,210.739s-636.319,50.408-802.765,18.477-223.355,195.935-223.355,195.935-35.865,172.224,0,308.594,547.081,97.83,547.081,97.83l552.7,20.763Z" transform="translate(3215.759 8)" fill="#3d7a6e"/>
+  </g>
+</svg>

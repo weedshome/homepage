@@ -1,60 +1,39 @@
 import React from "react"
 import { Link } from "gatsby"
-import { TiArrowSortedDown } from 'react-icons/ti'
 
-
-const Links = ({ styleClass }) => {
+const Links = ({ styleClass, children }) => {
   return (
     <ul className={styleClass}>
-      <div className="list-item">
+      <li>
         <Link to="/" className="page-link">
           Home
         </Link>
-      </div>
-      <div className="list-item">
+      </li>
+      <li>
         <Link to="/strains" className="page-link">
           Strains
         </Link>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn" className="page-link">Blog<TiArrowSortedDown /></button>
-        <div class="dropdown-content">
-          <div className="list-item">
-            <Link to="/news" className="page-link">
-              News
+      </li>
+      <li>
+        <Link to="/dispensaries" className="page-link">
+          Maps
         </Link>
-          </div>
-          <div className="list-item">
-            <Link to="/lifestyle" className="page-link">
-              Lifestyle
-              </Link>
-          </div>
-          <div className="list-item">
-            <Link to="/health" className="page-link">
-              Health
-              </Link>
-          </div>
-          <div className="list-item">
-            <Link to="/how-to" className="page-link">
-              How-To
+      </li>
+      <li>
+        <Link to="/blog" className="page-link">
+          Learn
         </Link>
-          </div>
-          <div className="list-item">
-            <Link to="/growing" className="page-link">
-              Growing
-              </Link>
-          </div>
-        </div>
-      </div>
-      <Link to="/business" className="page-link">
-        Business
+      </li>
+      <li>
+        <Link to="/business" className="page-link">
+          Business
         </Link>
-      <Link to="/about" className="page-link">
-        About
+      </li>
+      <li>
+        <Link to="/about" className="page-link">
+          About
         </Link>
-      <Link to="/contact" className="page-link">
-        Contact
-        </Link>
+      </li>
     </ul>
   )
 }

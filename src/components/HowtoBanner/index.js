@@ -2,14 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import Trending from './Trending'
 import About from './About'
+import NewsletterSidebar from '../NewsBanner/Newsletter'
+import Instagram from '../Instagram'
 
 const HowtoBanner = () => {
-    return (
-        <Wrapper>
-            <About />
-            <Trending />
-        </Wrapper>
-    )
+  return (
+    <Wrapper>
+      <About />
+      <Instagram />
+      <Trending />
+      <NewsletterSidebar />
+    </Wrapper>
+  )
 }
 
 

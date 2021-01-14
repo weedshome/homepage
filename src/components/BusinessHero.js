@@ -4,7 +4,7 @@ import BusinessFirst from './BusinessFirst'
 
 
 
-const BusinessHero = ({ }) => {
+const BusinessHero = () => {
     return (
         <header className="hero-front">
             <BusinessFirst />

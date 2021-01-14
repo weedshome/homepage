@@ -1,5 +1,4 @@
 import React from 'react'
-import SocialLinks from '../../constants/socialLinks'
 import Image from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby'
 import Title from './Title'
@@ -18,18 +17,18 @@ const query = graphql`
 `
 
 const About = () => {
-    const data = useStaticQuery(query)
-    return (
-        <Wrapper>
-            <Title title="Lifestyle" />
-            <Image fixed={data.person.childImageSharp.fixed} className="img" />
-            <p>Discover our latest lifestyle tips and education content.</p>
-            <SocialLinks styleClass="banner-icons" />
-        </Wrapper>
-    )
+  const data = useStaticQuery(query)
+  return (
+    <Wrapper>
+      <Title title="Lifestyle" />
+      <Image fixed={data.person.childImageSharp.fixed} className="img" />
+      <p>Discover our latest lifestyle tips and education content.</p>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`
+
   text-align: center;
   p {
     color: var(--clr-grey-5);

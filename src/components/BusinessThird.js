@@ -29,7 +29,7 @@ const query = graphql`
   }
 `
 
-const BusinessThird = ({ }) => {
+const BusinessThird = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, [])
@@ -149,8 +149,6 @@ p.third-para {
   letter-spacing: var(--spacing);
   color: hsl(209deg 61% 16%);
   line-height: 1.8;
-  font-size: 12px;
-  font-family: 'Montserrat', sans-serif;
   text-transform: none;
   border-radius: var(--radius);
 }

@@ -1,38 +1,26 @@
 import React, { useEffect } from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby'
-import Image from 'gatsby-image'
+import { Link } from 'gatsby'
 import './Business.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styled from "styled-components"
+import EmailBg from '../assets/headerBG.svg'
 
-const query = graphql`
-  {
-    headers: file(relativePath: {eq: "find-cannabis-strains.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
-const HeroHeaderFirst = ({ }) => {
+const HeroHeaderFirst = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, [])
-  const { headers } = useStaticQuery(query)
   return (
-    <Wrapper>
-      <section data-aos="fade-right">
+    <Wrapper data-aos="fade-up">
+      <section>
         <div className="home-width">
           <div class="grid-container-business">
             <div class="k-1">
               <div class="k-title">
                 <h2 className="business-title">Learn more about the plant</h2>
               </div>
-              <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience in the cannabis.</p>
+              <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience.</p>
               <div className="buttons-header">
                 <Link className="link" to="/business/">
                   <p class="button-first">Get started here</p>
@@ -42,13 +30,7 @@ const HeroHeaderFirst = ({ }) => {
                 </Link>
               </div>
             </div>
-            <div class="k-2">
-              <div className="business-image-container">
-                <div class="business-hero-image">
-                  <Image fluid={headers.childImageSharp.fluid} />
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
@@ -57,7 +39,18 @@ const HeroHeaderFirst = ({ }) => {
 }
 
 const Wrapper = styled.div`
-
+scroll-snap-align: center;
+height: 100vh;
+min-height: 36rem;
+background:
+    url(${EmailBg}) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    padding: 5rem calc((100vw - 1300px) /2 )
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 @media screen and (min-width: 1024px) {
 .grid-container-business {
     display: grid;
@@ -75,19 +68,12 @@ const Wrapper = styled.div`
     padding-bottom: 3.5rem;
    }
    .business-title {
-    font-size: 2rem;
-    line-height: 2.4rem;
+    font-size: 3rem;
+    line-height: 3.4rem;
     margin-bottom: 1rem;
     color: #102a42;
   }
-  .business-hero-image {
-    width: 630px;
-  }
 
-  .business-image-container {
-    margin-top: 1rem;
-    margin-left: 1.5rem;
-  }
   .buttons-header {
     box-sizing: border-box;
     margin: 0;
@@ -103,7 +89,7 @@ const Wrapper = styled.div`
     cursor: pointer;
     font-weight: 500;
     line-height: 1;
-    background-color: #102a42;
+    background-color: #3d796d;
     box-shadow: 0 3px 8px rgba(0,0,0,0.09);
     border-color: transparent;
     color: #FFFFFF;
@@ -120,8 +106,8 @@ const Wrapper = styled.div`
     font-weight: 500;
     line-height: 1;
     background: #FFFFFF;
-    border-color: #102a42;
-    color: #102a42;
+    border-color: #3d796d;
+    color: #3d796d;
     font-size: 15px;
     padding: 12px 16px;
     margin-right: 24px;
@@ -134,8 +120,6 @@ const Wrapper = styled.div`
     letter-spacing: var(--spacing);
     color: hsl(209deg 61% 16%);
     line-height: 1.8;
-    font-size: 12px !important;
-    font-family: 'Montserrat', sans-serif;
     text-transform: none;
     border-radius: var(--radius);
   }
@@ -176,7 +160,6 @@ const Wrapper = styled.div`
     color: hsl(209deg 61% 16%);
     line-height: 1.8;
     font-size: 12px !important;
-    font-family: 'Montserrat', sans-serif;
     text-transform: none;
     border-radius: var(--radius);
   }
@@ -203,7 +186,7 @@ const Wrapper = styled.div`
     cursor: pointer;
     font-weight: 500;
     line-height: 1;
-    background-color: #102a42;
+    background-color: #3d796d;
     box-shadow: 0 3px 8px rgba(0,0,0,0.09);
     border-color: transparent;
     color: #FFFFFF;
@@ -220,8 +203,8 @@ const Wrapper = styled.div`
     font-weight: 500;
     line-height: 1;
     background: #FFFFFF;
-    border-color: #102a42;
-    color: #102a42;
+    border-color: #3d796d;
+    color: #3d796d;
     font-size: 13px;
     padding: 12px 16px;
     margin-right: 24px;
@@ -231,7 +214,10 @@ const Wrapper = styled.div`
 
 
 @media screen and (max-width: 767px) {
+     height: 100%;
+     background: #bad0cb;
     .grid-container-business {
+      width: 100% !important;
       display: grid !important;
       grid-template-columns:  1fr !important;
       grid-template-rows: 1fr !important;
@@ -260,7 +246,6 @@ const Wrapper = styled.div`
       color: hsl(209deg 61% 16%);
       line-height: 1.8;
       font-size: 12px !important;
-      font-family: 'Montserrat', sans-serif;
       text-transform: none;
       border-radius: var(--radius);
       text-align: center;
@@ -281,7 +266,7 @@ const Wrapper = styled.div`
       cursor: pointer;
       font-weight: 500;
       line-height: 1;
-      background-color: #102a42;
+      background-color: #3d796d;
       box-shadow: 0 3px 8px rgba(0,0,0,0.09);
       border-color: transparent;
       color: #FFFFFF;
@@ -298,8 +283,8 @@ const Wrapper = styled.div`
       font-weight: 500;
       line-height: 1;
       background: #FFFFFF;
-      border-color: #102a42;
-      color: #102a42;
+      border-color: #3d796d;
+      color: #3d796d;
       font-size: 11px;
       padding: 12px 16px;
       margin-right: 24px;

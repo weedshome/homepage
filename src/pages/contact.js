@@ -4,33 +4,47 @@ import Layout from "../components/Layout"
 import styled from 'styled-components'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import ContactForm from "../components/ContactForm"
+import SEO from '../components/SEO'
 
 const Contact = ({
-    data: {
-        page: {
-            title,
-            body,
-        },
+  data: {
+    page: {
+      title,
+      body,
     },
+  },
 }) => {
-    return (
-        <Layout>
-            <Wrapper>
-                <div className="search-text" style={{ textAlign: "left" }}>
-                </div>
-                <section className="posts">
-                    <article className="height-page">
-                        <div className="post-info">
-                            <h2 className="page-title">{title}</h2>
-                            <div className="underline"></div>
-                        </div>
-                        {documentToReactComponents(body.json)}
-                    </article>
-                    <ContactForm />
-                </section>
-            </Wrapper>
-        </Layout >
-    )
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Contact",
+    "description": "Feel free to contact us by using the form on this page.",
+    "publisher": {
+      "@type": "Weed's Home",
+      "name": "Weed's Home"
+    },
+  }
+
+  return (
+    <Layout>
+      <SEO title="Contact" schemaMarkup={schema} />
+      <Wrapper>
+        <div className="search-text" style={{ textAlign: "left" }}>
+        </div>
+        <section className="posts">
+          <article className="height-page">
+            <div className="post-info">
+              <h2 className="page-title">{title}</h2>
+              <div className="underline"></div>
+            </div>
+            {documentToReactComponents(body.json)}
+          </article>
+          <ContactForm />
+        </section>
+      </Wrapper>
+    </Layout >
+  )
 }
 
 export const query = graphql`
@@ -135,7 +149,6 @@ label {
     color: hsl(209deg 61% 16%);
     line-height: 1.8;
     font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
     text-transform: none;
     border-radius: var(--radius);
     padding-top: 2rem;

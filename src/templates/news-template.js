@@ -7,22 +7,22 @@ import "react-sweet-progress/lib/style.css";
 import 'react-circular-progressbar/dist/styles.css';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { DiscussionEmbed } from "disqus-react"
+import { getFluidGatsbyImage } from '../components/getFluidGatsbyImage'
 
 import Image from 'gatsby-image'
+import Img from 'gatsby-image'
+
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NewsBanner from "../components/NewsBanner"
 
 
-const disqusConfig = {
-  shortname: process.env.GATSBY_DISQUS_NAME,
-}
-
 const NewsTemplate = ({
   data: {
     news: {
       title,
+      id,
       date,
       excerpt: { excerpt },
       body,
@@ -32,7 +32,27 @@ const NewsTemplate = ({
     },
   },
 }) => {
+  const options = {
 
+    renderNode: {
+      // eslint-disable-next-line react/display-name
+      'embedded-asset-block': node => {
+        const { file, title } = node.data.target.fields
+        const image = {
+          file: file['en-US'],
+        }
+        const fluidProps = getFluidGatsbyImage(image, { maxWidth: 720 })
+        return <Img className="mb-4" fluid={fluidProps} alt={title['en-US']} />
+      },
+    },
+  }
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: {
+      identifier: id,
+      title: title,
+    },
+  }
   return (
     <Layout>
       <Wrapper>
@@ -51,7 +71,10 @@ const NewsTemplate = ({
                     <div className="underline"></div>
                   </div>
                   <Image fluid={fluid} alt={title} />
-                  {documentToReactComponents(body.json)}
+                  {documentToReactComponents(
+                    body.json,
+                    options
+                  )}
                   <DiscussionEmbed {...disqusConfig} />
                 </article>
               </div>
@@ -91,6 +114,7 @@ query GetSingleNews($slug: String) {
 `
 
 const Wrapper = styled.section`
+
   width: 85vw;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -145,11 +169,9 @@ const Wrapper = styled.section`
     padding: 45px;
     padding-top: 30px;
     padding-bottom: 30px;
-    font-family: teko;
 }
 span.product-rating {
     color: rgb(16 42 66);
-    font-family: teko;
     font-size: 20px;
     padding-top: 2px;
 }
@@ -182,7 +204,6 @@ text.CircularProgressbar-text {
     padding: 45px;
     padding-top: 30px;
     padding-bottom: 30px;
-    font-family: teko;
 }
 
 .posts-center-growing {
@@ -205,7 +226,6 @@ text.CircularProgressbar-text {
     padding: 25px;
     padding-left: 0px;
     padding-right: 35px;
-    font-family: teko;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -235,7 +255,6 @@ text.CircularProgressbar-text {
 
   p.strain-info-text {
     color: white;
-    font-family: teko;
     padding-top: 7px;
     margin-bottom: 0rem;
     letter-spacing: var(--spacing);
@@ -243,7 +262,6 @@ text.CircularProgressbar-text {
 p.strain-info-text-2 {
     text-align: center;
     color: white;
-    font-family: teko;
     font-size: 20px;
     margin-bottom: 0rem;
     margin-top: 0.5rem;
@@ -251,7 +269,6 @@ p.strain-info-text-2 {
 }
 
   button.info-btn {
-    font-family: teko;
     padding-top: 4.5px;
     font-size: 20px;
     height: 35px;
@@ -263,7 +280,6 @@ p.strain-info-text-2 {
     border-radius: 5px;
 }
 button.info-btn2 {
-    font-family: teko;
     padding-top: 4.5px;
     font-size: 20px;
     margin-left: 10px;
@@ -324,7 +340,6 @@ h2.title-strain {
 .search-text {
     text-transform: uppercase;
     letter-spacing: var(--spacing);
-    font-family: teko;
     color: var(--clr-primary-5);
     padding-bottom: 0.1rem;
     display: flex;

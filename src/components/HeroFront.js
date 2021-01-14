@@ -62,7 +62,6 @@ class HeroFront extends React.Component {
     }
     h3 {
       font-weight: 400;
-      font-family: "Caveat", cursive;
     }
     a {
       background: transparent;

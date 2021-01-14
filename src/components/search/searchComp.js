@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import algoliasearch from 'algoliasearch/lite'
 import {
     InstantSearch,
@@ -15,6 +15,8 @@ import {
 } from 'react-instantsearch-dom'
 import hit from './Hit'
 import 'instantsearch.css/themes/algolia.css';
+import { AiOutlineClose } from "react-icons/ai"
+
 
 const searchClient = algoliasearch(
     process.env.GATSBY_ALGOLIA_APP_ID,
@@ -22,11 +24,21 @@ const searchClient = algoliasearch(
 )
 
 export default function () {
+    const [hide, setHide] = useState(true)
     return (
         <InstantSearch searchClient={searchClient} indexName="strains">
             <div className="posts-center">
                 <article>
-                    <section>
+                    <section className="border-search">
+                        <div className="searchBox">
+                            <h5 className="searchBoxTitle">What you looking?</h5>
+                            <SearchBox
+                                className="ais-SearchBox-form"
+                                translations={{
+                                    placeholder: 'Looking for strains?'
+                                }}
+                            />
+                        </div>
                         <div className="padding-sidebar">
                             <div class="f-title-3">
                                 <h4 class="strains-filter-header">Strain Type</h4>
@@ -98,19 +110,18 @@ export default function () {
                     </section>
                 </article>
                 <article className="section-headline">
+                    {
+                        hide ? <div className="info-strains">
+                            <AiOutlineClose onClick={() => setHide(false)} className="x-btn" />
+                            <p className="posts-text-strains">Auto-flowering marijuana seeds | Autoflowering cannabis plants start flowering on their own within 2-4 weeks.</p>
+                        </div> : null
+                    }
                     <div className="grid-filter">
-                        <SearchBox
-                            className="ais-SearchBox-form"
-                            autoFocus
-                            translations={{
-                                placeholder: 'Looking for strains?'
-                            }}
-                        />
                         <Stats />
                         <HitsPerPage
-                            defaultRefinement={24}
+                            defaultRefinement={3}
                             items={[
-                                { value: 4, label: 'Show 4 hits' },
+                                { value: 3, label: 'Show 3 hits' },
                                 { value: 24, label: 'Show 24 hits' },
                             ]}
                         />

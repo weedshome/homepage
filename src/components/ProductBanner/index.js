@@ -15,6 +15,7 @@ const ProductBanner = () => {
 
 
 const Wrapper = styled.aside`
+
   display: grid;
   grid-template-columns: 250px !important;
   justify-content: center;

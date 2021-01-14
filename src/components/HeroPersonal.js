@@ -70,7 +70,6 @@ class HeroPersonal extends React.Component {
 
         const Heading = styled.div`
             .glitch {
-                font-family: 'Montserrat', sans-serif;
                 text-transform: uppercase;
                 font-size: 150px;
                 line-height: 140px;
@@ -106,7 +105,6 @@ class HeroPersonal extends React.Component {
                 line-height: 20px;
             }
             span {
-                font-family: 'Montserrat', sans-serif;
             }
         `
         const gradientAnimation = keyframes`

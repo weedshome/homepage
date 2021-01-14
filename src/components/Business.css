@@ -89,23 +89,18 @@ p.third-para {
   letter-spacing: var(--spacing);
   color: hsl(209deg 61% 16%);
   line-height: 1.8;
-  font-size: 12px;
-  font-family: 'Montserrat', sans-serif;
   text-transform: none;
   border-radius: var(--radius);
+  padding-bottom: 1.5rem;
 }
 
 p.third-para2 {
   color: hsl(209deg 61% 16%);
-  font-size: 12px;
-  font-family: 'Montserrat', sans-serif;
   letter-spacing: var(--spacing);
 }
 
 li.third-space {
   color: hsl(209deg 61% 16%);
-  font-size: 12px;
-  font-family: 'Montserrat', sans-serif;
   letter-spacing: var(--spacing);
 }
   
@@ -149,7 +144,7 @@ li.third-space {
   }
 
   .section-fourth {
-    padding-top: 8rem;
+    padding-top: 11rem;
     padding-bottom: 8rem;
 
 }

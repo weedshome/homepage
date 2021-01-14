@@ -3,15 +3,15 @@ import Image from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { Link } from "gatsby"
-import { MdUpdate } from 'react-icons/md'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import ReactStars from "react-stars";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+
 const query = graphql`
 {
-    allContentfulStrains(filter: {}, limit: 10) {
+    allContentfulStrains(filter: {node_locale: {eq: "en-US"}}, limit: 4) {
       nodes {
         id
         price
@@ -35,7 +35,7 @@ const TrendingStrains = () => {
     const data = useStaticQuery(query)
     const { allContentfulStrains: { nodes: products }, } = data
     return (
-        <section className="posts" data-aos="fade-up">
+        <section className="posts" data-aos="fade-right">
             <Wrapper>
                 <div className="hero-info-3">
                     <h2 className="news-title">Browse Cannabis Strains</h2>
@@ -58,7 +58,7 @@ const TrendingStrains = () => {
                                                         edit={false}
                                                         value={product.rating}
                                                         size={16}
-                                                        color2={"#102a42"}
+                                                        color2={"#3f7e72"}
                                                     />
                                                 </div>
                                             </div>
@@ -69,11 +69,6 @@ const TrendingStrains = () => {
                         )
                     })}
                 </div>
-                <div className="buttons-header">
-                    <Link className="link" to="/strains/">
-                        <p class="button-first">View all strains</p>
-                    </Link>
-                </div>
             </Wrapper>
         </section>
     )
@@ -83,15 +78,14 @@ const Wrapper = styled.div`
 .hero-info-3 {
     align-items: center;
     display: flex;
-    padding-top: 1rem;
+    padding-top: 3rem;
 }
 .link-more {
-    color: #6e9654;
+    color: #3d796d;
     font-weight: 500 !important;
     letter-spacing: var(--spacing);
     font-size: 15px;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
     border: none;
     display: flex;
     align-items: center;
@@ -104,7 +98,6 @@ const Wrapper = styled.div`
     letter-spacing: var(--spacing);
     font-size: 15px !important;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
     border: none;
     display: flex;
     align-items: center;
@@ -115,8 +108,8 @@ const Wrapper = styled.div`
 .grid-trending-strains {
 display: grid;
 place-content: center;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-grid-gap: 4rem;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-gap: 2rem;
 }
 .gatsby-image-wrapper {
     border-radius: 50%;
@@ -128,7 +121,6 @@ grid-gap: 4rem;
 h3 {
     font-weight: 500;
     text-transform: initial;
-    font-family: 'Montserrat',sans-serif;
     line-height: 20px;
     font-size: 0.9rem;
     color: #102a42;
@@ -184,10 +176,9 @@ h2 {
     font-weight: 500 !important;
     white-space: nowrap;
     color: #ffffff;
-    background-color: #102a42 !important;
+    background-color: #3f7e72 !important;
     box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
     border-radius: 4px;
-    font-family: 'Montserrat',sans-serif;
     margin-bottom: .5rem;
   }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -195,7 +186,7 @@ h2 {
         display: grid;
         place-content: center;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 3rem;
+        grid-gap: 2rem;
         }
   }
   @media screen and (max-width: 767px)  {

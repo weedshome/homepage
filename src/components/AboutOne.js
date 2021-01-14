@@ -40,7 +40,6 @@ class AboutOne extends React.Component {
         const Heading = styled.h1`
             font-size: 100px;
             line-height: 90px;
-            font-family: 'Montserrat', sans-serif;
             color: #fff;
             text-transform: uppercase;
             @media (min-width:768px) and (max-width:1399px) {
@@ -57,7 +56,6 @@ class AboutOne extends React.Component {
             color: #04e5e5;
             font-size: 120px;
             line-height: 100px;
-            font-family: 'Montserrat', sans-serif;
             text-transform: uppercase;
             letter-spacing: 2px;
             @media (min-width:768px) and (max-width:1399px) {
@@ -78,7 +76,6 @@ class AboutOne extends React.Component {
             }
             .value {
                 font-size: 120px;
-                font-family: 'Montserrat', sans-serif;
                 color: #fff;
                 line-height: 90px;
             }

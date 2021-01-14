@@ -4,7 +4,7 @@ import ShopTwo from './ShopTwo'
 
 
 
-const ShopFrontTwo = ({ }) => {
+const ShopFrontTwo = () => {
     return (
         <div>
             <ShopTwo />

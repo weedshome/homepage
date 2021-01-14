@@ -1,11 +1,10 @@
 import React from 'react'
-import ShopFirst from './ShopFirst'
 import ShopFrontTwo from './ShopFrontTwo'
 
 
 
 
-const ShopFront = ({ }) => {
+const ShopFront = () => {
     return (
         <div className="shop-front">
             <section className="shopfront">

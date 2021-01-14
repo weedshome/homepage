@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import styled from 'styled-components'
@@ -12,6 +12,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import { GiSeedling } from 'react-icons/gi'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Image from 'gatsby-image'
+import { AiOutlineClose } from "react-icons/ai"
 
 
 
@@ -45,6 +46,7 @@ const StrainTemplate = ({
             },
         },
     }
+    const [hide, setHide] = useState(true)
 
     return (
         <Layout>
@@ -83,50 +85,14 @@ const StrainTemplate = ({
                                     <a href={affiliatelink}><button className="button-first">Get it now <GiSeedling /></button></a>
                                 </div>
                             </div>
-                            <div class="strain-info-first">
-                                <div class="strain-info-first-graph">
-                                    <CircularProgressbar value={sativa} text={`${sativa}%`}
-                                        styles={buildStyles({
-                                            strokeLinecap: 'butt',
-                                            textSize: '20px',
-                                            pathTransitionDuration: 0.5,
-                                            pathColor: `rgb(126, 167, 72), ${sativa / 100})`,
-                                            textColor: 'white',
-                                            trailColor: 'white',
-                                            backgroundColor: 'rgb(126, 167, 72)',
-                                        })}
-                                    />
-                                    <p className="strain-info-text-2">Sativa</p>
-                                </div>
-                                <div class="strain-info-first-graph">
-                                    <CircularProgressbar value={indica} text={`${indica}%`}
-                                        styles={buildStyles({
-                                            strokeLinecap: 'butt',
-                                            textSize: '20px',
-                                            pathTransitionDuration: 0.5,
-                                            pathColor: `rgb(126, 167, 72), ${indica / 100})`,
-                                            textColor: 'white',
-                                            trailColor: 'white',
-                                            backgroundColor: 'rgb(126, 167, 72)',
-                                        })}
-                                    />
-                                    <p className="strain-info-text-2">Indica</p>
-                                </div>
-                                <div class="strain-info-first-graph">
-                                    <CircularProgressbar value={hybrid} text={`${hybrid}%`}
-                                        styles={buildStyles({
-                                            strokeLinecap: 'butt',
-                                            textSize: '20px',
-                                            pathTransitionDuration: 0.5,
-                                            pathColor: `rgb(126, 167, 72), ${hybrid / 100})`,
-                                            textColor: 'white',
-                                            trailColor: 'white',
-                                            backgroundColor: 'rgb(126, 167, 72)',
-                                        })}
-                                    />                                    <p className="strain-info-text-2">Hybrid</p>
-                                </div>
-                                <div class="strain-info-4">
-                                </div>
+                            <div class="strain-info-close">
+                                {
+                                    hide ? <div className="info-strains">
+                                        <AiOutlineClose onClick={() => setHide(false)} className="x-btn" />
+                                        <p className="posts-text-strains">Auto-flowering marijuana seeds | Autoflowering cannabis plants start flowering on their own within 2-4 weeks.</p>
+                                    </div> : null
+                                }
+
                             </div>
                         </div>
                         <div class="grid-container">
@@ -240,7 +206,17 @@ const Wrapper = styled.section`
   max-width: var(--max-width);
   margin: 0 auto;
   margin-bottom: 4rem;
-  padding-top: 15px;
+  padding-top: 5.5rem;
+  a.links {
+    color: #3d796d;
+}
+
+.strain-info-close {
+    background: black;
+    width: 400px;
+    height: 200px;
+}
+
   .button-first {
     border: 2px solid;
     display: inline-block;
@@ -249,7 +225,7 @@ const Wrapper = styled.section`
     cursor: pointer;
     font-weight: 500;
     line-height: 1;
-    background-color: #102a42;
+    background-color: #3d796d;
     box-shadow: 0 3px 8px rgba(0,0,0,0.09);
     border-color: transparent;
     color: #FFFFFF;
@@ -282,12 +258,22 @@ const Wrapper = styled.section`
     margin: 2rem 0 4rem 0;
     text-align: center;
     span {
-      background: var(--clr-primary-5);
-      color: var(--clr-white);
-      border-radius: var(--radius);
-      padding: 0.25rem 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: var(--spacing);
+        margin-bottom: 0.5rem;
+        width: fit-content;
+        bottom: 16px;
+        right: 12px;
+        display: block;
+        padding: 4px;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: .6rem !important;
+        font-weight: 500 !important;
+        white-space: nowrap;
+        color: #ffffff;
+        background-color: #3d796d;
+        box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
+        border-radius: 4px;
+        margin: 0 auto;
     }
     h2 {
       margin: 1.25rem 0;
@@ -328,18 +314,14 @@ const Wrapper = styled.section`
     padding: 45px;
     padding-top: 30px;
     padding-bottom: 30px;
-    font-family: 'Montserrat', sans-serif;
 }
 span.product-rating {
     color: rgb(16 42 66);
-    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     padding-top: 2px;
     padding-left: 1rem;
 }
-p.strain-info-text-2 {
-    color: rgb(16, 42, 66)!important;
-}
+
 path.CircularProgressbar-trail {
     stroke: rgb(16 42 66) !important;
 }
@@ -347,7 +329,7 @@ text.CircularProgressbar-text {
     fill: rgb(16, 42, 66) !important;
 }
 .heading-info {
-    color: #102a42;
+    color: #3d796d;
     font-size: 15px;
     text-transform: uppercase;
     padding-bottom: 10px;
@@ -355,30 +337,30 @@ text.CircularProgressbar-text {
 }
 .strain-text {
     justify-self: left;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 .react-sweet-progress-line {
-    background-color: #102a42 !important;
+    background-color: #3d796d !important;
 }
 .strain-info-graphs {
     width: 100%;
     padding: 45px;
     padding-top: 30px;
     padding-bottom: 30px;
-    font-family: 'Montserrat', sans-serif;
 }
 .strain-info-first {
     width: 100%;
     padding: 25px;
     padding-left: 0px;
     padding-right: 35px;
-    font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 1px 1px;
 }
 .CircularProgressbar .CircularProgressbar-path {
-    stroke: #7da748;
+    stroke: #3d796d;
     stroke-linecap: round !important;
     transition: stroke-dashoffset 0.5s ease 0s;
     font-size: 14px;
@@ -403,19 +385,9 @@ text.CircularProgressbar-text {
 
   p.strain-info-text {
     font-size: 14px;
-    color: #102a42;
-    font-family: 'Montserrat', sans-serif;
+    color: #3d796d;
     padding-top: 7px;
     margin-bottom: 0rem;
-    letter-spacing: var(--spacing);
-}
-p.strain-info-text-2 {
-    text-align: center;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    margin-bottom: 0rem;
-    margin-top: 0.5rem;
     letter-spacing: var(--spacing);
 }
 h2.title-strain {
@@ -440,15 +412,15 @@ h2.title-strain {
   }
     .search-icon {
         float: left;
+        padding-top: 0.15rem;
+        padding-right: 0.5rem;
 }
 
 .grid-container3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 1px 1px;
     grid-template-areas: "strain-image strain-text strain-info .";
-    height: 200px;
     width: 100%;
     background-color: #ffffff;
     place-items: center;
@@ -470,7 +442,6 @@ h2.title-strain {
 .search-text {
     text-transform: uppercase;
     letter-spacing: var(--spacing);
-    font-family: 'Montserrat', sans-serif;
     color: var(--clr-primary-5);
     padding-bottom: 0.1rem;
     display: flex;

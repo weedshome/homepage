@@ -10,18 +10,22 @@ const contentfulQuery = `
         sativa
         category
         hybrid
+        alt
+        info {
+          info
+        }
         image {
-            fluid {
-              src
-            }
+          file {
+          url
+          }
           }
         }
       }
     }
 `
 
-function pageToAlgoliaRecords({ id, title, price, indica, sativa, hybrid, image }) {
-  return { objectID: id, title, price, indica, sativa, hybrid, image }
+function pageToAlgoliaRecords({ id, title, category, price, indica, sativa, hybrid, info, image, alt }) {
+  return { objectID: id, title, category, price, indica, sativa, hybrid, info: info.info, image: image.file.url, alt }
 
 }
 

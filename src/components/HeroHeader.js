@@ -4,7 +4,7 @@ import HeroHeaderFirst from './HeroHeaderFirst'
 
 
 
-const HeroHeader = ({ }) => {
+const HeroHeader = () => {
     return (
         <header className="hero-front">
             <HeroHeaderFirst />

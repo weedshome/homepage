@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import HomeBanner from '../components/HomeBanner'
 import HeroHeader from '../components/HeroHeader'
 import BusinessFifth from '../components/BusinessFifth'
 import TrendingStrains from '../components/HomeBanner/TrendingStrains'
 import { useStaticQuery, graphql } from "gatsby"
+import TrendingBlog from '../components/HomeBanner/TrendingBlog'
 
 const IndexPage = ({ data }) => {
   const { site } = useStaticQuery(
@@ -34,9 +34,9 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" schemaMarkup={schema} />
       <HeroHeader />
-      <HomeBanner />
-      <BusinessFifth />
       <TrendingStrains />
+      <BusinessFifth />
+      <TrendingBlog />
     </Layout>
   )
 }

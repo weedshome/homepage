@@ -85,25 +85,7 @@ const Wrapper = styled.article`
   .link:hover {
     border-color: #0a0c10;
     color: #0a0c10;
-  }
-  footer {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--clr-grey-9);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--clr-grey-5);
 
-    & .date {
-      display: flex;
-      align-items: center;
-      & .icon {
-        color: var(--clr-primary-5);
-        margin-right: 0.5rem;
-      }
-    }
-  }
   @media (min-width: 600px) {
     .img {
       height: 20rem;

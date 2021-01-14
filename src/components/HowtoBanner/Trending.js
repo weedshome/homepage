@@ -85,10 +85,9 @@ const Wrapper = styled.div`
       font-weight: 500 !important;
       white-space: nowrap;
       color: #ffffff;
-      background-color: #102a42 !important; 
+      background-color: #3d796d !important; 
       box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
       border-radius: 4px;
-      font-family: 'Montserrat', sans-serif;
   }
     text-align: center;
     h3 {
@@ -96,14 +95,12 @@ const Wrapper = styled.div`
       font-weight: 400;
       margin-bottom: 0.5rem;
       text-transform: initial;
-      font-family: 'Montserrat', sans-serif;
       line-height: 24px;
     }
     p {
       color: var(--clr-grey-5);
       line-height: 1.8;
       font-size: 12px;
-      font-family: 'Montserrat',sans-serif;
       text-transform: none;
     }
     .img {
@@ -123,6 +120,9 @@ const Wrapper = styled.div`
       display: block !important;
       border-right: 0px !important;
       margin-bottom: 1rem;
+      height: 100% !important;
+      padding: 10px;
+      background: #f1f5fe;
       box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
   }
   .author-text {

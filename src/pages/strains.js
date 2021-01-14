@@ -2,18 +2,29 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout"
-import { GoSettings } from 'react-icons/go'
 import SearchComp from '../components/search/searchComp'
 import 'instantsearch.css/themes/algolia.css';
+import SEO from '../components/SEO'
+
 
 const Strains = ({ data }) => {
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cannabis Strains",
+    "description": "Browse through our cannabis strain database and find the perfect bud for yourself.",
+    "publisher": {
+      "@type": "Weed's Home",
+      "name": "Weed's Home"
+    },
+  }
 
   return (
     <Wrapper>
       <Layout>
+        <SEO title="Strains" schemaMarkup={schema} />
         <section className="posts">
-          <h3 className="posts-title-products"><GoSettings />Browse Seeds</h3>
-          <p className="posts-text-strains">Auto-flowering marijuana seeds | Autoflowering cannabis plants start flowering on their own within 2-4 weeks of germination. Classic varieties, both Indica and Sativa dominant, are photoperiodic plants. Therefore, they are traditionally exposed to 12 hours of light in order to induce flowering indoors but might not have enough time to finish outdoors before the days get shorter – unlike autoflowering strains.</p>
           <article>
             <SearchComp />
           </article>
@@ -60,13 +71,6 @@ h3.posts-title-products {
     letter-spacing: var(--spacing);
     color: white;
   }
-  h3 {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    text-transform: initial;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.8rem !important;
-  }
   .underline {
     width: 5rem;
     height: 1px;
@@ -74,19 +78,18 @@ h3.posts-title-products {
     margin: 0 auto;
     margin-bottom: 0.5rem;
   }
-  h3 {
-    font-size: 1.25rem;
-  }
-  p {
-    color: var(--clr-grey-5);
+  li.ais-Hits-item p {
     line-height: 1.8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 540px;
   }
   .link {
     padding-bottom: 0.1rem;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
     letter-spacing: var(--spacing);
     color: rgb(37,41,53);
     font-weight: 400;
@@ -102,27 +105,10 @@ h3.posts-title-products {
     border-color: #0a0c10;
     color: #0a0c10;
   }
-  footer {
-    padding-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--clr-grey-5);
-
-    & .date {
-      display: flex;
-      align-items: center;
-      & .icon {
-        color: var(--clr-primary-5);
-        margin-right: 0.5rem;
-      }
-    }
-  }
   .rating {
     margin-bottom: 0.5rem;
   }
   .product-rating {
-    font-family: 'Montserrat', sans-serif;
     letter-spacing: var(--spacing);
     padding-right: 23px;
     font-size: 13px;
@@ -140,7 +126,6 @@ h3.posts-title-products {
     font-weight: 400;
     transition: var(--transition);
     font-size: 18px;
-    font-family: teko;
     border: 2px solid transparent;
     cursor: pointer;
   }
@@ -156,7 +141,6 @@ h3.posts-title-products {
   }
   .span-float {
     float: left;
-    font-family: teko;
     font-size: 18px;
     letter-spacing: var(--spacing);
     text-align: center;
@@ -169,7 +153,6 @@ h3.posts-title-products {
   .span-float2 {
     float: right;
     text-align: center;
-    font-family: teko;
     font-size: 18px;
     letter-spacing: var(--spacing);
     background: #000000;
@@ -183,7 +166,16 @@ h3.posts-title-products {
       height: 20rem;
     }
   }
-  @media (min-width: 800px) {
+  @media (max-width: 800px) {
+    .posts-center {
+      padding-top: 3rem;
+  }
+    li.ais-Hits-item p {
+      white-space: unset;
+      overflow: unset;
+      text-overflow: unset;
+      width: 100%;
+      }
     .img {
       height: 25rem;
     }
@@ -212,15 +204,17 @@ h3.posts-title-products {
     border: 1px solid #6f9654;
   }
   .posts-text-strains {
-    padding: 20px;
-    padding-top: 10px;
     color: hsl(209deg 61% 16%);
     font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
     letter-spacing: var(--spacing);
   }
+  .info-strains {
+    padding: 20px;
+    background-color: #ebf3f5;
+    margin-bottom: 1rem;
+  }
   section.posts {
-    padding-top: 3rem;
+    padding-top: 3rem !important;
 }
 `
 
@@ -234,6 +228,9 @@ export const query = graphql`
         slug
         rating
         category
+        info {
+          info
+        }
       }
     }
   }

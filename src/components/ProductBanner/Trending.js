@@ -74,6 +74,9 @@ const Wrapper = styled.div`
     background-color: #f6f7f8;
   }
   
+  .d {
+    height: 100% !important;
+  }
   .post-card-badge5 {
     position: absolute;
       bottom: 16px;
@@ -86,17 +89,15 @@ const Wrapper = styled.div`
       font-weight: 500 !important;
       white-space: nowrap;
       color: #ffffff;
-      background-color: #102a42;
+      background-color: #3d796d !important;
       box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
       border-radius: 4px;
-      font-family: 'Montserrat', sans-serif;
   }
     text-align: center;
     h3 {
       font-weight: 400;
     margin-bottom: 0.5rem;
     text-transform: initial;
-    font-family: 'Montserrat',sans-serif;
     font-size: 0.75rem !important;
     line-height: 16px;
     color: #102a42;
@@ -105,7 +106,6 @@ const Wrapper = styled.div`
       color: var(--clr-grey-5);
       line-height: 1.8;
       font-size: 12px;
-      font-family: 'Montserrat',sans-serif;
       text-transform: none;
     }
     .img {

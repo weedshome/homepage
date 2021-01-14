@@ -1,45 +1,137 @@
-import React, { useEffect } from 'react';
-import './Business.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
+import addToMailchimp from 'gatsby-plugin-mailchimp'
+import styled from "styled-components"
 
+export default class IndexPage extends React.Component {
+    state = {
+        name: null,
+        email: null,
+    }
 
+    _handleChange = e => {
+        console.log({
+            [`${e.target.name}`]: e.target.value,
+        })
+        this.setState({
+            [`${e.target.name}`]: e.target.value,
+        })
+    }
 
-const Newsletter = ({ }) => {
-    useEffect(() => {
-        AOS.init({ duration: 2000 });
-    }, [])
-    return (
-        <section data-aos="flip-left">
+    _handleSubmit = e => {
+        e.preventDefault()
 
+        console.log('submit', this.state)
 
-            <div class="grid-container-newsletter">
-                <div class="newsletter">
-                    <div class="newsletter-inside">
-                        <section className="newsletter-page">
-                            <div className="page-center">
-                                <div className="above-heading">NEWSLETTER</div>
-                                <h2 className="newsletter-title">Get all the latest stories to your inbox</h2>
-                                <form className="contact-form" name="test-contact" method="post" netlify-honeypot="bot-field" data-netlify="true" action="/success">
-                                    <input type="hidden" name="bot-field" />
-                                    <input type="hidden" name="form-name" value="testing-contact" />
-                                    <input type="text" name="name" placeholder="Your name" className="form-control" />
-                                    <input type="email" name="email" placeholder="Your email" className="form-control" />
-                                    <button type="submit" className="btn form-control submit-btn"> subscribe</button>
-                                </form>
-                                <p className="newsletter-terms">I've read and agree to Weed's Home written <a href="/">Privacy Policy</a> and <a href="/">Terms Conditions.</a></p>
-                            </div>
-                        </section>
+        addToMailchimp(this.state.email, this.state)
+            .then(({ msg, result }) => {
+                console.log('msg', `${result}: ${msg}`)
 
+                if (result !== 'success') {
+                    throw msg
+                }
+                alert(msg)
+            })
+            .catch(err => {
+                console.log('err', err)
+                alert(err)
+            })
+    }
+
+    render() {
+        return (
+            <Wrapper>
+                <div className="newsletter-container">
+                    <h2 className="newsletter-title">Subscribe to our newsletter</h2>
+                    <p className="newsletter-info">Sign up for our newsletter to receive the new releases directly to your inbox.</p>
+                    <div>
+                        <form onSubmit={this._handleSubmit}>
+                            <input
+                                type="text"
+                                onChange={this._handleChange}
+                                placeholder="name"
+                                name="name"
+                            />
+                            <input
+                                type="email"
+                                onChange={this._handleChange}
+                                placeholder="email"
+                                name="email"
+                            />
+                            <br />
+                            <input type="submit" className="newsletter-btn" />
+                        </form>
                     </div>
                 </div>
-            </div>
-
-
-        </section>
-    )
+            </Wrapper>
+        )
+    }
 }
 
+const Wrapper = styled.div`
+background: #f1f5fe;
+.newsletter-info {
+    margin-bottom: 0px !important;
+    color: hsl(209deg 61% 16%);
+    font-size: 12px;
+    letter-spacing: var(--spacing);
+}
+.newsletter-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-bottom: 4rem;
+    text-align: center;
+    padding-top: 4rem;
+}
+.newsletter-btn {
+    border: 2px solid;
+    display: inline-block;
+    border-radius: 8px;
+    -webkit-letter-spacing: 0.02em;
+    -moz-letter-spacing: 0.02em;
+    -ms-letter-spacing: 0.02em;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 1;
+    background-color: #102a42;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.09);
+    border-color: transparent;
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 12px 16px;
+}
+input[type="text"] {
+    margin: 20px;
+    appearance: none;
+    padding: 0.8rem 1.7rem;
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #102a42;
+    border-radius: 5px;
+    color: white !important;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    font-weight: 400;
+}
+input[type="email"] {
+    appearance: none;
+    padding: 0.8rem 1.7rem;
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #102a42;
+    border-radius: 5px;
+    color: white !important;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    font-weight: 400;
+}
 
-
-export default Newsletter
+@media screen and (max-width: 767px) {
+input.newsletter-btn {
+    margin-top: 2rem;
+}
+h2 {
+font-size: 1.5rem;
+}
+}
+`

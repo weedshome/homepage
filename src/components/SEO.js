@@ -54,9 +54,11 @@ const SEO = ({ title, description, image, article, schemaMarkup }) => {
       )}
 
       {seo.image && <meta name="twitter:image" content={seo.image} />}
+
       {schemaMarkup &&
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       }
+
     </Helmet>
   )
 }

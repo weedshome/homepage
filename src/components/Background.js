@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const query = graphql`
   {
-    file(relativePath: {eq: "mainBcg.png"}) {
+    file(relativePath: {eq: "background.svg"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -15,18 +15,18 @@ const query = graphql`
   }
 `
 
-const Background = ({ children, image }) => {
-    const { file: { childImageSharp: { fluid } } } = useStaticQuery(query)
-    return <Wrapper>
-        <BackgroundImage
-            Tag="div"
-            fluid={image || fluid}
-            className="bcg"
-            preserveStackingContext={true}
-        >
-            {children}
-        </BackgroundImage>
-    </Wrapper>
+const Background = ({ children }) => {
+  const {
+    file: {
+      childImageSharp: { fluid },
+    },
+  } = useStaticQuery(query)
+
+  return <Wrapper>
+    <BackgroundImage Tag="div" fluid={fluid} className="bcg" preserveStackingContext="true">
+      {children}
+    </BackgroundImage>
+  </Wrapper>
 }
 
 const fadeIn = keyframes`
@@ -51,5 +51,4 @@ const Wrapper = styled.section`
     opacity: 1;
   }
 `
-
 export default Background

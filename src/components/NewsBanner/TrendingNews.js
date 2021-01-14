@@ -82,12 +82,10 @@ display: grid;
     background-color: #102a42 !important;
     box-shadow: 0 0 2px 0 rgba(0,0,0,.75);
     border-radius: 4px;
-    font-family: 'Montserrat', sans-serif;
 }
   h3 {
     font-weight: 400 !important;
     text-transform: initial;
-    font-family: 'Montserrat', sans-serif;
     line-height: 16px !important;
     font-size: 0.8rem !important;
     color: #102a42;
@@ -122,7 +120,6 @@ display: grid;
     font-weight: 500 !important;
     letter-spacing: var(--spacing);
     font-size: 18px !important;
-    font-family: 'Montserrat', sans-serif;
     max-width: var(--max-width);
     margin: 0 auto;
   }

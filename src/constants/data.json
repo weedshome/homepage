@@ -1,0 +1,34 @@
+{
+    "features": [
+        {
+            "properties": {
+                "ID": 1,
+                "NAME": "BudCars Delivery",
+                "DESCRIPTION": "Delivery service",
+                "Image": "https://i.imgur.com/Q5dWco3.png",
+                "CATEGORY": "Headshop"
+            },
+            "geometry": {
+                "coordinates": [
+                    38.592049,
+                    -121.496751
+                ]
+            }
+        },
+        {
+            "properties": {
+                "ID": 2,
+                "NAME": "The Re-Up",
+                "DESCRIPTION": "Delivery service",
+                "Image": "https://i.imgur.com/CUJzGc8.jpg",
+                "CATEGORY": "Headshop"
+            },
+            "geometry": {
+                "coordinates": [
+                    38.596466,
+                    -121.484451
+                ]
+            }
+        }
+    ]
+}

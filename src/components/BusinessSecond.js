@@ -31,7 +31,7 @@ const query = graphql`
   }
 `
 
-const BusinessSecond = ({ }) => {
+const BusinessSecond = () => {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, [])
@@ -164,7 +164,6 @@ padding-top: 6rem;
 .card-text {
   color: hsl(209deg 61% 16%);
     font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
     letter-spacing: var(--spacing);
     padding: 20px;
 }

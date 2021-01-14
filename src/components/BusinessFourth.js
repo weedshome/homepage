@@ -6,24 +6,14 @@ import { FaStop } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styled from "styled-components"
+import yourSVG from '../assets/weedshome-maps.svg'
 
-const query = graphql`
-  {
-    featuresThird: file(relativePath: {eq: "worldwide2.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
-const BusinessFourth = ({ }) => {
+
+const BusinessFourth = () => {
     useEffect(() => {
         AOS.init({ duration: 2000 });
     }, [])
-    const { featuresThird } = useStaticQuery(query)
     return (
         <Wrapper>
             <section data-aos="zoom-in">
@@ -43,8 +33,7 @@ const BusinessFourth = ({ }) => {
                         </div>
                         <div class="v-image">
                             <div class="inside-image">
-                                <Image fluid={featuresThird.childImageSharp.fluid} />
-                            </div>
+                                <img src={yourSVG} />                            </div>
                         </div>
                     </div>
                 </div>
@@ -81,6 +70,9 @@ const Wrapper = styled.div`
         width: auto;
         margin-top: 3rem;
         }
+    }
+    img {
+        height: 400px;
     }
 `
 
