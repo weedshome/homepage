@@ -78,12 +78,7 @@ module.exports = {
         chunkSize: 10000,
       },
     },
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `weedshome_backup`,
-      },
-    },
+
     {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {
