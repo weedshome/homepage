@@ -101,23 +101,6 @@ module.exports = {
       resolve: `@contentful/gatsby-transformer-contentful-richtext`,
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Roboto`,
-            variants: [`400`, `500`, `700`],
-          },
-          {
-            family: `Open Sans`,
-          },
-          {
-            family: `Teko`,
-          },
-        ],
-      },
-    },
-    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         resolveEnv: () => NETLIFY_ENV,
