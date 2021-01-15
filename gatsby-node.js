@@ -29,11 +29,6 @@ exports.createPages = async ({ graphql, actions }) => {
         slug
       }
     }
-    howto: allContentfulHowto(filter: {node_locale: {eq: "en-US"}}) {
-      nodes {
-        slug
-      }
-    }
   }
   `)
 

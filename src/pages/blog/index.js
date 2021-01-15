@@ -16,7 +16,6 @@ const Blog = ({ data }) => {
     allContentfulHealth: { nodes: healths },
     allContentfulGrowing: { nodes: growings },
     allContentfulNews: { nodes: newss },
-    allContentfulHowto: { nodes: howtos },
   } = data
 
   return (
@@ -70,23 +69,6 @@ const Blog = ({ data }) => {
             <div className="hero-info-3">
               <h2 className="news-title">Latest from How-to</h2>
               <Link className="link-more" to={`/blog/how-to`}>View all <FaLongArrowAltRight /></Link>
-            </div>
-            <div className="product-grid-strains3">
-              {howtos.map(howto => {
-                return (
-                  <article key={howto.id}>
-                    <Link className="link" to={`/howto/${howto.slug}`}>
-                      <div className="d">
-                        <Image fluid={howto.image.fluid} alt={howto.title}></Image>
-                        <div className="info">
-                          <span class="post-card-badge">{howto.category}</span>
-                          <h3 className="title">{howto.title}</h3>
-                        </div>
-                      </div>
-                    </Link>
-                  </article>
-                )
-              })}
             </div>
           </div>
         </section>
@@ -456,22 +438,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulHowto(filter: {node_locale: {eq: "en-US"}}, limit: 3) {
-      nodes {
-        id
-        title
-        slug
-        date
-        author
-        category
-        image {
-          fluid {
-          ...GatsbyContentfulFluid
-          }
-        }
-      }
-    }
-  }
+
 `
 
 export default Blog
