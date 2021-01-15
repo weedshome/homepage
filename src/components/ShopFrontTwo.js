@@ -1,5 +1,4 @@
 import React from 'react'
-import ShopTwo from './ShopTwo'
 
 
 
@@ -7,7 +6,6 @@ import ShopTwo from './ShopTwo'
 const ShopFrontTwo = () => {
     return (
         <div>
-            <ShopTwo />
         </div>
     )
 }
