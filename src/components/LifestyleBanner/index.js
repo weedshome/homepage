@@ -1,13 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import Trending from './Trending'
-import About from './About'
 import NewsletterSidebar from '../NewsBanner/Newsletter'
 
 const LifestyleBanner = () => {
   return (
     <Wrapper>
-      <About />
       <Trending />
       <NewsletterSidebar />
     </Wrapper>

@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Trending from './Trending'
-import About from './About'
 
 const ProductBanner = () => {
   return (
     <Wrapper>
-      <About />
       <Trending />
     </Wrapper>
   )
