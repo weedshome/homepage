@@ -77,13 +77,5 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-  result.data.howto.nodes.forEach(howto => {
-    createPage({
-      path: `/howto/${howto.slug}`,
-      component: path.resolve(`src/templates/howto-template.js`),
-      context: {
-        slug: howto.slug
-      },
-    })
-  })
+
 }
