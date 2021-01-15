@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './Business.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import BusinessSecond from './BusinessSecond';
 
 
 const BusinessFirst = () => {
@@ -12,7 +11,6 @@ const BusinessFirst = () => {
   return (
     <section data-aos="fade-right">
 
-      <BusinessSecond />
 
     </section>
   )
