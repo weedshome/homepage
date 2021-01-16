@@ -120,6 +120,7 @@ img {
     padding-top: 5rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    background: #f1f5fe;
 }
 .flex.mb-4 {
     display: grid;
@@ -134,7 +135,7 @@ img {
 }
 .location-card {
     box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
-background-color: #f1f5fe;
+background-color: #ffffff;
 display: grid;
 grid-template-columns: 1fr;
 width: 100%;

@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 const Title = ({ title }) => {
-    return (
-        <Wrapper>
-            <h4>{title}</h4>
-            <div className="line"></div>
-        </Wrapper>
-    )
+  return (
+    <Wrapper>
+      <h4>{title}</h4>
+      <div className="line"></div>
+    </Wrapper>
+  )
 }
 const Wrapper = styled.div`
 position: relative;
@@ -16,7 +16,7 @@ h4 {
   color: var(--clr-grey-3);
   text-transform: uppercase;
   font-weight: 500;
-  background: var(--clr-white);
+  background: #fff0;
   display: inline-block;
   margin-bottom: 0;
   padding: 0 0.6rem;

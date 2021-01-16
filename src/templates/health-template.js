@@ -47,35 +47,37 @@ const HealthTemplate = ({
   }
   return (
     <Layout>
-      <Wrapper>
-        <div className="search-text" style={{ textAlign: "left" }}>
-          <Link to="/health" className="links"> back to all news <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
-        </div>
-        <article>
-          <section className="posts">
-            <div className="posts-center-growing">
-              <div className="product-grid-strains">
+      <div className="health-layout-background">
+        <Wrapper>
+          <div className="search-text" style={{ textAlign: "left" }}>
+            <Link to="/health" className="links"> back to all news <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
+          </div>
+          <article>
+            <section className="posts">
+              <div className="posts-center-growing">
+                <div className="product-grid-strains">
+                  <article>
+                    <div className="post-info">
+                      <span>{category}</span>
+                      <h2>{title}</h2>
+                      <p>{excerpt}</p>
+                      <div className="underline"></div>
+                    </div>
+                    <Image fluid={fluid} alt={title} />
+                    {documentToReactComponents(
+                      body.json,
+                      options
+                    )}
+                  </article>
+                </div>
                 <article>
-                  <div className="post-info">
-                    <span>{category}</span>
-                    <h2>{title}</h2>
-                    <p>{excerpt}</p>
-                    <div className="underline"></div>
-                  </div>
-                  <Image fluid={fluid} alt={title} />
-                  {documentToReactComponents(
-                    body.json,
-                    options
-                  )}
+                  <HealthBanner />
                 </article>
               </div>
-              <article>
-                <HealthBanner />
-              </article>
-            </div>
-          </section>
-        </article>
-      </Wrapper>
+            </section>
+          </article>
+        </Wrapper>
+      </div>
     </Layout >
   )
 }

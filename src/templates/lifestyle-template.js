@@ -55,36 +55,38 @@ const LifestyleTemplate = ({
   }
   return (
     <Layout>
-      <Wrapper>
-        <div className="search-text" style={{ textAlign: "left" }}>
-          <Link to="/lifestyle" className="links"> back to all lifestyle <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
-        </div>
-        <article>
-          <section className="posts">
-            <div className="posts-center-growing">
-              <div className="product-grid-strains">
+      <div className="health-layout-background">
+        <Wrapper>
+          <div className="search-text" style={{ textAlign: "left" }}>
+            <Link to="/lifestyle" className="links"> back to all lifestyle <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
+          </div>
+          <article>
+            <section className="posts">
+              <div className="posts-center-growing">
+                <div className="product-grid-strains">
+                  <article>
+                    <div className="post-info">
+                      <span>{category}</span>
+                      <h2>{title}</h2>
+                      <p>{excerpt}</p>
+                      <div className="underline"></div>
+                    </div>
+                    <Image fluid={fluid} alt={title} />
+                    {documentToReactComponents(
+                      body.json,
+                      options
+                    )}
+                    <DiscussionEmbed {...disqusConfig} />
+                  </article>
+                </div>
                 <article>
-                  <div className="post-info">
-                    <span>{category}</span>
-                    <h2>{title}</h2>
-                    <p>{excerpt}</p>
-                    <div className="underline"></div>
-                  </div>
-                  <Image fluid={fluid} alt={title} />
-                  {documentToReactComponents(
-                    body.json,
-                    options
-                  )}
-                  <DiscussionEmbed {...disqusConfig} />
+                  <LifestyleBanner />
                 </article>
               </div>
-              <article>
-                <LifestyleBanner />
-              </article>
-            </div>
-          </section>
-        </article>
-      </Wrapper>
+            </section>
+          </article>
+        </Wrapper>
+      </div>
     </Layout >
   )
 }
@@ -329,7 +331,7 @@ h2.title-strain {
 }
 .product-grid-strains {
     background: white;
-    padding: 25px;
+    padding: 4rem;
     margin: 0 auto;
 }
 .posts-center {

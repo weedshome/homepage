@@ -14,45 +14,49 @@ const Health = ({ data }) => {
 
   return (
     <Wrapper>
-      <Layout>
-        <section className="posts">
-          <div className="posts-center-grid">
-            <div className="product-grid-strains">
-              {products.map(product => {
-                return (
-                  <article key={product.id}>
-                    <Link className="link" to={`/health/${product.slug}`}>
-                      <div className="d">
-                        <figure className="post-card-figure">
-                          <Image fluid={product.image.fluid} alt={product.title}></Image>
-                          <span class="post-card-badge">{product.category}</span>
-                        </figure>
-                        <div className="info">
-                          <h3 className="title">{product.title}</h3>
-                          <p className="readmore">{product.excerpt.excerpt}</p>
-                          <div className="article-info">
-                            <p className="author-text">{product.author}</p>
-                            <p className="author-text2">{product.date}</p>
+      <div className="health-background">
+        <Layout>
+          <section className="posts">
+            <div className="posts-center-grid">
+              <div className="product-grid-strains">
+                {products.map(product => {
+                  return (
+                    <article key={product.id}>
+                      <Link className="link" to={`/health/${product.slug}`}>
+                        <div className="d">
+                          <figure className="post-card-figure">
+                            <Image fluid={product.image.fluid} alt={product.title}></Image>
+                            <span class="post-card-badge">{product.category}</span>
+                          </figure>
+                          <div className="info">
+                            <h3 className="title">{product.title}</h3>
+                            <p className="readmore">{product.excerpt.excerpt}</p>
+                            <div className="article-info">
+                              <p className="author-text">{product.author}</p>
+                              <p className="author-text2">{product.date}</p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </Link>
-                  </article>
-                )
-              })}
+                      </Link>
+                    </article>
+                  )
+                })}
+              </div>
+              <article>
+                <HealthBanner />
+              </article>
             </div>
-            <article>
-              <HealthBanner />
-            </article>
-          </div>
-        </section>
-      </Layout>
+          </section>
+        </Layout>
+      </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.article`
-
+.health-background {
+  background: #f1f5fe;
+}
 .post-card-figure {
   position: relative;
   display: block;
@@ -243,7 +247,7 @@ const Wrapper = styled.article`
   }
   .d {
     box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
-    background-color: #f1f5fe;
+    background-color: #ffffff;
     display: grid;
     grid-template-columns: 1fr;
     height: 330px;

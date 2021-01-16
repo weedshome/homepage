@@ -16,68 +16,91 @@ const Blog = ({ data }) => {
     allContentfulHealth: { nodes: healths },
     allContentfulGrowing: { nodes: growings },
     allContentfulNews: { nodes: newss },
+    allContentfulHowto: { nodes: howtos },
   } = data
 
   return (
     <Wrapper>
-      <Layout>
-        <HeroBlog />
-        <section className="posts">
-          <div className="posts-center-grid">
-            <div className="hero-info-3">
-              <h2 className="news-title">Latest from Lifestyle</h2>
-              <Link className="link-more" to={`/blog/lifestyle`}>View all <FaLongArrowAltRight /></Link>
-            </div>
-            <div className="product-grid-strains">
-              {products.map(product => {
-                return (
-                  <article key={product.id}>
-                    <Link className="link" to={`/lifestyle/${product.slug}`}>
-                      <div className="d">
-                        <Image fluid={product.image.fluid} alt={product.title}></Image>
-                        <div className="info">
-                          <span class="post-card-badge">{product.category}</span>
-                          <h3 className="title">{product.title}</h3>
+      <div className="blog-background">
+        <Layout>
+          <HeroBlog />
+          <section className="posts">
+            <div className="posts-center-grid">
+              <div className="hero-info-3">
+                <h2 className="news-title">Latest from Lifestyle</h2>
+                <Link className="link-more" to={`/blog/lifestyle`}>View all <FaLongArrowAltRight /></Link>
+              </div>
+              <div className="product-grid-strains">
+                {products.map(product => {
+                  return (
+                    <article key={product.id}>
+                      <Link className="link" to={`/lifestyle/${product.slug}`}>
+                        <div className="d">
+                          <Image fluid={product.image.fluid} alt={product.title}></Image>
+                          <div className="info">
+                            <span class="post-card-badge">{product.category}</span>
+                            <h3 className="title">{product.title}</h3>
+                          </div>
                         </div>
-                      </div>
-                    </Link>
-                  </article>
-                )
-              })}
-            </div>
-            <div className="hero-info-3">
-              <h2 className="news-title">Latest from Health</h2>
-              <Link className="link-more" to={`/blog/health`}>View all <FaLongArrowAltRight /></Link>
-            </div>
-            <div className="product-grid-strains2">
-              {healths.map(health => {
-                return (
-                  <article key={health.id}>
-                    <Link className="link" to={`/health/${health.slug}`}>
-                      <div className="d">
-                        <Image fluid={health.image.fluid} alt={health.title}></Image>
-                        <div className="info">
-                          <span class="post-card-badge">{health.category}</span>
-                          <h3 className="title">{health.title}</h3>
+                      </Link>
+                    </article>
+                  )
+                })}
+              </div>
+              <div className="hero-info-3">
+                <h2 className="news-title">Latest from Health</h2>
+                <Link className="link-more" to={`/blog/health`}>View all <FaLongArrowAltRight /></Link>
+              </div>
+              <div className="product-grid-strains2">
+                {healths.map(health => {
+                  return (
+                    <article key={health.id}>
+                      <Link className="link" to={`/health/${health.slug}`}>
+                        <div className="d">
+                          <Image fluid={health.image.fluid} alt={health.title}></Image>
+                          <div className="info">
+                            <span class="post-card-badge">{health.category}</span>
+                            <h3 className="title">{health.title}</h3>
+                          </div>
                         </div>
-                      </div>
-                    </Link>
-                  </article>
-                )
-              })}
+                      </Link>
+                    </article>
+                  )
+                })}
+              </div>
+              <div className="hero-info-3">
+                <h2 className="news-title">Latest from How-to</h2>
+                <Link className="link-more" to={`/blog/howto`}>View all <FaLongArrowAltRight /></Link>
+              </div>
+              <div className="product-grid-strains3">
+                {howtos.map(howto => {
+                  return (
+                    <article key={howto.id}>
+                      <Link className="link" to={`/howto/${howto.slug}`}>
+                        <div className="d">
+                          <Image fluid={howto.image.fluid} alt={howto.title}></Image>
+                          <div className="info">
+                            <span class="post-card-badge">{howto.category}</span>
+                            <h3 className="title">{howto.title}</h3>
+                          </div>
+                        </div>
+                      </Link>
+                    </article>
+                  )
+                })}
+              </div>
             </div>
-            <div className="hero-info-3">
-              <h2 className="news-title">Latest from How-to</h2>
-              <Link className="link-more" to={`/blog/how-to`}>View all <FaLongArrowAltRight /></Link>
-            </div>
-          </div>
-        </section>
-      </Layout>
+          </section>
+        </Layout>
+      </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.article`
+.blog-background {
+  background: #f1f5fe;
+}
 .hero-info-3 {
   align-items: center;
   display: flex;
@@ -266,7 +289,7 @@ const Wrapper = styled.article`
   }
   .d {
     box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
-    background-color: #f1f5fe;
+    background-color: #ffffff;
     display: grid;
     grid-template-columns: 1fr;
     margin-bottom: 1rem;
@@ -424,6 +447,21 @@ export const query = graphql`
       }
     }
     allContentfulNews(filter: {node_locale: {eq: "en-US"}}, limit: 3) {
+      nodes {
+        id
+        title
+        slug
+        date
+        author
+        category
+        image {
+          fluid {
+          ...GatsbyContentfulFluid
+          }
+        }
+      }
+    }
+    allContentfulHowto(filter: {node_locale: {eq: "en-US"}}, limit: 3) {
       nodes {
         id
         title

@@ -71,7 +71,7 @@ const Wrapper = styled.div`
 form {
   display: grid;
 }
-background: #f1f5fe;
+background: #ffffff;
 .newsletter-container {
     max-width: var(--max-width);
     margin: 0 auto;

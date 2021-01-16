@@ -24,17 +24,22 @@ const Strains = ({ data }) => {
     <Wrapper>
       <Layout>
         <SEO title="Strains" schemaMarkup={schema} />
-        <section className="posts">
-          <article>
-            <SearchComp />
-          </article>
-        </section>
+        <div className="strains-background">
+          <section className="posts">
+            <article>
+              <SearchComp />
+            </article>
+          </section>
+        </div>
       </Layout>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
+.strains-background {
+  background: #f1f5fe;
+}
 h3.posts-title-products {
   padding-top: 2rem;
 }
@@ -212,6 +217,7 @@ h3.posts-title-products {
     padding: 20px;
     background-color: #ebf3f5;
     margin-bottom: 1rem;
+    border: solid 1px #3d796d;
   }
   section.posts {
     padding-top: 3rem !important;

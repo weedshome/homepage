@@ -209,6 +209,9 @@ Navbar
   background: #3d796d;
   box-shadow: 0 0 8px 0 #0000006e;
 }
+.nav-icons {
+  width: fit-content !important;
+}
 .logo {
   height: 28px;
 }
@@ -483,7 +486,7 @@ Posts Component
   width: 85vw;
   max-width: var(--max-width);
   margin: 0 auto;
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
 }
 
 .posts-title {
@@ -1134,6 +1137,7 @@ span.product-rating-x {
 
 .border-search {
   border: 1px solid #e5e5e5!important;
+  background: white;
 }
 
 @media screen and (max-width: 767px) {
@@ -1472,7 +1476,7 @@ h2.news-title {
   border: none;
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: #ffffff00;
   margin-right: auto;
   margin-left: 0;
 }
@@ -1486,14 +1490,16 @@ a.link-more {
   border: none;
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: #ffffff00;
   padding-bottom: 8px;
 }
 a.link-more svg {
   margin-left: 5px;
 }
 
-
+.health-layout-background {
+  background: #f1f5fe;
+}
 
 /*
 ===============
@@ -1622,8 +1628,9 @@ p.posts-text-strains {
 
 
 select.ais-HitsPerPage-select {
-  border: 2px solid #3d796d;
+  border: 1px solid #3d796d;
   color: #3d796d;
+  border-radius: 0px !important;
 }
 
 ul.ais-Pagination-list {
@@ -1642,5 +1649,18 @@ ul.ais-Pagination-list {
 }
 
 select.ais-HitsPerPage-select {
-  border: 2px solid #3d796d;
+  border: 1px solid #3d796d;
+  border-radius: 0px !important;
+}
+
+a.ais-Pagination-link {
+  background: white;
+  border: solid 1px #3d796d;
+  color: #3d796d;
+}
+
+span.ais-Pagination-link {
+  background: white;
+  border: solid 1px #3d796d;
+  color: #3d796d !important;
 }

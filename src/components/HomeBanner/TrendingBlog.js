@@ -33,37 +33,42 @@ const TrendingBlog = () => {
     const data = useStaticQuery(query)
     const { allContentfulHealth: { nodes: products }, } = data
     return (
-        <section className="posts" data-aos="fade-left">
-            <Wrapper>
-                <div className="hero-info-3">
-                    <h2 className="news-title">Latest Blog Posts</h2>
-                    <Link className="link-more" to={`/blog/`}>View all <FaLongArrowAltRight /></Link>
-                </div>
-                <div className="grid-trending-strains">
-                    {products.map(product => {
-                        return (
-                            <article key={product.id}>
-                                <Link className="link" to={`/health/${product.slug}`}>
-                                    <div className="d">
-                                        <div className="grid-news">
-                                            <Image fluid={product.image.fluid} alt={product.title}></Image>
-                                            <div className="info">
-                                                <span class="post-card-badge">{product.category}</span>
-                                                <h3>{product.title}</h3>
+        <Wrapper>
+            <div className="trending-blog-background">
+                <section className="posts" data-aos="fade-left">
+                    <div className="hero-info-3">
+                        <h2 className="news-title">Latest Blog Posts</h2>
+                        <Link className="link-more" to={`/blog/`}>View all <FaLongArrowAltRight /></Link>
+                    </div>
+                    <div className="grid-trending-strains">
+                        {products.map(product => {
+                            return (
+                                <article key={product.id}>
+                                    <Link className="link" to={`/health/${product.slug}`}>
+                                        <div className="d">
+                                            <div className="grid-news">
+                                                <Image fluid={product.image.fluid} alt={product.title}></Image>
+                                                <div className="info">
+                                                    <span class="post-card-badge">{product.category}</span>
+                                                    <h3>{product.title}</h3>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </Link>
-                            </article>
-                        )
-                    })}
-                </div>
-            </Wrapper>
-        </section>
+                                    </Link>
+                                </article>
+                            )
+                        })}
+                    </div>
+                </section>
+            </div>
+        </Wrapper>
     )
 }
 
 const Wrapper = styled.div`
+.trending-blog-background {
+    background: #f1f5fe;
+}
 .gatsby-image-wrapper {
     height: 150px;
 }
@@ -81,7 +86,7 @@ const Wrapper = styled.div`
     border: none;
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: #373a4700;
     padding-bottom: 4rem !important;
 }
 .news-title {
@@ -93,7 +98,7 @@ const Wrapper = styled.div`
     border: none;
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: #373a4700;
     margin-right: auto;
     margin-left: 0;
 }
@@ -120,7 +125,7 @@ h2 {
     height: 90px;
 }
 .d {
-  background: #f1f5fe;
+  background: #ffffff;
   padding: 10px;
 }
 .buttons-header {

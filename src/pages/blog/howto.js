@@ -4,60 +4,60 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../../components/Layout"
-import LifestyleBanner from "../../components/LifestyleBanner"
+import HowtoBanner from "../../components/HowtoBanner"
 
 
-const Lifestyle = ({ data }) => {
-  const {
-    allContentfulLifestyle: { nodes: products },
-  } = data
+const Howto = ({ data }) => {
+    const {
+        allContentfulHowto: { nodes: products },
+    } = data
 
-  return (
-    <Wrapper>
-      <div className="lifestyle-background">
-        <Layout>
-          <section className="posts">
-            <div className="posts-center-grid">
-              <div className="product-grid-strains">
-                {products.map(product => {
-                  return (
-                    <article key={product.id}>
-                      <Link className="link" to={`/lifestyle/${product.slug}`}>
-                        <div className="d">
-                          <figure className="post-card-figure">
-                            <Image fluid={product.image.fluid} alt={product.title}></Image>
-                            <span class="post-card-badge">{product.category}</span>
-                          </figure>
-                          <div className="info">
-                            <h3 className="title">{product.title}</h3>
-                            <p className="readmore">{product.excerpt.excerpt}</p>
-                            <div className="article-info">
-                              <p className="author-text">{product.author}</p>
-                              <p className="author-text2">{product.date}</p>
+    return (
+        <Wrapper>
+            <div className="howto-background">
+                <Layout>
+                    <section className="posts">
+                        <div className="posts-center-grid">
+                            <div className="product-grid-strains">
+                                {products.map(product => {
+                                    return (
+                                        <article key={product.id}>
+                                            <Link className="link" to={`/howto/${product.slug}`}>
+                                                <div className="d">
+                                                    <figure className="post-card-figure">
+                                                        <Image fluid={product.image.fluid} alt={product.title}></Image>
+                                                        <span class="post-card-badge">{product.category}</span>
+                                                    </figure>
+                                                    <div className="info">
+                                                        <h3 className="title">{product.title}</h3>
+                                                        <p className="readmore">{product.excerpt.excerpt}</p>
+                                                        <div className="article-info">
+                                                            <p className="author-text">{product.author}</p>
+                                                            <p className="author-text2">{product.date}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </article>
+                                    )
+                                })}
                             </div>
-                          </div>
+                            <article>
+                                <HowtoBanner />
+                            </article>
                         </div>
-                      </Link>
-                    </article>
-                  )
-                })}
-              </div>
-              <article>
-                <LifestyleBanner />
-              </article>
+                    </section>
+                </Layout>
             </div>
-          </section>
-        </Layout>
-      </div>
-    </Wrapper>
-  )
+        </Wrapper>
+    )
 }
 
 const Wrapper = styled.article`
-
-.lifestyle-background {
-  background: #f1f5fe;
+.howto-background {
+    background: #f1f5fe;
 }
+
 .post-card-figure {
   position: relative;
   display: block;
@@ -92,8 +92,11 @@ const Wrapper = styled.article`
     border: none !important;
     padding: 10px;
     align-self: center;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    p {
+      line-height: 1.8;
+      font-size: 12px;
+      text-transform: none;
+    }
   }
   .posts-title-products {
     text-transform: uppercase;
@@ -140,11 +143,6 @@ const Wrapper = styled.article`
     background: var(--clr-grey-9);
     margin: 0 auto;
     margin-bottom: 0.5rem;
-  }
-  p {
-    line-height: 1.8;
-    font-size: 12px;
-    text-transform: none;
   }
   .link {
     text-transform: uppercase;
@@ -252,9 +250,9 @@ const Wrapper = styled.article`
     box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
     background-color: #ffffff;
     display: grid;
+    padding: 10px;
     grid-template-columns: 1fr;
     height: 330px;
-    padding: 10px;
   }
   .article-info {
     align-items: center;
@@ -265,8 +263,6 @@ const Wrapper = styled.article`
     grid-template-columns: 1fr 250px;
     column-gap: 2rem;
     padding-top: 5rem !important;
-    column-gap: 2rem;
-
   }
 .readmore {
   width: 250px;
@@ -352,7 +348,7 @@ p.readmore {
 
 export const query = graphql`
   {
-    allContentfulLifestyle(filter: {node_locale: {eq: "en-US"}}, limit: 3) {
+    allContentfulHowto(filter: {node_locale: {eq: "en-US"}}) {
       nodes {
         id
         title
@@ -373,4 +369,4 @@ export const query = graphql`
   }
 `
 
-export default Lifestyle
+export default Howto

@@ -6,7 +6,7 @@ import { FaStop } from 'react-icons/fa';
 import styled from "styled-components"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import EmailBg from '../assets/backgroundF.svg'
+import EmailBg from '../assets/Background-home2.svg'
 
 const query = graphql`
   {
@@ -26,7 +26,7 @@ const BusinessFifth = () => {
     }, [])
     const { featuresThird } = useStaticQuery(query)
     return (
-        <Wrapper data-aos="flip-left">
+        <Wrapper>
             <section>
                 <div className="section-third">
                     <div className="section-width">

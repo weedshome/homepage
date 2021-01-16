@@ -60,7 +60,7 @@ const Wrapper = styled.div`
     box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
     display: grid;
     grid-template-columns: 300px 1fr;
-    background-color: #f1f5fe;
+    background-color: #ffffff;
     padding: 10px;
 }
 span.post-card-badge {

@@ -24,6 +24,11 @@ exports.createPages = async ({ graphql, actions }) => {
         slug
       }
     }
+    howto: allContentfulHowto(filter: {node_locale: {eq: "en-US"}}) {
+      nodes {
+        slug
+      }
+    }
     health: allContentfulHealth(filter: {node_locale: {eq: "en-US"}}) {
       nodes {
         slug
@@ -65,6 +70,15 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`src/templates/lifestyle-template.js`),
       context: {
         slug: lifestyle.slug
+      },
+    })
+  })
+  result.data.howto.nodes.forEach(howto => {
+    createPage({
+      path: `/howto/${howto.slug}`,
+      component: path.resolve(`src/templates/howto-template.js`),
+      context: {
+        slug: howto.slug
       },
     })
   })

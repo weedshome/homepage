@@ -146,7 +146,7 @@ const Wrapper = styled.div`
       border-right: 0px !important;
       margin-bottom: 1rem;
       padding: 10px;
-      background: #f1f5fe !important;
+      background: #ffffff !important;
       height: 100% !important;
       box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
   }

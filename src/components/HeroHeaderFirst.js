@@ -4,7 +4,7 @@ import './Business.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styled from "styled-components"
-import EmailBg from '../assets/headerBG.svg'
+import EmailBg from '../assets/background-home.svg'
 
 
 const HeroHeaderFirst = () => {

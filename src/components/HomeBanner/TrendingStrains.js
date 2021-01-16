@@ -35,46 +35,51 @@ const TrendingStrains = () => {
     const data = useStaticQuery(query)
     const { allContentfulStrains: { nodes: products }, } = data
     return (
-        <section className="posts" data-aos="fade-right">
-            <Wrapper>
-                <div className="hero-info-3">
-                    <h2 className="news-title">Browse Cannabis Strains</h2>
-                    <Link className="link-more" to={`/strains/`}>View all <FaLongArrowAltRight /></Link>
-                </div>
-                <div className="grid-trending-strains">
-                    {products.map(product => {
-                        return (
-                            <article key={product.id}>
-                                <Link className="link" to={`/strains/${product.slug}`}>
-                                    <div className="d">
-                                        <div className="grid-news">
-                                            <Image fixed={product.image.fixed} alt={product.title}></Image>
-                                            <div className="info">
-                                                <span class="post-card-badge">{product.category}</span>
-                                                <h3>{product.title}</h3>
-                                                <div className="rating-stars">
-                                                    <ReactStars
-                                                        count={5}
-                                                        edit={false}
-                                                        value={product.rating}
-                                                        size={16}
-                                                        color2={"#3f7e72"}
-                                                    />
+        <Wrapper>
+            <div className="trending-strains-background">
+                <section className="posts" data-aos="fade-right">
+                    <div className="hero-info-3">
+                        <h2 className="news-title">Browse Cannabis Strains</h2>
+                        <Link className="link-more" to={`/strains/`}>View all <FaLongArrowAltRight /></Link>
+                    </div>
+                    <div className="grid-trending-strains">
+                        {products.map(product => {
+                            return (
+                                <article key={product.id}>
+                                    <Link className="link" to={`/strains/${product.slug}`}>
+                                        <div className="d">
+                                            <div className="grid-news">
+                                                <Image fixed={product.image.fixed} alt={product.title}></Image>
+                                                <div className="info">
+                                                    <span class="post-card-badge">{product.category}</span>
+                                                    <h3>{product.title}</h3>
+                                                    <div className="rating-stars">
+                                                        <ReactStars
+                                                            count={5}
+                                                            edit={false}
+                                                            value={product.rating}
+                                                            size={16}
+                                                            color2={"#3f7e72"}
+                                                        />
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </Link>
-                            </article>
-                        )
-                    })}
-                </div>
-            </Wrapper>
-        </section>
+                                    </Link>
+                                </article>
+                            )
+                        })}
+                    </div>
+                </section>
+            </div>
+        </Wrapper>
     )
 }
 
 const Wrapper = styled.div`
+.trending-strains-background {
+    background: #f1f5fe;
+}
 .hero-info-3 {
     align-items: center;
     display: flex;
@@ -89,7 +94,7 @@ const Wrapper = styled.div`
     border: none;
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: #ffffff00;
     padding-bottom: 4rem !important;
 }
 .news-title {
@@ -101,7 +106,7 @@ const Wrapper = styled.div`
     border: none;
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: #ffffff00;
     margin-right: auto;
     margin-left: 0;
 }
@@ -135,7 +140,7 @@ h2 {
     margin-top: -40px !important;
 }
 .d {
-  background: #f1f5fe;
+  background: #ffffff;
   padding: 10px;
 }
 .buttons-header {
