@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "gatsby"
 import Contact from './Contact'
+import EmailBg from '../assets/copyright.svg'
 
 const Footer = () => {
   return (
@@ -67,9 +68,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-desc">
-        <p className="footer-desc1">WEED'S HOME IS A CERTIFIED B CORP</p>
+        <div className="copyright-grid">
+          <p className="footer-desc1">WEED'S HOME IS A CERTIFIED B CORP</p>
+          <img src={EmailBg} />
+        </div>
         <p className="copyright">© 2020 Weed's Home. All rights reserved. PrivacyTerms of UseCA Supply Chains Act</p>
-        <p className="footer-info">*All farmers who supply milk for Tillamook products pledge to not use artificial growth hormones. The FDA has stated that no significant difference has been shown between milk derived from rBST treated and non-rBST treated cows.</p>
       </div>
     </footer>
   )

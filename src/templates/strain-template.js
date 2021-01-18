@@ -12,7 +12,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import { GiSeedling } from 'react-icons/gi'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Image from 'gatsby-image'
-
+import { ImSleepy, ImHappy, ImIcoMoon, ImSpinner10 } from "react-icons/im"
 
 
 import "slick-carousel/slick/slick.css";
@@ -86,24 +86,25 @@ const StrainTemplate = ({
                                 </div>
                                 <div class="strain-info-close">
                                     <div className="info-strains">
+                                        <tr>
+                                            <th>Strain Info</th>
+                                        </tr>
                                         <table>
+
                                             <tr>
-                                                <th>Strain Info</th>
-                                            </tr>
-                                            <tr>
-                                                <td>THC:</td>
+                                                <td><ImHappy /> THC:</td>
                                                 <td>25%</td>
                                             </tr>
                                             <tr>
-                                                <td>CBD:</td>
+                                                <td> <ImSleepy /> CBD:</td>
                                                 <td>2%</td>
                                             </tr>
                                             <tr>
-                                                <td>Genetics:</td>
+                                                <td> <ImIcoMoon /> Genetics:</td>
                                                 <td>Sativa</td>
                                             </tr>
                                             <tr>
-                                                <td>Varities:</td>
+                                                <td><ImSpinner10 /> Varities:</td>
                                                 <td>Sweet & Fruity</td>
                                             </tr>
                                         </table>                                    </div>
@@ -230,6 +231,11 @@ const Wrapper = styled.section`
     color: #3d796d;
   }
 
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
 
   .strain-info-close {
     padding: 45px;
@@ -280,6 +286,9 @@ const Wrapper = styled.section`
     }
 }
   @media screen and (max-width: 768px) {
+    .product-grid-strains {
+        padding; 1rem !important;
+    }
     .grid-container {
         display: block !important;
     }

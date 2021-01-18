@@ -1597,6 +1597,17 @@ p.posts-text-strains {
     border-radius: var(--radius);
 }
 
+
+.copyright-grid {
+  display: flex;
+    place-content: center;
+    gap: 1rem;
+}
+
+.footer-desc img {
+  height: 24px !important;
+}
+
 .footer-align {
   margin: 0 auto;
 }
