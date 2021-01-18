@@ -85,6 +85,8 @@ const Wrapper = styled.section`
   .post-info {
     text-align: center;
     padding-bottom: 2rem;
+    padding-top: 2rem;
+
     span {
       background: var(--clr-primary-5);
       color: var(--clr-white);

@@ -4,6 +4,8 @@ import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { Link } from "gatsby"
 import Title from './Title'
+
+
 const query = graphql`
 {
     allContentfulHealth(filter: {}, limit: 2) {

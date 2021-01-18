@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import styled from 'styled-components'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import SEO from '../components/SEO'
+import { Helmet } from "react-helmet"
 
 const About = ({
   data: {
@@ -33,6 +34,7 @@ const About = ({
         <section className="posts">
           <article className="height-page">
             <div className="post-info">
+              <script type="text/javascript" data-cfasync="false" src="https://assets.mantisadnetwork.com/mantodea.min.js" async></script>
               <h2 className="page-title">{title}</h2>
               <div className="underline"></div>
             </div>
@@ -82,6 +84,7 @@ const Wrapper = styled.section`
   .post-info {
     text-align: center;
     padding-bottom: 2rem;
+    padding-top: 2rem;
     span {
       background: var(--clr-primary-5);
       color: var(--clr-white);

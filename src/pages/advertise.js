@@ -5,30 +5,30 @@ import styled from 'styled-components'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const Advertise = ({
-    data: {
-        page: {
-            title,
-            body,
-        },
+  data: {
+    page: {
+      title,
+      body,
     },
+  },
 }) => {
-    return (
-        <Layout>
-            <Wrapper>
-                <div className="search-text" style={{ textAlign: "left" }}>
-                </div>
-                <section className="posts">
-                    <article className="height-page">
-                        <div className="post-info">
-                            <h2 className="page-title">{title}</h2>
-                            <div className="underline"></div>
-                        </div>
-                        {documentToReactComponents(body.json)}
-                    </article>
-                </section>
-            </Wrapper>
-        </Layout >
-    )
+  return (
+    <Layout>
+      <Wrapper>
+        <div className="search-text" style={{ textAlign: "left" }}>
+        </div>
+        <section className="posts">
+          <article className="height-page">
+            <div className="post-info">
+              <h2 className="page-title">{title}</h2>
+              <div className="underline"></div>
+            </div>
+            {documentToReactComponents(body.json)}
+          </article>
+        </section>
+      </Wrapper>
+    </Layout >
+  )
 }
 
 export const query = graphql`
@@ -69,6 +69,8 @@ const Wrapper = styled.section`
   .post-info {
     text-align: center;
     padding-bottom: 2rem;
+    padding-top: 2rem;
+
     span {
       background: var(--clr-primary-5);
       color: var(--clr-white);
