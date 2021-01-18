@@ -8,41 +8,44 @@ import Video from "../../assets/videos/blog-cannabis.mp4"
 
 
 const HeroHeaderBlog = () => {
-    useEffect(() => {
-        AOS.init({ duration: 2000 });
-    }, [])
-    return (
-        <Wrapper>
-            <VideoBg src={Video} type="video/mp4" autoPlay loop muted playsInline />
-            <section data-aos="fade-up">
-                <div className="home-width">
-                    <div class="grid-container-business">
-                        <div class="k-1">
-                            <div class="k-title">
-                                <h2 className="business-title">Learn more about the plant</h2>
-                            </div>
-                            <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience.</p>
-                            <div className="buttons-header">
-                                <Link className="link" to="/business/">
-                                    <p class="button-first">Get started here</p>
-                                </Link>
-                                <Link className="link" to="/strains/">
-                                    <p class="button-second">Search Strains</p>
-                                </Link>
-                            </div>
-                        </div>
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, [])
+  return (
+    <Wrapper>
+      <VideoBg src={Video} type="video/mp4" autoPlay loop muted playsInline />
+      <section data-aos="fade-up">
+        <div className="home-width">
+          <div class="grid-container-business">
+            <div class="k-1">
+              <div class="k-title">
+                <h2 className="business-title">Learn more about the plant</h2>
+              </div>
+              <p className="business-text">Use Weed's Home to automate your marketing actions in order to reach a much larger audience.</p>
+              <div className="buttons-header">
+                <Link className="link" to="/business/">
+                  <p class="button-first">Get started here</p>
+                </Link>
+                <Link className="link" to="/strains/">
+                  <p class="button-second">Search Strains</p>
+                </Link>
+              </div>
+            </div>
 
-                    </div>
-                </div>
-            </section>
-        </Wrapper>
-    )
+          </div>
+        </div>
+      </section>
+    </Wrapper>
+  )
 }
 
 const VideoBg = styled.video`
 height: 100%;
-width: 50%;
+width: 60%;
 object-fit: cover;
+@media screen and (max-width: 767px) {
+    display: none;
+}
 `
 
 const Wrapper = styled.div`

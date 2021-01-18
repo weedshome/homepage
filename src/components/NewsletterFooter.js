@@ -111,6 +111,22 @@ input[type="email"] {
 }
 
 @media screen and (max-width: 767px) {
+    .newsletter-btn {
+        display: inline-block !important;
+        border-radius: 8px !important;
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        letter-spacing: 0.02em !important;
+        cursor: pointer !important;
+        font-weight: 500 !important;
+        line-height: 1 !important;
+        background-color: #ffffff !important;
+        border-color: transparent !important;
+        border: solid !important;
+        color: #3d796d !important;
+        font-size: 17px !important;
+        padding: 11.6px 16px !important;
+    }
 h2 {
 font-size: 1.5rem;
 }
