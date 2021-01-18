@@ -31,7 +31,7 @@ export default function () {
                 <article>
                     <section className="border-search">
                         <div className="searchBox">
-                            <h5 className="searchBoxTitle">What you looking?</h5>
+                            <h5 className="searchBoxTitle">Strain Search</h5>
                             <SearchBox
                                 className="ais-SearchBox-form"
                                 translations={{

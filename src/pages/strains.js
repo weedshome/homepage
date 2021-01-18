@@ -93,7 +93,6 @@ h3.posts-title-products {
   .link {
     padding-bottom: 0.1rem;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     letter-spacing: var(--spacing);
     color: rgb(37,41,53);

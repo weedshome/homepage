@@ -1,14 +1,13 @@
 import React from 'react'
 import { Link } from "gatsby"
-import Contact from './Contact'
-import EmailBg from '../assets/copyright.svg'
+import NewsletterFooter from '../components/NewsletterFooter'
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-top">
         <div className="footer-links-grid">
-          <Contact />
+          <NewsletterFooter />
           <div className="footer-links">
             <ul className="footer-ul">
               <h2 className="footer-title">Get in touch</h2>
@@ -68,10 +67,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-desc">
-        <div className="copyright-grid">
-          <p className="footer-desc1">WEED'S HOME IS A CERTIFIED B CORP</p>
-          <img src={EmailBg} />
-        </div>
+        <p className="footer-desc1">WEED'S HOME IS A CERTIFIED B CORP</p>
+
         <p className="copyright">© 2020 Weed's Home. All rights reserved. PrivacyTerms of UseCA Supply Chains Act</p>
       </div>
     </footer>

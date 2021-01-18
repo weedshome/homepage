@@ -131,7 +131,6 @@ p {
   letter-spacing: var(--spacing);
   display: inline-block;
   font-weight: 400;
-  -webkit-transition: var(--transition);
   transition: var(--transition);
   font-size: 18px;
   border: 2px solid transparent;
@@ -299,8 +298,6 @@ Navbar
     letter-spacing: var(--spacing);
     font-size: 15px;
     cursor: pointer;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     padding: 0.25rem 1rem;
     border: none;
     display: flex;
@@ -1009,8 +1006,6 @@ BeforeFooter
   height: 10px;
   border: solid white;
   border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -1606,6 +1601,7 @@ p.posts-text-strains {
 
 .footer-desc img {
   height: 24px !important;
+  padding-bottom: .2rem;
 }
 
 .footer-align {

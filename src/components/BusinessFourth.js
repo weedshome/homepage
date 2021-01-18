@@ -62,8 +62,10 @@ const Wrapper = styled.div`
     }
 }
     @media screen and (max-width: 767px) {
+        .v-image {
+            display: none;
+        }
         width: 85vw;
-        padding-bottom: 10rem;
     max-width: var(--max-width);
     margin: 0 auto;
     .inside-image {

@@ -78,7 +78,6 @@ margin-bottom: 3rem;
 display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    -webkit-column-gap: 1rem;
     column-gap: 1rem;
     text-align: center;
 }

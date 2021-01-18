@@ -145,8 +145,7 @@ li.third-space {
 
   .section-fourth {
     padding-top: 11rem;
-    padding-bottom: 8rem;
-
+    padding-bottom: 5rem;
 }
   
   .inside-image {
@@ -216,6 +215,10 @@ li.third-space {
  }
 }
   @media screen and (max-width: 767px) {
+    .section-fourth {
+      padding-top: 11rem;
+      padding-bottom: 0rem;
+  }
     .grid-container-fourth {
       display: block !important;
   }

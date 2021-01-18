@@ -111,7 +111,6 @@ const Wrapper = styled.section`
   width: 85vw;
   max-width: var(--max-width);
   margin: 0 auto;
-  margin-bottom: 4rem;
   padding-top: 15px;
   .post-info {
     text-align: left;
@@ -391,10 +390,7 @@ h2.title-strain {
   .strain-info-3 { grid-area: strain-info-3; }
   
   .strain-info-4 { grid-area: strain-info-4; }
-  @media (max-width: 767px) {
-    grid-template-columns: auto !important;
-    padding-top: 2rem;
-  }
+
 `
 
 

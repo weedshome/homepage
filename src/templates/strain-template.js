@@ -90,7 +90,6 @@ const StrainTemplate = ({
                                             <th>Strain Info</th>
                                         </tr>
                                         <table>
-
                                             <tr>
                                                 <td><ImHappy /> THC:</td>
                                                 <td>25%</td>
@@ -497,7 +496,6 @@ h2.title-strain {
     display: grid;
     row-gap: 1rem;
     grid-template-columns: 1fr 250px;
-    -webkit-column-gap: 1rem;
     column-gap: 1rem;
 }
 .search-text {
