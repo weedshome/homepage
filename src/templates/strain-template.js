@@ -7,7 +7,6 @@ import { IoMdArrowRoundBack } from 'react-icons/io'
 import ReactStars from "react-stars";
 import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { GiSeedling } from 'react-icons/gi'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -287,7 +286,7 @@ const Wrapper = styled.section`
 }
   @media screen and (max-width: 768px) {
     .product-grid-strains {
-        padding; 1rem !important;
+        padding: 1rem !important;
     }
     .grid-container {
         display: block !important;
@@ -485,8 +484,11 @@ h2.title-strain {
     place-items: center;
     max-width: var(--max-width);
     margin: 0 auto;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+
+}
+table svg {
+    top: .09rem;
+    position: relative;
 }
 .product-grid-strains {
     background: white;

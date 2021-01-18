@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { GoogleMap, Marker, InfoWindow } from 'react-google-maps'
 
 import * as Data from '../constants/data.json'
-import EmailBg from '../assets/budcars.svg'
 
 
 const Map = (props) => {
@@ -12,7 +11,7 @@ const Map = (props) => {
     const [infoWindow, setInfoWindow] = useState(null)
 
     const iconChange = (data) => {
-        if (icon && data.properties.ID == icon.properties.ID) {
+        if (icon && data.properties.ID === icon.properties.ID) {
             return "https://svgshare.com/i/T8b.svg"
         } else {
             return "https://svgshare.com/i/T8b.svg"
@@ -61,7 +60,7 @@ const Map = (props) => {
                     onCloseClick={() => setInfoWindow(null)}
                 >
                     <div>
-                        <img className="w-15 h-12 mb-2" src={infoWindow.properties.Image} style={{ width: '100px', height: '100px' }} />
+                        <img className="w-15 h-12 mb-2" src={infoWindow.properties.Image} style={{ width: '100px', height: '100px' }} alt="dispensarie" />
                         <h2 className="text-sm mb-3">{infoWindow.properties.NAME}</h2>
                         <p className="text-sm">{infoWindow.properties.DESCRIPTION}</p>
                     </div>

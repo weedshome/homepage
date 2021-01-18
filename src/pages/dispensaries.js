@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import Layout from "../components/Layout"
 
-import { GoogleMap, withGoogleMap, withScriptjs } from 'react-google-maps'
+import { withGoogleMap, withScriptjs } from 'react-google-maps'
 
 import Map from '../components/Map'
 import 'react-responsive-modal/styles.css';
@@ -44,7 +44,7 @@ export default function IndexPage() {
                                 <div className="location-card " >
                                     <div class="max-w-sm rounded overflow-hidden shadow-lg">
                                         <figure className="post-card-figure">
-                                            <img className="rounded" src={j.properties.Image} />
+                                            <img alt="dispensarie" className="rounded" src={j.properties.Image} />
                                             <span class="post-card-badge">{j.properties.CATEGORY}</span>
                                         </figure>
                                         <div className="px-6 py-4">
@@ -64,7 +64,7 @@ export default function IndexPage() {
                 >
                     <div className="flex">
                         <div className="w-full">
-                            <img src={data.properties.Image} style={{ width: '100px', height: '100px' }} />
+                            <img alt="dispensaries" src={data.properties.Image} style={{ width: '100px', height: '100px' }} />
                         </div>
                         <div className="w-full ml-3">
                             <h1>{data.properties.NAME}</h1>

@@ -2,7 +2,6 @@ import React from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import styled from "styled-components"
 import SocialLinksTwo from '../constants/socialLinksTwo'
-import { GoChevronRight } from 'react-icons/go'
 
 export default class NewsletterFooter extends React.Component {
     state = {

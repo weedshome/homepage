@@ -1,8 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
-import { GatsbyContext } from '../context/context'
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = React.useState(false)

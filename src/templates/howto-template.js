@@ -114,7 +114,7 @@ const Wrapper = styled.section`
   .post-info {
     text-align: left;
     span {
-      background: var(--clr-primary-5);
+      background: hsl(168deg 33% 36%);
       color: var(--clr-white);
       border-radius: var(--radius);
       padding: 0.25rem 0.5rem;

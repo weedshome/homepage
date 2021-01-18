@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import logo from '../assets/nav-logo.svg'
 import { FaBars } from 'react-icons/fa'
 import Links from '../constants/links'

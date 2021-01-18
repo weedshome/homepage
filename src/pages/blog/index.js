@@ -4,9 +4,7 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../../components/Layout"
-import HeroHeader from "../../components/HeroHeader"
 import { FaLongArrowAltRight } from "react-icons/fa"
-import HeroHeaderBlog from "../../components/blog/HeroHeaderBlog"
 import HeroBlog from "../../components/blog/HeroBlog"
 
 
@@ -14,8 +12,6 @@ const Blog = ({ data }) => {
   const {
     allContentfulLifestyle: { nodes: products },
     allContentfulHealth: { nodes: healths },
-    allContentfulGrowing: { nodes: growings },
-    allContentfulNews: { nodes: newss },
     allContentfulHowto: { nodes: howtos },
   } = data
 

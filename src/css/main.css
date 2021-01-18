@@ -255,9 +255,7 @@ Navbar
   cursor: pointer;
   transition: var(--transition);
 }
-.toggle-btn:hover {
-  color: var(--clr-primary-3);
-}
+
 .nav-links {
   display: none;
 }
@@ -792,7 +790,7 @@ Footer
   }
 
   .footer-top {
-      border-top: 0.15rem solid #ffffff;
+      border-top: .15rem solid #ffffff;
       width: 90vw;
       max-width: var(--max-width);
       margin: 0 auto;

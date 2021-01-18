@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
 import './Business.css';
 import { FaStop } from 'react-icons/fa';
 import AOS from 'aos';
@@ -33,7 +31,7 @@ const BusinessFourth = () => {
                         </div>
                         <div class="v-image">
                             <div class="inside-image">
-                                <img src={yourSVG} />                            </div>
+                                <img src={yourSVG} alt="svg" />                            </div>
                         </div>
                     </div>
                 </div>

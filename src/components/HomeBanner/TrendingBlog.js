@@ -4,7 +4,6 @@ import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { Link } from "gatsby"
 import { FaLongArrowAltRight } from 'react-icons/fa'
-import ReactStars from "react-stars";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

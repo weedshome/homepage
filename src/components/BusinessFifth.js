@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
-import Image from 'gatsby-image';
+import { Link } from 'gatsby';
 import './Business.css';
 import { FaStop } from 'react-icons/fa';
 import styled from "styled-components"
@@ -8,23 +7,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import EmailBg from '../assets/Background-home2.svg'
 
-const query = graphql`
-  {
-    featuresThird: file(relativePath: {eq: "background2.svg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
 const BusinessFifth = () => {
     useEffect(() => {
         AOS.init({ duration: 2000 });
     }, [])
-    const { featuresThird } = useStaticQuery(query)
     return (
         <Wrapper>
             <section>

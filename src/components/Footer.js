@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from "gatsby"
 import NewsletterFooter from '../components/NewsletterFooter'
-import footerBg from '../assets/footerBg3.svg'
 import styled from 'styled-components'
 
 const Footer = () => {

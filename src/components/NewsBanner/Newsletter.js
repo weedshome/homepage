@@ -1,7 +1,6 @@
 import React from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import styled from "styled-components"
-import Title from '../LifestyleBanner/Title';
 
 export default class NewsletterSidebar extends React.Component {
   state = {

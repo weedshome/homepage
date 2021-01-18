@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from "gatsby"
-import { AiOutlineInfoCircle } from 'react-icons/ai'
 import ReactStars from "react-stars";
 import 'instantsearch.css/themes/algolia.css';
 import styled from 'styled-components'
