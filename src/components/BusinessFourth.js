@@ -24,10 +24,10 @@ const BusinessFourth = () => {
                         <div class="v-text">
                             <div class="inside-text">
                                 <h3>Now Is The Time To Upgrade Your Marketing Solution</h3>
-                                <p className="text-fourth-biz">Target the right customers for your business with the help of Tivo's patented segmentation technology and deploy efficient marketing campaigns. Keep your customers happy and loyal.</p>
+                                <p className="text-fourth-biz">Target the right audience for your cannabis business with the help of Weed's Home social network with over 3.000.000 followers.</p>
                                 <ul>
                                     <li className="third-space"><FaStop className="third-icon" />Understand customers and meet their requirements</li>
-                                    <li className="third-space"><FaStop className="third-icon" />Targeted client base with Tivo's efficient technology</li>
+                                    <li className="third-space"><FaStop className="third-icon" />Targeted cannabis audience with Weed's Home</li>
                                 </ul>
                             </div>
                         </div>

@@ -79,7 +79,7 @@ input#name {
     text-align: left;
     font-weight: 400;
     letter-spacing: var(--spacing);
-    font-size: 1rem;
+    font-size: .8rem;
     transition: var(--transition);
     cursor: pointer;
     border-radius: var(--radius);
@@ -93,7 +93,7 @@ input#website {
     text-align: left;
     font-weight: 400;
     letter-spacing: var(--spacing);
-    font-size: 1rem;
+    font-size: .8rem;
     transition: var(--transition);
     cursor: pointer;
     border-radius: var(--radius);
@@ -107,7 +107,7 @@ input#subject {
     text-align: left;
     font-weight: 400;
     letter-spacing: var(--spacing);
-    font-size: 1rem;
+    font-size: .8rem;
     transition: var(--transition);
     cursor: pointer;
     border-radius: var(--radius);

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-footerBg3">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="footerBg3" clip-path="url(#clip-footerBg3)">
+    <rect width="1920" height="1080" fill="#3d796d"/>
+    <path id="Polygon_1" data-name="Polygon 1" d="M39,0,78,67H0Z" transform="translate(999 67) rotate(180)" fill="#f1f5fe"/>
+  </g>
+</svg>

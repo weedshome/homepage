@@ -709,7 +709,6 @@ Footer
   display: grid;
   grid-template-rows: auto auto auto;
   place-items: center;
-  padding-bottom: 5rem;
   padding-top: 5rem;
 }
 .footer label {
@@ -871,7 +870,7 @@ input#email {
   text-align: left;
   font-weight: 400;
   letter-spacing: var(--spacing);
-  font-size: 1rem;
+  font-size: .8rem;
   transition: var(--transition);
   cursor: pointer;
   border-radius: var(--radius);
