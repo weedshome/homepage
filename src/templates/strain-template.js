@@ -14,9 +14,6 @@ import Image from 'gatsby-image'
 import { ImSleepy, ImHappy, ImIcoMoon, ImSpinner10 } from "react-icons/im"
 
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 
 const StrainTemplate = ({
     data: {
@@ -25,9 +22,10 @@ const StrainTemplate = ({
             rating,
             title,
             category,
-            sativa,
-            indica,
-            hybrid,
+            thc,
+            cbd,
+            genetics,
+            varities,
             body,
             affiliatelink,
             image: { fixed },
@@ -52,9 +50,6 @@ const StrainTemplate = ({
                 <Wrapper>
                     <article>
                         <div className="product-grid">
-                            <div className="search-text" style={{ textAlign: "left" }}>
-                                <Link to="/strains" className="links"> back to all strains <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
-                            </div>
                             <div class="grid-container3">
                                 <div class="strain-image">
                                     <div class="strain-image">
@@ -92,19 +87,19 @@ const StrainTemplate = ({
                                         <table>
                                             <tr>
                                                 <td><ImHappy /> THC:</td>
-                                                <td>25%</td>
+                                                <td>{thc}%</td>
                                             </tr>
                                             <tr>
                                                 <td> <ImSleepy /> CBD:</td>
-                                                <td>2%</td>
+                                                <td>{cbd}%</td>
                                             </tr>
                                             <tr>
                                                 <td> <ImIcoMoon /> Genetics:</td>
-                                                <td>Sativa</td>
+                                                <td>{genetics}</td>
                                             </tr>
                                             <tr>
                                                 <td><ImSpinner10 /> Varities:</td>
-                                                <td>Sweet & Fruity</td>
+                                                <td>{varities}</td>
                                             </tr>
                                         </table>                                    </div>
 
@@ -198,9 +193,10 @@ query GetSingleStrain($slug: String) {
     title
     price
     rating
-    sativa
-    indica
-    hybrid
+    thc
+    cbd
+    genetics
+    varities
     affiliatelink,
     image {
       fixed(width: 400, height: 200) {
@@ -487,7 +483,8 @@ h2.title-strain {
 
 }
 table svg {
-    top: .09rem;
+    top: 0.0938rem;
+    margin-right: .5rem;
     position: relative;
 }
 .product-grid-strains {
