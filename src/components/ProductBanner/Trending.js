@@ -116,6 +116,7 @@ const Wrapper = styled.div`
       padding: 10px;
       padding-bottom: 0.5rem !important;
       border: none !important;
+      background: white;
    }
    .article-info {
     align-items: center;

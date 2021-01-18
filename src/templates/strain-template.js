@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import styled from 'styled-components'
@@ -12,7 +12,6 @@ import 'react-circular-progressbar/dist/styles.css';
 import { GiSeedling } from 'react-icons/gi'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Image from 'gatsby-image'
-import { AiOutlineClose } from "react-icons/ai"
 
 
 
@@ -46,131 +45,149 @@ const StrainTemplate = ({
             },
         },
     }
-    const [hide, setHide] = useState(true)
 
     return (
         <Layout>
-            <Wrapper>
-                <article>
-                    <div className="product-grid">
-                        <div className="search-text" style={{ textAlign: "left" }}>
-                            <Link to="/strains" className="links"> back to all strains <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
-                        </div>
-                        <div class="grid-container3">
-                            <div class="strain-image">
+            <BackgroundBg>
+                <Wrapper>
+                    <article>
+                        <div className="product-grid">
+                            <div className="search-text" style={{ textAlign: "left" }}>
+                                <Link to="/strains" className="links"> back to all strains <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
+                            </div>
+                            <div class="grid-container3">
                                 <div class="strain-image">
-                                    <Image fixed={fixed} alt={title} />
+                                    <div class="strain-image">
+                                        <Image fixed={fixed} alt={title} />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="strain-text">
-                                <div class="strain-title">
-                                    <h2 className="title-strain">{title}</h2>
-                                </div>
-                                <div class="strain-review">
-                                    <div className="rating">
-                                        <div className="rating-stars">
-                                            <ReactStars
-                                                count={5}
-                                                edit={false}
-                                                value={rating}
-                                                size={20}
-                                                color2={"#7EA748"}
-                                                color1={"#102a42"}
-                                            />
+                                <div class="strain-text">
+                                    <div class="strain-title">
+                                        <h2 className="title-strain">{title}</h2>
+                                    </div>
+                                    <div class="strain-review">
+                                        <div className="rating">
+                                            <div className="rating-stars">
+                                                <ReactStars
+                                                    count={5}
+                                                    edit={false}
+                                                    value={rating}
+                                                    size={20}
+                                                    color2={"#7EA748"}
+                                                    color1={"#102a42"}
+                                                />
+                                            </div>
+                                            <span className="product-rating">Total: 1 Average: {rating}/5</span>
                                         </div>
-                                        <span className="product-rating">Total: 1 Average: {rating}/5</span>
+                                    </div>
+                                    <div class="strain-button">
+                                        <a href={affiliatelink}><button className="button-first">Get it now <GiSeedling /></button></a>
                                     </div>
                                 </div>
-                                <div class="strain-button">
-                                    <a href={affiliatelink}><button className="button-first">Get it now <GiSeedling /></button></a>
-                                </div>
-                            </div>
-                            <div class="strain-info-close">
-                                {
-                                    hide ? <div className="info-strains">
-                                        <AiOutlineClose onClick={() => setHide(false)} className="x-btn" />
-                                        <p className="posts-text-strains">Auto-flowering marijuana seeds | Autoflowering cannabis plants start flowering on their own within 2-4 weeks.</p>
-                                    </div> : null
-                                }
+                                <div class="strain-info-close">
+                                    <div className="info-strains">
+                                        <table>
+                                            <tr>
+                                                <th>Strain Info</th>
+                                            </tr>
+                                            <tr>
+                                                <td>THC:</td>
+                                                <td>25%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>CBD:</td>
+                                                <td>2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Genetics:</td>
+                                                <td>Sativa</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Varities:</td>
+                                                <td>Sweet & Fruity</td>
+                                            </tr>
+                                        </table>                                    </div>
 
-                            </div>
-                        </div>
-                        <div class="grid-container">
-                            <div class="strain-info-graphs">
-                                <div class="strain-info-1">
-                                    <h3 className="heading-info">Feelings</h3>
-                                    <p className="strain-info-text">Happy</p>
-                                    <Progress percent={price} />
-                                </div>
-                                <div class="strain-info-2">
-                                    <p className="strain-info-text">Euphoric</p>
-                                    <Progress percent={price} />
-                                </div>
-                                <div class="strain-info-3">
-                                    <p className="strain-info-text">Stress</p>
-                                    <Progress percent={price} />
-                                </div>
-                                <div class="strain-info-4">
+
                                 </div>
                             </div>
-                            <div class="strain-info-graphs">
-                                <div class="strain-info-1">
-                                    <h3 className="heading-info">Helps with</h3>
-                                    <p className="strain-info-text">Anxiety</p>
-                                    <Progress percent={price} />
-                                </div>
-                                <div class="strain-info-2">
-                                    <p className="strain-info-text">Dry mouth</p>
-                                    <Progress percent={price} />
-                                </div>
-                                <div class="strain-info-3">
-                                    <p className="strain-info-text">Dry eyes</p>
-                                    <Progress percent={price} />
-                                </div>
-                                <div class="strain-info-4">
-                                </div>
-                            </div>
-                            <div class="strain-info">
-                                <div class="strain-info-1">
-                                    <h3 className="heading-info">Negatives</h3>
-                                    <p className="strain-info-text">Relaxed</p>
-                                    <Progress percent={price} />
-                                </div>
-                                <div class="strain-info-2">
-                                    <p className="strain-info-text">Uplifted</p>
-                                    <Progress percent={price} />
-                                </div>
-                                <div class="strain-info-3">
-                                    <p className="strain-info-text">Depression</p>
-                                    <Progress percent={price} />
-                                </div>
-                                <div class="strain-info-4">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <section className="posts">
-                        <div className="posts-center">
-                            <div className="product-grid-strains">
-                                <article>
-                                    <div className="post-info">
-                                        <span>{category}</span>
-                                        <h2>Our {title} Review</h2>
-                                        <p>{info}</p>
-                                        <div className="underline"></div>
+                            <div class="grid-container">
+                                <div class="strain-info-graphs">
+                                    <div class="strain-info-1">
+                                        <h3 className="heading-info">Feelings</h3>
+                                        <p className="strain-info-text">Happy</p>
+                                        <Progress percent={price} />
                                     </div>
-                                    {documentToReactComponents(body.json, options)}
+                                    <div class="strain-info-2">
+                                        <p className="strain-info-text">Euphoric</p>
+                                        <Progress percent={price} />
+                                    </div>
+                                    <div class="strain-info-3">
+                                        <p className="strain-info-text">Stress</p>
+                                        <Progress percent={price} />
+                                    </div>
+                                    <div class="strain-info-4">
+                                    </div>
+                                </div>
+                                <div class="strain-info-graphs">
+                                    <div class="strain-info-1">
+                                        <h3 className="heading-info">Helps with</h3>
+                                        <p className="strain-info-text">Anxiety</p>
+                                        <Progress percent={price} />
+                                    </div>
+                                    <div class="strain-info-2">
+                                        <p className="strain-info-text">Dry mouth</p>
+                                        <Progress percent={price} />
+                                    </div>
+                                    <div class="strain-info-3">
+                                        <p className="strain-info-text">Dry eyes</p>
+                                        <Progress percent={price} />
+                                    </div>
+                                    <div class="strain-info-4">
+                                    </div>
+                                </div>
+                                <div class="strain-info">
+                                    <div class="strain-info-1">
+                                        <h3 className="heading-info">Negatives</h3>
+                                        <p className="strain-info-text">Relaxed</p>
+                                        <Progress percent={price} />
+                                    </div>
+                                    <div class="strain-info-2">
+                                        <p className="strain-info-text">Uplifted</p>
+                                        <Progress percent={price} />
+                                    </div>
+                                    <div class="strain-info-3">
+                                        <p className="strain-info-text">Depression</p>
+                                        <Progress percent={price} />
+                                    </div>
+                                    <div class="strain-info-4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <section className="posts">
+                            <div className="posts-center">
+                                <div className="product-grid-strains">
+                                    <article>
+                                        <div className="post-info">
+                                            <span>{category}</span>
+                                            <h2>Our {title} Review</h2>
+                                            <p>{info}</p>
+                                            <div className="underline"></div>
+                                        </div>
+                                        {documentToReactComponents(body.json, options)}
+                                    </article>
+                                </div>
+                                <article>
+                                    <ProductBanner />
                                 </article>
                             </div>
-                            <article>
-                                <ProductBanner />
-                            </article>
-                        </div>
-                    </section>
-                </article>
-            </Wrapper>
+                        </section>
+                    </article>
+                </Wrapper>
+            </BackgroundBg>
         </Layout >
     )
 }
@@ -201,21 +218,45 @@ query GetSingleStrain($slug: String) {
 }
 `
 
+const BackgroundBg = styled.section`
+background: #f1f5fe;
+`
 const Wrapper = styled.section`
   width: 85vw;
   max-width: var(--max-width);
   margin: 0 auto;
-  margin-bottom: 4rem;
   padding-top: 5.5rem;
   a.links {
     color: #3d796d;
-}
+  }
+
+
+  .strain-info-close {
+    padding: 45px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+ th {
+    color: #3d796d;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: inherit;
+ }
+
+ td {
+    font-size: 14px;
+    color: #3d796d;
+    padding-top: 7px;
+    margin-bottom: 0rem;
+    letter-spacing: var(--spacing);
+ }
 
 .strain-info-close {
-    background: black;
+    background: #ffffff;
     width: 400px;
     height: 200px;
 }
+
 
   .button-first {
     border: 2px solid;
@@ -242,8 +283,17 @@ const Wrapper = styled.section`
     .grid-container {
         display: block !important;
     }
+    .strain-info-close {
+        width: auto !important;
+    }
+    .gatsby-image-wrapper {
+        width: 100% !important;
+    }
+    .product-grid-strains {
+        background: white;
+        padding: 1rem;
+    }
     .grid-container3 {
-        margin-bottom: 25rem !important;
         display: block !important;
     }
     .posts-center {
@@ -255,7 +305,6 @@ const Wrapper = styled.section`
     }
   }
   .post-info {
-    margin: 2rem 0 4rem 0;
     text-align: center;
     span {
         margin-bottom: 0.5rem;
@@ -317,8 +366,8 @@ const Wrapper = styled.section`
 }
 span.product-rating {
     color: rgb(16 42 66);
-    font-size: 18px;
-    padding-top: 2px;
+    font-size: 15px;
+    padding-top: 4px;
     padding-left: 1rem;
 }
 
@@ -380,7 +429,7 @@ text.CircularProgressbar-text {
     grid-template-areas: "strain-image strain-text strain-info .";
     height: 100%;
     width: 100%;
-    background: #f1f5fe;
+    background: #ffffff;
   }
 
   p.strain-info-text {
@@ -392,6 +441,7 @@ text.CircularProgressbar-text {
 }
 h2.title-strain {
     color: rgb(16 42 66);
+    font-size: 1.15rem !important;
 }
 .strain-review {
     margin-bottom: 1rem;
@@ -431,10 +481,12 @@ h2.title-strain {
 }
 .product-grid-strains {
     background: white;
+    padding: 4rem;
 }
 .posts-center {
     margin-top: 1rem;
     display: grid;
+    row-gap: 1rem;
     grid-template-columns: 1fr 250px;
     -webkit-column-gap: 1rem;
     column-gap: 1rem;
