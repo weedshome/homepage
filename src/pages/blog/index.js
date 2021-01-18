@@ -300,7 +300,6 @@ const Wrapper = styled.article`
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 1rem;
-    padding-top: 5rem !important;
   }
 .title-news {
     font-size: .9rem;
@@ -346,6 +345,9 @@ const Wrapper = styled.article`
   padding-top: 6rem;
 }
 @media screen and (max-width: 768px) {
+  video.HeroHeaderBlog__VideoBg-kmfhAh.ijgFXm {
+    display: none;
+}
     .news-grid-section2 {
         grid-template-columns: 1fr;
     }

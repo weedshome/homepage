@@ -145,5 +145,16 @@ padding: 10px;
     .flex.mb-4 {
     grid-template-columns: 1fr;
     }
+    .flex.flex-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .locations {
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        background: #f1f5fe;
+    }
 }
 `

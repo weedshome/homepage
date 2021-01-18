@@ -25,6 +25,10 @@ const Wrapper = styled.aside`
       column-gap: 3rem;
     }
   }
+  @media (max-width: 767px) {
+    grid-template-columns: auto !important;
+    padding-top: 2rem;
+  }
 `
 
 export default HealthBanner

@@ -899,7 +899,7 @@ input::placeholder{
     max-width: 73rem;
     display: grid;
     width: 100%;
-    justify-items: end;
+    justify-items: left;
 }
 .footer-links-grid {
   display: contents;
@@ -910,7 +910,7 @@ input::placeholder{
   margin-top: 2rem;
 }
 .btn-footer {
-  right: 4rem;
+  right: 1.5rem;
 }
 }
 

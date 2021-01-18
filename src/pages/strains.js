@@ -175,6 +175,7 @@ h3.posts-title-products {
     .posts-center {
       padding-top: 3rem;
   }
+
     li.ais-Hits-item p {
       white-space: unset;
       overflow: unset;

@@ -120,7 +120,6 @@ const Wrapper = styled.section`
   width: 85vw;
   max-width: var(--max-width);
   margin: 0 auto;
-  margin-bottom: 4rem;
   padding-top: 15px;
   .post-info {
     text-align: left;
@@ -333,6 +332,12 @@ h2.title-strain {
     background: white;
     padding: 4rem;
     margin: 0 auto;
+}
+@media (max-width: 767px) {
+  margin-bottom: 0rem;
+  .product-grid-strains {
+  padding: 1rem !important;
+  }
 }
 .posts-center {
     margin-top: 1rem;

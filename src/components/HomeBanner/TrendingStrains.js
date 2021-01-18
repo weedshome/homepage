@@ -198,8 +198,11 @@ h2 {
     .grid-trending-strains {
         display: grid;
         place-content: center;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-gap: 2rem;
+        }
+        .d {
+            margin-bottom: 2rem;
         }
   }
 `
