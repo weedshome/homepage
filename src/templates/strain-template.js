@@ -13,7 +13,6 @@ import { GiSeedling } from 'react-icons/gi'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Image from 'gatsby-image'
 import { ImSleepy, ImHappy, ImIcoMoon, ImSpinner10 } from "react-icons/im"
-import Helmet from "react-helmet"
 
 
 import "slick-carousel/slick/slick.css";

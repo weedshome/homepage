@@ -66,7 +66,6 @@ const Wrapper = styled.div`
     padding-top: 4rem;
 }
 .newsletter-btn {
-    border: none;
     display: inline-block;
     border-radius: 8px;
     border-top-left-radius: 0px;
@@ -75,12 +74,12 @@ const Wrapper = styled.div`
     cursor: pointer;
     font-weight: 500;
     line-height: 1;
-    background-color: #102a42;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.09);
+    background-color: #ffffff;
     border-color: transparent;
-    color: #FFFFFF;
+    border: solid;
+    color: #3d796d;
     font-size: 17px;
-    padding: 12px 16px;
+    padding: 11.6px 16px;
 }
 input[type="text"] {
     margin: 20px;
