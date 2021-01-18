@@ -13,6 +13,7 @@ import { GiSeedling } from 'react-icons/gi'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Image from 'gatsby-image'
 import { ImSleepy, ImHappy, ImIcoMoon, ImSpinner10 } from "react-icons/im"
+import Helmet from "react-helmet"
 
 
 import "slick-carousel/slick/slick.css";
@@ -46,6 +47,7 @@ const StrainTemplate = ({
         },
     }
 
+
     return (
         <Layout>
             <BackgroundBg>
@@ -55,6 +57,7 @@ const StrainTemplate = ({
                             <div className="search-text" style={{ textAlign: "left" }}>
                                 <Link to="/strains" className="links"> back to all strains <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
                             </div>
+                            <script type="text/javascript" data-cfasync="false" src="https://assets.mantisadnetwork.com/mantodea.min.js" async></script>
                             <div class="grid-container3">
                                 <div class="strain-image">
                                     <div class="strain-image">
