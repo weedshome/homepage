@@ -50,8 +50,6 @@
   
   .third-image {
     display: grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
     gap: 1px 1px;
     grid-template-areas: "image-third";
     grid-area: third-image;
@@ -60,8 +58,6 @@
   }
   .third-image2 {
     display: grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
     gap: 1px 1px;
     grid-template-areas: "image-third";
     grid-area: third-image;
@@ -73,8 +69,6 @@
   
   .third-text {
     display: grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
     gap: 1px 1px;
     grid-area: third-text;
     justify-self: right;
@@ -150,8 +144,6 @@ li.third-space {
   
   .inside-image {
     display: grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
     gap: 1px 1px;
     grid-template-areas: "image-third";
     grid-area: third-image;
@@ -163,8 +155,6 @@ li.third-space {
   
   .third-text {
     display: grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
     gap: 1px 1px;
     grid-area: third-text;
     justify-self: right;
