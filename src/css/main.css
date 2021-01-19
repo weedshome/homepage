@@ -641,8 +641,6 @@ Testing Post and Components
   overflow-x: scroll;
   position: relative;
 }
-.code pre {
-}
 .code .token-line {
   line-height: 1.5;
 }
