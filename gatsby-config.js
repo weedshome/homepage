@@ -53,12 +53,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-        shortname: `weedshome`
-      }
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `9o07roe0gz0h`,
