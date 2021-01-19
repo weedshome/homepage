@@ -55,9 +55,6 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `9o07roe0gz0h`,
-        // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: `KL4_SRyDhpmqnlqsJ1cMlfeuXOSFQ6MBGlA-dUrd-MM`,
         forceFullSync: true,
         downloadLocal: true,
       },
@@ -65,8 +62,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
-        appId: "1DR891HL15",
-        apiKey: "a2a259879ba297d63c0aea215b854c9c",
         indexName: "strains",
         queries: require("./src/constants/algolia"),
         chunkSize: 10000,
