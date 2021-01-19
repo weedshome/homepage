@@ -6,7 +6,6 @@ import { IoMdArrowRoundBack } from 'react-icons/io'
 import "react-sweet-progress/lib/style.css";
 import 'react-circular-progressbar/dist/styles.css';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { DiscussionEmbed } from "disqus-react"
 import { getFluidGatsbyImage } from '../components/getFluidGatsbyImage'
 import Img from 'gatsby-image'
 
@@ -15,7 +14,6 @@ import Image from 'gatsby-image'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LifestyleBanner from "../components/LifestyleBanner"
-import LazyLoad from 'react-lazy-load';
 
 
 const LifestyleTemplate = ({
@@ -47,6 +45,7 @@ const LifestyleTemplate = ({
       },
     },
   }
+
   return (
     <Layout>
       <div className="health-layout-background">
@@ -70,14 +69,6 @@ const LifestyleTemplate = ({
                       body.json,
                       options
                     )}
-                    <LazyLoad offsetTop={400}>
-                      <ReactDisqusComments
-                        shortname="process.env.GATSBY_DISQUS_NAME"
-                        identifier={id}
-                        title={title}
-                        url={slug}
-                      />
-                    </LazyLoad>
                   </article>
                 </div>
                 <article>

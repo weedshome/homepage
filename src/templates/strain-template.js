@@ -1,9 +1,8 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import styled from 'styled-components'
 import ProductBanner from "../components/ProductBanner"
-import { IoMdArrowRoundBack } from 'react-icons/io'
 import ReactStars from "react-stars";
 import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";

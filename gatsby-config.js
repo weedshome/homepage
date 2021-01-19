@@ -17,7 +17,7 @@ const queries = require("./src/constants/algolia")
 module.exports = {
   siteMetadata: {
     title: `Weed's Home`,
-    description: `Awesome Cannabis Blog built with Gatsby and Contentful`,
+    description: `Awesome Cannabis Blog built with Gatsby, Contentful and Algolia`,
     titleTemplate: `Weed's Home`,
     siteUrl: `https://weedshome.com/`,
     image: `mainImg.png`,
@@ -53,6 +53,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `weedshome`
+      }
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `9o07roe0gz0h`,
@@ -78,7 +84,7 @@ module.exports = {
         chunkSize: 10000,
       },
     },
- 
+
     {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {
