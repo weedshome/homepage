@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styled from "styled-components"
 import EmailBg from '../assets/background-home.svg'
+import MobileBg from '../assets/mobileBg2.svg'
 
 
 const HeroHeaderFirst = () => {
@@ -214,8 +215,18 @@ background:
 
 
 @media screen and (max-width: 767px) {
-     height: 100%;
-     background: #bad0cb;
+  scroll-snap-align: center;
+  height: 100vh;
+  min-height: 36rem;
+  background:
+      url(${MobileBg}) no-repeat center;
+      background-size: cover;
+      width: 100%;
+      padding: 5rem calc((100vw - 1300px) /2 )
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     .grid-container-business {
       width: 100% !important;
       display: grid !important;
@@ -224,19 +235,18 @@ background:
       gap: 1px 1px !important;
       grid-template-areas: "k-1" !important;
       padding: 2rem;
-      padding-top: 6rem;
       padding-bottom: 3rem;
+      padding-top: 0rem;
     }
     .business-hero-image {
       width: 300px;
       margin: 0 auto
     }
     .business-title {
-      font-size: 1.2rem;
       line-height: 2.4rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
       color: #102a42;
-      text-align: center;
+      text-align: left;
     }
     p.business-text {
       margin: 0 auto;
@@ -245,10 +255,9 @@ background:
       letter-spacing: var(--spacing);
       color: hsl(209deg 61% 16%);
       line-height: 1.8;
-      font-size: 12px !important;
       text-transform: none;
       border-radius: var(--radius);
-      text-align: center;
+      text-align: left;
     }
     .buttons-header {
       box-sizing: border-box;

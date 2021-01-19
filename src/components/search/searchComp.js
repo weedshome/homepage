@@ -119,9 +119,9 @@ export default function () {
                     <div className="grid-filter">
                         <Stats />
                         <HitsPerPage
-                            defaultRefinement={3}
+                            defaultRefinement={4}
                             items={[
-                                { value: 3, label: 'Show 3 hits' },
+                                { value: 4, label: 'Show 4 hits' },
                                 { value: 24, label: 'Show 24 hits' },
                             ]}
                         />
