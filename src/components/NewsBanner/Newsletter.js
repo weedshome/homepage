@@ -79,6 +79,7 @@ background: #ffffff;
     padding-top: 2rem;
 }
 .newsletter-btn {
+  -webkit-appearance: none !important;
   margin: 20px;
   margin-top: 0px;
     border: 2px solid;
