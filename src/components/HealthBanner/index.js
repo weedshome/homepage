@@ -6,8 +6,8 @@ import NewsletterSidebar from '../NewsBanner/Newsletter'
 const HealthBanner = () => {
   return (
     <Wrapper>
-      <Trending />
       <NewsletterSidebar />
+      <Trending />
     </Wrapper>
   )
 }

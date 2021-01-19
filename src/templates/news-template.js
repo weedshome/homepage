@@ -6,7 +6,6 @@ import { IoMdArrowRoundBack } from 'react-icons/io'
 import "react-sweet-progress/lib/style.css";
 import 'react-circular-progressbar/dist/styles.css';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { DiscussionEmbed } from "disqus-react"
 import { getFluidGatsbyImage } from '../components/getFluidGatsbyImage'
 
 import Image from 'gatsby-image'
@@ -46,13 +45,6 @@ const NewsTemplate = ({
       },
     },
   }
-  const disqusConfig = {
-    shortname: process.env.GATSBY_DISQUS_NAME,
-    config: {
-      identifier: id,
-      title: title,
-    },
-  }
   return (
     <Layout>
       <Wrapper>
@@ -75,7 +67,6 @@ const NewsTemplate = ({
                     body.json,
                     options
                   )}
-                  <DiscussionEmbed {...disqusConfig} />
                 </article>
               </div>
               <article>

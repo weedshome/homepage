@@ -141,6 +141,7 @@ h2 {
 }
 .d {
   background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,.16);
   padding: 10px;
 }
 .buttons-header {

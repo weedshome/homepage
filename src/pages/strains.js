@@ -89,6 +89,7 @@ h3.posts-title-products {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 540px;
+    font-size: .8rem;
   }
   .link {
     padding-bottom: 0.1rem;

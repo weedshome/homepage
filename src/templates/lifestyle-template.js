@@ -15,6 +15,7 @@ import Image from 'gatsby-image'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LifestyleBanner from "../components/LifestyleBanner"
+import LazyLoad from 'react-lazy-load';
 
 
 const LifestyleTemplate = ({
@@ -46,13 +47,6 @@ const LifestyleTemplate = ({
       },
     },
   }
-  const disqusConfig = {
-    shortname: process.env.GATSBY_DISQUS_NAME,
-    config: {
-      identifier: id,
-      title: title,
-    },
-  }
   return (
     <Layout>
       <div className="health-layout-background">
@@ -76,7 +70,14 @@ const LifestyleTemplate = ({
                       body.json,
                       options
                     )}
-                    <DiscussionEmbed {...disqusConfig} />
+                    <LazyLoad offsetTop={400}>
+                      <ReactDisqusComments
+                        shortname="process.env.GATSBY_DISQUS_NAME"
+                        identifier={id}
+                        title={title}
+                        url={slug}
+                      />
+                    </LazyLoad>
                   </article>
                 </div>
                 <article>
