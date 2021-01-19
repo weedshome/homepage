@@ -1,7 +1,7 @@
 
 const contentfulQuery = `
 {
-    allContentfulStrains {
+    allContentfulStrains(filter: {node_locale: {eq: "en-US"}}) {
       nodes {
         id
         title
