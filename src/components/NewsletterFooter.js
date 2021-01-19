@@ -111,6 +111,7 @@ input[type="email"] {
 
 @media screen and (max-width: 767px) {
     .newsletter-btn {
+        -webkit-appearance: none !important;
         display: inline-block !important;
         border-radius: 8px !important;
         border-top-left-radius: 0px !important;
