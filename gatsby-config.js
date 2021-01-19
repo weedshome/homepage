@@ -63,12 +63,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `weedshome.wh`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-algolia`,
       options: {
         appId: "1DR891HL15",
