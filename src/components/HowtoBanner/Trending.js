@@ -33,7 +33,7 @@ const Trending = () => {
       {products.map(product => {
         return (
           <article key={product.id}>
-            <Link className="link" to={`/how-to/${product.slug}`}>
+            <Link className="link" to={`/howto/${product.slug}`}>
               <div className="d">
                 <figure className="post-card-figure">
                   <Image fluid={product.image.fluid} alt={product.title}></Image>
