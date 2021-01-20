@@ -1667,3 +1667,25 @@ span.ais-Pagination-link {
   border: solid 1px #3d796d;
   color: #3d796d !important;
 }
+
+
+.CookieConsent {
+  align-items: baseline;
+  background: rgb(61 121 109) !important;
+  color: rgb(255 255 255) !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  left: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  font-size: 15px;
+  bottom: 0px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 9px 10px 5px;
+}
+
+button#rcc-confirm-button {
+  background: white !important;
+  color: #373a47 !important;
+}
