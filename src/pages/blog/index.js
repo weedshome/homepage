@@ -284,7 +284,7 @@ const Wrapper = styled.article`
     }
   }
   .d {
-    box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.16);
     background-color: #ffffff;
     display: grid;
     grid-template-columns: 1fr;

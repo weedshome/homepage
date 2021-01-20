@@ -3,7 +3,6 @@ import Image from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { Link } from "gatsby"
-import Title from './Title'
 const query = graphql`
 {
     allContentfulHowto(filter: {}, limit: 2) {
@@ -27,34 +26,33 @@ const query = graphql`
   }
 `
 const Trending = () => {
-    const data = useStaticQuery(query)
-    const { allContentfulHowto: { nodes: products }, } = data
-    return (
-        <Wrapper>
-            <Title title="Latest from How To" />
-            {products.map(product => {
-                return (
-                    <article key={product.id}>
-                        <Link className="link" to={`/how-to/${product.slug}`}>
-                            <div className="d">
-                                <figure className="post-card-figure">
-                                    <Image fluid={product.image.fluid} alt={product.title}></Image>
-                                    <span class="post-card-badge4">{product.category}</span>
-                                </figure>
-                                <div className="info">
-                                    <h3 className="howto-title">{product.title}</h3>
-                                    <div className="article-info">
-                                        <p className="author-text">{product.author}</p>
-                                        <p className="author-text2">{product.date}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </article>
-                )
-            })}
-        </Wrapper>
-    )
+  const data = useStaticQuery(query)
+  const { allContentfulHowto: { nodes: products }, } = data
+  return (
+    <Wrapper>
+      {products.map(product => {
+        return (
+          <article key={product.id}>
+            <Link className="link" to={`/how-to/${product.slug}`}>
+              <div className="d">
+                <figure className="post-card-figure">
+                  <Image fluid={product.image.fluid} alt={product.title}></Image>
+                  <span class="post-card-badge4">{product.category}</span>
+                </figure>
+                <div className="info">
+                  <h3 className="howto-title">{product.title}</h3>
+                  <div className="article-info">
+                    <p className="author-text">{product.author}</p>
+                    <p className="author-text2">{product.date}</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </article>
+        )
+      })}
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`
@@ -98,7 +96,7 @@ const Wrapper = styled.div`
       line-height: 24px;
     }
     p {
-      color: var(--clr-grey-5);
+      color: hsl(168deg 33% 36%);
       line-height: 1.8;
       font-size: 12px;
       text-transform: none;
@@ -109,7 +107,7 @@ const Wrapper = styled.div`
    .info {
       text-align: left;
       padding: 10px;
-      padding-bottom: 0.5rem !important;
+      padding-bottom: 0rem !important;
       border: none !important;
    }
    .article-info {
@@ -123,7 +121,7 @@ const Wrapper = styled.div`
       height: 100% !important;
       padding: 10px;
       background: #ffffff;
-      box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
+      box-shadow: 0 4px 8px rgba(0,0,0,.16);
   }
   .author-text {
     margin-bottom: 0;

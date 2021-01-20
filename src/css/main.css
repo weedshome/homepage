@@ -206,7 +206,7 @@ Navbar
   width: 100%;
   background: transparent;
   background: #3d796d;
-  box-shadow: 0 0 8px 0 #0000006e;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 47%);
 }
 .nav-icons {
   width: fit-content !important;
@@ -1128,6 +1128,7 @@ span.product-rating-x {
 .border-search {
   border: 1px solid #e5e5e5!important;
   background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,.16);
 }
 
 @media screen and (max-width: 767px) {

@@ -56,7 +56,7 @@ const Wrapper = styled.div`
 
 }
 .hit-p {
-    box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.16);
     display: grid;
     grid-template-columns: 300px 1fr;
     background-color: #ffffff;

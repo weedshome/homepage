@@ -69,9 +69,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-desc">
-          <p className="footer-desc1">WEED'S HOME IS A CERTIFIED B CORP</p>
+          <p className="footer-desc1">WEED'S HOME IS A CERTIFIED CORP</p>
 
-          <p className="copyright">© 2020 Weed's Home. All rights reserved. PrivacyTerms of UseCA Supply Chains Act</p>
+          <p className="copyright">© 2020 Weed's Home. All rights reserved.</p>
         </div>
       </footer>
     </Wrapper>

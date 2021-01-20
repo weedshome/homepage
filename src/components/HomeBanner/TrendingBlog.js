@@ -121,7 +121,6 @@ h2 {
 .info {
     border-bottom: none;
     margin-bottom: 0;
-    height: 90px;
 }
 .d {
   background: #ffffff;

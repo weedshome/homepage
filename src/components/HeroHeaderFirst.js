@@ -5,8 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styled from "styled-components"
 import EmailBg from '../assets/background-home.svg'
-import MobileBg from '../assets/mobileBg2.svg'
-
+import MobileBg from '../assets/mobileBg3.svg'
 
 const HeroHeaderFirst = () => {
   useEffect(() => {

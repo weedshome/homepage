@@ -71,6 +71,7 @@ form {
   display: grid;
 }
 background: #ffffff;
+box-shadow: 0 4px 8px rgba(0,0,0,.16);
 .newsletter-container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -103,7 +104,7 @@ input[type="text"] {
     padding: 0.8rem 1.7rem;
     position: relative;
     background-color: #ffffff;
-    border: 1px solid #102a42;
+    border: 1px solid #3d796d;
     border-radius: 5px;
     color: white !important;
     text-transform: capitalize;
@@ -118,7 +119,7 @@ input[type="email"] {
     padding: 0.8rem 1.7rem;
     position: relative;
     background-color: #ffffff;
-    border: 1px solid #102a42;
+    border: 1px solid #3d796d;
     border-radius: 5px;
     color: white !important;
     text-transform: capitalize;

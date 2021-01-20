@@ -103,7 +103,7 @@ input[type="text"] {
     padding: 0.8rem 1.7rem;
     position: relative;
     background-color: #ffffff;
-    border: 1px solid #102a42;
+    border: 1px solid #3d796d;
     border-radius: 5px;
     color: white !important;
     text-transform: capitalize;
@@ -115,7 +115,7 @@ input[type="email"] {
     padding: 0.8rem 1.7rem;
     position: relative;
     background-color: #ffffff;
-    border: 1px solid #102a42;
+    border: 1px solid #3d796d;
     border-radius: 5px;
     color: white !important;
     text-transform: capitalize;

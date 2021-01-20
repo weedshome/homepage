@@ -1,18 +1,13 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import styled from 'styled-components'
-import { IoMdArrowRoundBack } from 'react-icons/io'
 import "react-sweet-progress/lib/style.css";
 import 'react-circular-progressbar/dist/styles.css';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { getFluidGatsbyImage } from '../components/getFluidGatsbyImage'
 import Img from 'gatsby-image'
-
 import Image from 'gatsby-image'
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import HealthBanner from "../components/HealthBanner"
 
 
@@ -48,9 +43,6 @@ const GrowingTemplate = ({
   return (
     <Layout>
       <Wrapper>
-        <div className="search-text" style={{ textAlign: "left" }}>
-          <Link to="/health" className="links"> back to all news <div className="search-icon"><IoMdArrowRoundBack /></div></Link>
-        </div>
         <article>
           <section className="posts">
             <div className="posts-center-growing">
@@ -105,7 +97,11 @@ query GetSingleGrowing($slug: String) {
 `
 
 const Wrapper = styled.section`
-
+.product-grid-strains .gatsby-image-wrapper {
+  margin: 2rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
   width: 85vw;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -200,13 +196,13 @@ text.CircularProgressbar-text {
     display: grid !important;
     grid-template-columns: 1fr 250px !important;
     column-gap: 1rem;
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
   @media screen and (max-width: 768px) {
     .posts-center-growing {
     grid-template-columns: 1fr !important;
     column-gap: 1rem;
-    padding-top: 3rem;
+    padding-top: 4rem;
     }
   }
 .strain-info-first {
@@ -321,27 +317,11 @@ h2.title-strain {
   padding: 25px;
   margin: 0 auto;
     background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,.16);
 }
 .posts-center {
     margin-top: 1rem;
 }
-.search-text {
-    text-transform: uppercase;
-    letter-spacing: var(--spacing);
-    color: var(--clr-primary-5);
-    padding-bottom: 0.1rem;
-    display: flex;
-    align-items: center;
-    svg {
-    margin-left: 0.25rem;
-    margin-bottom: 0.35rem;
-    font-size: 1.1rem;
-}
-
-.search-text:hover {
-    border-color: #0a0c10;
-    color: #0a0c10;
-  }
   
   .strain-image {
     display: grid;

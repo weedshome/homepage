@@ -3,7 +3,6 @@ import Image from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { Link } from "gatsby"
-import Title from './Title'
 
 
 const query = graphql`
@@ -33,7 +32,6 @@ const Trending = () => {
   const { allContentfulHealth: { nodes: products }, } = data
   return (
     <Wrapper>
-      <Title title="Latest from Health" />
       {products.map(product => {
         return (
           <article key={product.id}>
@@ -101,7 +99,7 @@ const Wrapper = styled.div`
     color: #102a42;
     }
     p {
-      color: var(--clr-grey-5);
+      color: hsl(168deg 33% 36%);
       line-height: 1.8;
       font-size: 12px;
       text-transform: none;
@@ -110,7 +108,7 @@ const Wrapper = styled.div`
    .info {
       text-align: left;
       padding: 10px;
-      padding-bottom: 0.5rem !important;
+      padding-bottom: 0rem !important;
       border: none !important;
    }
    .article-info {
@@ -124,7 +122,7 @@ const Wrapper = styled.div`
       height: 100% !important;
       background: #ffffff;
       padding: 10px;
-      box-shadow: rgba(1,1,1,0.05) 1px 1px 5px 0px;
+      box-shadow: 0 4px 8px rgba(0,0,0,.16);
   }
   .author-text {
     margin-bottom: 0;

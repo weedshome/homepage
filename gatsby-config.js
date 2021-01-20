@@ -64,12 +64,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.GATSBY_ALGOLIA_ADMIN_KEY,
         indexName: "strains",
         queries: require("./src/constants/algolia"),
         chunkSize: 10000,
       },
     },
-
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `weedshome`
+      }
+    },
     {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {

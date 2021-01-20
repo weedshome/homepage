@@ -3,17 +3,14 @@ import Image from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { Link } from "gatsby"
-import Title from './Title'
 
 const query = graphql`
 {
-    allContentfulGrowing(filter: {}, limit: 2) {
+    allContentfulStrains(filter: {}, limit: 2) {
       nodes {
         id
         title
         slug
-        date
-        author
         category
         image {
           fluid {
@@ -29,10 +26,9 @@ const query = graphql`
 `
 const Trending = () => {
   const data = useStaticQuery(query)
-  const { allContentfulGrowing: { nodes: products }, } = data
+  const { allContentfulStrains: { nodes: products }, } = data
   return (
     <Wrapper>
-      <Title title="Trending Growing" />
       {products.map(product => {
         return (
           <article key={product.id}>
@@ -44,10 +40,6 @@ const Trending = () => {
                 </figure>
                 <div className="info">
                   <h3>{product.title}</h3>
-                  <div className="article-info">
-                    <p className="author-text">{product.author}</p>
-                    <p className="author-text2">{product.date}</p>
-                  </div>
                 </div>
               </div>
             </Link>
@@ -117,6 +109,7 @@ const Wrapper = styled.div`
       padding-bottom: 0.5rem !important;
       border: none !important;
       background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,.16);
    }
    .article-info {
     align-items: center;

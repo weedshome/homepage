@@ -450,6 +450,7 @@ h2.title-strain {
     margin-bottom: 1rem;
 }
   .product-grid {
+    box-shadow: 0 4px 8px rgba(0,0,0,.16);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -489,6 +490,7 @@ table svg {
 .product-grid-strains {
     background: white;
     padding: 4rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,.16);
 }
 .posts-center {
     margin-top: 1rem;

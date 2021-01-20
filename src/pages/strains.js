@@ -215,6 +215,7 @@ h3.posts-title-products {
     letter-spacing: var(--spacing);
   }
   .info-strains {
+    box-shadow: 0 4px 8px rgba(0,0,0,.16);
     padding: 20px;
     background-color: #ebf3f5;
     margin-bottom: 1rem;
