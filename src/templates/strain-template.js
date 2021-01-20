@@ -25,6 +25,15 @@ const StrainTemplate = ({
             cbd,
             genetics,
             varities,
+            depressionPercentage,
+            dryEyesPercentage,
+            dryMouthPercentage,
+            euphoricPercentage,
+            happyPercentage,
+            relaxedPercentage,
+            stressPercentage,
+            upliftedPercentage,
+            anxietyPercentage,
             body,
             affiliatelink,
             image: { fixed },
@@ -110,15 +119,15 @@ const StrainTemplate = ({
                                     <div class="strain-info-1">
                                         <h3 className="heading-info">Feelings</h3>
                                         <p className="strain-info-text">Happy</p>
-                                        <Progress percent={price} />
+                                        <Progress percent={happyPercentage} />
                                     </div>
                                     <div class="strain-info-2">
                                         <p className="strain-info-text">Euphoric</p>
-                                        <Progress percent={price} />
+                                        <Progress percent={euphoricPercentage} />
                                     </div>
                                     <div class="strain-info-3">
                                         <p className="strain-info-text">Stress</p>
-                                        <Progress percent={price} />
+                                        <Progress percent={stressPercentage} />
                                     </div>
                                     <div class="strain-info-4">
                                     </div>
@@ -127,15 +136,15 @@ const StrainTemplate = ({
                                     <div class="strain-info-1">
                                         <h3 className="heading-info">Helps with</h3>
                                         <p className="strain-info-text">Anxiety</p>
-                                        <Progress percent={price} />
+                                        <Progress percent={anxietyPercentage} />
                                     </div>
                                     <div class="strain-info-2">
                                         <p className="strain-info-text">Dry mouth</p>
-                                        <Progress percent={price} />
+                                        <Progress percent={dryMouthPercentage} />
                                     </div>
                                     <div class="strain-info-3">
                                         <p className="strain-info-text">Dry eyes</p>
-                                        <Progress percent={price} />
+                                        <Progress percent={dryEyesPercentage} />
                                     </div>
                                     <div class="strain-info-4">
                                     </div>
@@ -144,15 +153,15 @@ const StrainTemplate = ({
                                     <div class="strain-info-1">
                                         <h3 className="heading-info">Negatives</h3>
                                         <p className="strain-info-text">Relaxed</p>
-                                        <Progress percent={price} />
+                                        <Progress percent={relaxedPercentage} />
                                     </div>
                                     <div class="strain-info-2">
                                         <p className="strain-info-text">Uplifted</p>
-                                        <Progress percent={price} />
+                                        <Progress percent={upliftedPercentage} />
                                     </div>
                                     <div class="strain-info-3">
                                         <p className="strain-info-text">Depression</p>
-                                        <Progress percent={price} />
+                                        <Progress percent={depressionPercentage} />
                                     </div>
                                     <div class="strain-info-4">
                                     </div>
@@ -196,6 +205,15 @@ query GetSingleStrain($slug: String) {
     cbd
     genetics
     varities
+    depressionPercentage
+    dryEyesPercentage
+    dryMouthPercentage
+    euphoricPercentage
+    happyPercentage
+    relaxedPercentage
+    stressPercentage
+    upliftedPercentage
+    anxietyPercentage
     affiliatelink,
     image {
       fixed(width: 400, height: 200) {
