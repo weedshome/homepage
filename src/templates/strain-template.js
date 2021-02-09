@@ -4,15 +4,10 @@ import Layout from "../components/Layout"
 import styled from 'styled-components'
 import ProductBanner from "../components/ProductBanner"
 import ReactStars from "react-stars";
-import { Progress } from 'react-sweet-progress';
-import "react-sweet-progress/lib/style.css";
-import 'react-circular-progressbar/dist/styles.css';
 import { GiSeedling } from 'react-icons/gi'
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Image from 'gatsby-image'
 import { ImSleepy, ImHappy, ImIcoMoon, ImSpinner10 } from "react-icons/im"
-
-
 
 const StrainTemplate = ({
     data: {
@@ -25,14 +20,10 @@ const StrainTemplate = ({
             cbd,
             genetics,
             varities,
-            depressionPercentage,
-            dryEyesPercentage,
-            dryMouthPercentage,
-            euphoricPercentage,
-            happyPercentage,
+            negatives,
+            feelings,
+            medicalUses,
             relaxedPercentage,
-            stressPercentage,
-            upliftedPercentage,
             anxietyPercentage,
             body,
             affiliatelink,
@@ -50,7 +41,6 @@ const StrainTemplate = ({
             },
         },
     }
-
 
     return (
         <Layout>
@@ -106,7 +96,7 @@ const StrainTemplate = ({
                                                 <td>{genetics}</td>
                                             </tr>
                                             <tr>
-                                                <td><ImSpinner10 /> Varities:</td>
+                                                <td><ImSpinner10 /> Flavours:</td>
                                                 <td>{varities}</td>
                                             </tr>
                                         </table>                                    </div>
@@ -118,33 +108,16 @@ const StrainTemplate = ({
                                 <div class="strain-info-graphs">
                                     <div class="strain-info-1">
                                         <h3 className="heading-info">Feelings</h3>
-                                        <p className="strain-info-text">Happy</p>
-                                        <Progress percent={happyPercentage} />
+                                        <p className="strain-info-text">{feelings}</p>
                                     </div>
-                                    <div class="strain-info-2">
-                                        <p className="strain-info-text">Euphoric</p>
-                                        <Progress percent={euphoricPercentage} />
-                                    </div>
-                                    <div class="strain-info-3">
-                                        <p className="strain-info-text">Stress</p>
-                                        <Progress percent={stressPercentage} />
-                                    </div>
+
                                     <div class="strain-info-4">
                                     </div>
                                 </div>
                                 <div class="strain-info-graphs">
                                     <div class="strain-info-1">
                                         <h3 className="heading-info">Helps with</h3>
-                                        <p className="strain-info-text">Anxiety</p>
-                                        <Progress percent={anxietyPercentage} />
-                                    </div>
-                                    <div class="strain-info-2">
-                                        <p className="strain-info-text">Dry mouth</p>
-                                        <Progress percent={dryMouthPercentage} />
-                                    </div>
-                                    <div class="strain-info-3">
-                                        <p className="strain-info-text">Dry eyes</p>
-                                        <Progress percent={dryEyesPercentage} />
+                                        <p className="strain-info-text">{medicalUses}</p>
                                     </div>
                                     <div class="strain-info-4">
                                     </div>
@@ -152,16 +125,7 @@ const StrainTemplate = ({
                                 <div class="strain-info">
                                     <div class="strain-info-1">
                                         <h3 className="heading-info">Negatives</h3>
-                                        <p className="strain-info-text">Relaxed</p>
-                                        <Progress percent={relaxedPercentage} />
-                                    </div>
-                                    <div class="strain-info-2">
-                                        <p className="strain-info-text">Uplifted</p>
-                                        <Progress percent={upliftedPercentage} />
-                                    </div>
-                                    <div class="strain-info-3">
-                                        <p className="strain-info-text">Depression</p>
-                                        <Progress percent={depressionPercentage} />
+                                        <p className="strain-info-text">{negatives}</p>
                                     </div>
                                     <div class="strain-info-4">
                                     </div>
@@ -205,15 +169,9 @@ query GetSingleStrain($slug: String) {
     cbd
     genetics
     varities
-    depressionPercentage
-    dryEyesPercentage
-    dryMouthPercentage
-    euphoricPercentage
-    happyPercentage
-    relaxedPercentage
-    stressPercentage
-    upliftedPercentage
-    anxietyPercentage
+    negatives
+    feelings
+    medicalUses
     affiliatelink,
     image {
       fixed(width: 400, height: 200) {
@@ -262,7 +220,7 @@ const Wrapper = styled.section`
  }
 
  td {
-    font-size: 14px;
+    font-size: 13px;
     color: #3d796d;
     padding-top: 7px;
     margin-bottom: 0rem;
@@ -392,12 +350,6 @@ span.product-rating {
     padding-left: 1rem;
 }
 
-path.CircularProgressbar-trail {
-    stroke: rgb(16 42 66) !important;
-}
-text.CircularProgressbar-text {
-    fill: rgb(16, 42, 66) !important;
-}
 .heading-info {
     color: #3d796d;
     font-size: 15px;
@@ -409,9 +361,6 @@ text.CircularProgressbar-text {
     justify-self: left;
     padding-left: 2rem;
     padding-right: 2rem;
-}
-.react-sweet-progress-line {
-    background-color: #3d796d !important;
 }
 .strain-info-graphs {
     width: 100%;
@@ -429,19 +378,9 @@ text.CircularProgressbar-text {
     grid-template-rows: 1fr;
     gap: 1px 1px;
 }
-.CircularProgressbar .CircularProgressbar-path {
-    stroke: #3d796d;
-    stroke-linecap: round !important;
-    transition: stroke-dashoffset 0.5s ease 0s;
-    font-size: 14px;
+
 }
-}
-.react-sweet-progress-symbol {
-    color: #102a42;
-}
-.react-sweet-progress-line-inner.react-sweet-progress-line-inner-status-active {
-    background-color: rgb(126, 167, 72) !important;
-}
+
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -583,8 +522,4 @@ table svg {
   .strain-info-4 { grid-area: strain-info-4; }
 `
 
-
 export default StrainTemplate
-
-
-
