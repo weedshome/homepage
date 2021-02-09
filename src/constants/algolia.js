@@ -10,6 +10,8 @@ const contentfulQuery = `
         sativa
         category
         hybrid
+        cbd
+        slug
         alt
         info {
           info
@@ -24,8 +26,8 @@ const contentfulQuery = `
     }
 `
 
-function pageToAlgoliaRecords({ id, title, category, price, indica, sativa, hybrid, info, image, alt }) {
-  return { objectID: id, title, category, price, indica, sativa, hybrid, info: info.info, image: image.file.url, alt }
+function pageToAlgoliaRecords({ id, slug, title, category, cbd, price, indica, sativa, hybrid, info, image, alt }) {
+  return { objectID: id, slug, title, category, cbd, price, indica, sativa, hybrid, info: info.info, image: image.file.url, alt }
 
 }
 
