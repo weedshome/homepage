@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import styled from 'styled-components'
@@ -42,13 +42,6 @@ const LifestyleTemplate = ({
       },
     },
   }
-
-  const [emptyState, setEmptyState]=useState("");
-
-  useEffect(()=>{
-    setEmptyState(" ");
-   
-  }, [])
   
   return (
     <Layout>
@@ -59,7 +52,7 @@ const LifestyleTemplate = ({
               <div className="posts-center-growing">
                 <div className="product-grid-strains">
                   <article>
-                    <div data-mantis-zone={`captain-jack`} className={`emptyState`}></div>
+                    <div data-mantis-zone={`captain-jack`}></div>
                     <div className="post-info">
                       <span>{category}</span>
                       <h2>{title}</h2>
