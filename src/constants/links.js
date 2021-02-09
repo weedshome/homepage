@@ -21,7 +21,7 @@ const Links = ({ styleClass, children }) => {
       </li>
       <li>
         <Link to="/blog" className="page-link">
-          Learn
+          Blog
         </Link>
       </li>
       <li>
