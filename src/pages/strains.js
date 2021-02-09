@@ -24,6 +24,7 @@ const Strains = ({ data }) => {
     <Wrapper>
       <Layout>
         <SEO title="Strains" schemaMarkup={schema} />
+        <div data-mantis-zone="captain-jack"></div>
         <div className="strains-background">
           <section className="posts">
             <article>
