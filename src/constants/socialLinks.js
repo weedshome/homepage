@@ -13,7 +13,7 @@ const SocialLinks = ({ styleClass }) => {
         </a>
       </li>
       <li>
-        <a href="https://www.instagram.com/weed_home7/">
+        <a href="https://www.instagram.com/weedshomeofficial/">
           <FaInstagramSquare className="social-icon dribble-icon"></FaInstagramSquare>
         </a>
       </li>
