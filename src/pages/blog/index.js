@@ -21,9 +21,6 @@ const Blog = ({ data }) => {
         <Layout>
           <HeroBlog />
           <section className="posts">
-           <div className="ad">
-           <div data-mantis-zone="captain-jack"></div>
-           </div>
             <div className="posts-center-grid">
               <div className="hero-info-3">
                 <h2 className="news-title">Latest from Lifestyle</h2>
