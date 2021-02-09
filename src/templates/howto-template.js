@@ -50,6 +50,7 @@ const HowtoTemplate = ({
               <div className="posts-center-growing">
                 <div className="product-grid-strains">
                   <article>
+                    <div data-mantis-zone="captain-jack"></div>
                     <div className="post-info">
                       <span>{category}</span>
                       <h2>{title}</h2>
@@ -62,6 +63,7 @@ const HowtoTemplate = ({
                       options
                     )}
                   </article>
+                  <div data-mantis-zone="captain-jack"></div>
                   <Disqus
                     identifier={id}
                     title={title}
