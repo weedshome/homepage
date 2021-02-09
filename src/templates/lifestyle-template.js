@@ -59,7 +59,7 @@ const LifestyleTemplate = ({
               <div className="posts-center-growing">
                 <div className="product-grid-strains">
                   <article>
-                    <div data-mantis-zone={`captain-jack ${emptyState}`}></div>
+                    <div data-mantis-zone={`captain-jack`} className={`emptyState`}></div>
                     <div className="post-info">
                       <span>{category}</span>
                       <h2>{title}</h2>
