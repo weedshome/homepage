@@ -52,6 +52,7 @@ const LifestyleTemplate = ({
               <div className="posts-center-growing">
                 <div className="product-grid-strains">
                   <article>
+                    <div data-mantis-zone="captain-jack" markdown="1"></div>
                     <div className="post-info">
                       <span>{category}</span>
                       <h2>{title}</h2>
@@ -65,6 +66,7 @@ const LifestyleTemplate = ({
                       options
                     )}
                   </article>
+                  <div data-mantis-zone="captain-jack" markdown="1"></div>
                   <Disqus
                     identifier={id}
                     title={title}
