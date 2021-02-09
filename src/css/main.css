@@ -1689,3 +1689,14 @@ button#rcc-confirm-button {
   background: white !important;
   color: #373a47 !important;
 }
+
+input.ais-RefinementList-checkbox[type="checkbox"]:checked {
+  background: hsl(168deg 33% 36%) !important;
+  border: solid 2px #bad0cb !important;
+}
+
+input.ais-NumericMenu-radio[type="radio"]:checked {
+  background: hsl(168deg 33% 36%) !important;
+  border: solid 2px #bad0cb !important;
+
+}
