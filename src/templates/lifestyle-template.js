@@ -63,7 +63,6 @@ const LifestyleTemplate = ({
                     <div className="post-info">
                       <span>{category}</span>
                       <h2>{title}</h2>
-                      <div data-mantis-zone="captain-jack"></div>
                       <p>{excerpt}</p>
                       <div className="underline"></div>
                     </div>
@@ -73,7 +72,6 @@ const LifestyleTemplate = ({
                       options
                     )}
                   </article>
-                  <div data-mantis-zone="captain-jack"></div>
                   <Disqus
                     identifier={id}
                     title={title}
