@@ -6,6 +6,7 @@ const contentfulQuery = `
         id
         title
         price
+        thc
         indica
         sativa
         category
@@ -29,8 +30,8 @@ const contentfulQuery = `
     }
 `
 
-function pageToAlgoliaRecords({ id, slug, usages, rating, effects, title, category, cbd, price, indica, sativa, hybrid, info, image, alt }) {
-  return { objectID: id, slug, usages, rating, effects, title, category, cbd, price, indica, sativa, hybrid, info: info.info, image: image.file.url, alt }
+function pageToAlgoliaRecords({ id, slug, thc, usages, rating, effects, title, category, cbd, price, indica, sativa, hybrid, info, image, alt }) {
+  return { objectID: id, slug, usages, thc, rating, effects, title, category, cbd, price, indica, sativa, hybrid, info: info.info, image: image.file.url, alt }
 
 }
 
