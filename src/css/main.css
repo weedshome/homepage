@@ -1700,3 +1700,16 @@ input.ais-NumericMenu-radio[type="radio"]:checked {
   border: solid 2px #bad0cb !important;
 
 }
+
+div#mantis_ad_0 {
+    text-align-last: center;
+    padding-top: 3rem;
+}
+
+div#mantis_ad_2 {
+    padding-bottom: 3rem;
+}
+
+div#mantis_ad_1 {
+    padding-bottom: 1rem;
+}
